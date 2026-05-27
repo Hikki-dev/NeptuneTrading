@@ -42,3 +42,4 @@ Update all canonical URLs, Open Graph URLs, `robots.txt`, and `sitemap.xml` when
 ## Deployment
 
 Create the GitHub repository as `Hikki-dev/NeptuneTrading`, push this project, and connect the repository to Vercel as a static site. No build command is required.
+# NeptuneTrading
