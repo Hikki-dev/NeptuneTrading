@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us | Neptune Trading Company (Pvt) Ltd</title>
+    <meta name="description" content="Contact Neptune Trading Company (Pvt) Ltd for Hummer, Metal Alloy Corporation, and Aliaxis brand enquiries in Sri Lanka.">
+    <link rel="canonical" href="https://neptunetrading.vercel.app/contact.html">
+    <meta property="og:title" content="Contact Us | Neptune Trading Company (Pvt) Ltd">
+    <meta property="og:description" content="Submit an enquiry for represented principal brands in Sri Lanka.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://neptunetrading.vercel.app/contact.html">
+    <meta property="og:image" content="https://neptunetrading.vercel.app/assets/trading_hero.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <!-- Glassmorphic Sticky Header -->
+    <header class="site-header" data-header>
+      <div class="container">
+        <nav class="nav" aria-label="Primary navigation">
+          <a class="brand" href="index.html" aria-label="Neptune Trading Company home">
+            <img src="assets/logos/neptune-trading-logo.png" alt="Neptune Trading Company logo">
+          </a>
+          <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" data-nav-toggle>
+            <span></span><span></span><span></span>
+          </button>
+          <div class="nav-links" data-nav-links>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="principals.html">Principals</a>
+            <a href="products.html">Products</a>
+            <a class="active" href="contact.html">Contact</a>
+            <a class="btn btn-primary" href="contact.html">Enquire</a>
+          </div>
+        </nav>
+      </div>
+      <div class="nav-scroll-progress" aria-hidden="true" data-nav-progress></div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="nav-links-mobile" data-nav-links-mobile>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="principals.html">Principals</a>
+      <a href="products.html">Products</a>
+      <a class="active" href="contact.html">Contact</a>
+      <a class="btn btn-primary" href="contact.html">Enquire</a>
+    </div>
+
+    <main>
+      <!-- Page Hero Section with Breadcrumbs -->
+      <section class="page-hero">
+        <div class="page-hero-grid"></div>
+        <div class="container page-hero-inner">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="breadcrumb-separator">/</span>
+            <span class="breadcrumb-current">Contact</span>
+          </nav>
+          <span class="eyebrow">Contact Desk</span>
+          <h1>Submit a Commercial Enquiry</h1>
+          <p>Please use the form below to submit a technical catalog query or request direct procurement pricing. Our brand support desk coordinates all requests with global principals.</p>
+        </div>
+      </section>
+
+      <!-- Contact and Form Layout -->
+      <section class="section">
+        <div class="container contact-layout">
+          <!-- Left Details Column -->
+          <aside class="contact-list" aria-label="Contact details">
+            <div class="contact-item">
+              <div class="contact-label">Trading Entity</div>
+              <div class="contact-value">Neptune Trading Company (Pvt) Ltd.</div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-label">Corporate Address</div>
+              <div class="contact-value">66B Vivekananda Hill, Kotahena,<br>Colombo 13, Sri Lanka</div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-label">Direct Lines</div>
+              <div class="contact-value"><a href="tel:+94117991105">+94 117 99 11 05</a></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-label">Email Channels</div>
+              <div class="contact-value"><a href="mailto:info@neptunelogistics.lk">info@neptunelogistics.lk</a></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-label">Business Hours</div>
+              <div class="contact-value">
+                Monday - Friday: 8:30 AM - 5:30 PM<br>
+                Saturday: 8:30 AM - 1:00 PM
+              </div>
+            </div>
+          </aside>
+
+          <!-- Right Form Column -->
+          <section class="card" aria-label="Enquiry form">
+            <h2 style="margin-bottom: 8px;">Enquiry Form</h2>
+            <p style="color: var(--muted); margin-bottom: 24px;">Please select the relevant principal brand and outline your product requirements so we can coordinate accurately.</p>
+            
+            <form action="https://api.web3forms.com/submit" method="POST" data-contact-form>
+              <input type="hidden" name="access_key" value="WEB3FORMS_ACCESS_KEY">
+              <input type="hidden" name="subject" value="Neptune Trading Company Website Enquiry">
+              
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                <label>
+                  Contact Name *
+                  <input name="name" autocomplete="name" placeholder="John Doe" required>
+                </label>
+                <label>
+                  Company Name *
+                  <input name="company" autocomplete="organization" placeholder="Enterprise Lanka Ltd" required>
+                </label>
+              </div>
+
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                <label>
+                  Email Address *
+                  <input type="email" name="email" autocomplete="email" placeholder="john@enterprise.lk" required>
+                </label>
+                <label>
+                  Phone Number
+                  <input name="phone" autocomplete="tel" placeholder="+94 77 123 4567">
+                </label>
+              </div>
+
+              <label>
+                Appointed Principal / Brand of Interest *
+                <select name="principal" id="principal-select" required>
+                  <option value="">Select principal brand</option>
+                  <option value="hummer">Hummer</option>
+                  <option value="metalco">Metal Alloy Corporation</option>
+                  <option value="aliaxis">Aliaxis</option>
+                  <option value="other">Other / Future Principal</option>
+                </select>
+              </label>
+
+              <label>
+                Message *
+                <textarea name="message" required placeholder="Please describe the product models, required quantities, applications, and any relevant technical specifications."></textarea>
+              </label>
+
+              <button class="btn btn-primary" type="submit">Submit Inquiry Package</button>
+              <p class="form-note" data-form-note>The enquiry form is prepared for Web3Forms. Add the live access key before enabling submissions.</p>
+            </form>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <img class="footer-logo" src="assets/logos/neptune-trading-logo.png" alt="Neptune Trading Company logo">
+            <p>Neptune Trading Company (Pvt) Ltd. is a dedicated, separate trading entity representing selected international principals in Sri Lanka.</p>
+          </div>
+          <div>
+            <h3>Company</h3>
+            <div class="footer-links">
+              <a href="about.html">About</a>
+              <a href="principals.html">Principals</a>
+              <a href="products.html">Products</a>
+              <a href="contact.html">Contact</a>
+            </div>
+          </div>
+          <div>
+            <h3>Corporate Office</h3>
+            <div class="footer-contact-info">
+              <p>66B Vivekananda Hill, Kotahena,<br>Colombo 13, Sri Lanka</p>
+              <p><strong>Phone:</strong> +94 117 99 11 05<br><strong>Email:</strong> info@neptunelogistics.lk</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>&copy; 2026 Neptune Trading Company (Pvt) Ltd. All rights reserved.</span>
+          <span><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-use.html">Terms of Use</a></span>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

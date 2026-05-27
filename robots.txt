@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://neptunetrading.vercel.app/sitemap.xml
