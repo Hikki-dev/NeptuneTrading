@@ -6,6 +6,10 @@
 (function() {
   'use strict';
 
+  function getWeb3FormsAccessKey() {
+    return window.NEPTUNE_WEB3FORMS_ACCESS_KEY || '';
+  }
+
   /* ─── 1. NAVBAR SCROLL BEHAVIOUR ─────────────────────── */
   window.addEventListener('scroll', () => {
     document.documentElement.style.setProperty('--scroll-y', window.scrollY);
@@ -560,7 +564,7 @@
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify({
-          access_key: 'db47306b-6779-4d87-9279-d805de43c70c',
+          access_key: getWeb3FormsAccessKey(),
           subject: `Neptune Trading Enquiry from ${name}, ${company}`,
           from_name: name,
           name,
@@ -859,7 +863,7 @@
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
           body: JSON.stringify({
-            access_key: 'db47306b-6779-4d87-9279-d805de43c70c',
+            access_key: getWeb3FormsAccessKey(),
             subject: `Neptune Newsletter Subscription: ${email}`,
             email: email,
             form_name: 'Newsletter Subscription'

@@ -1,8 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const navbar = document.getElementById("site-navbar");
-  const hamburger = document.querySelector(".nav-hamburger");
-  const mobileMenu = document.getElementById("nav-mobile-menu");
-  const progressBar = document.querySelector(".nav-scroll-progress");
+  document.querySelectorAll("#year, [data-current-year]").forEach((el) => {
+    el.textContent = String(new Date().getFullYear());
+  });
+
+  const navbar = document.getElementById("site-navbar") || document.querySelector("[data-header]");
+  const hamburger = document.querySelector(".nav-hamburger") || document.querySelector("[data-nav-toggle]");
+  const mobileMenu = document.getElementById("nav-mobile-menu") || document.querySelector("[data-nav-links-mobile]");
+  const progressBar = document.querySelector(".nav-scroll-progress") || document.querySelector("[data-nav-progress]");
 
   if (hamburger && mobileMenu) {
     hamburger.addEventListener("click", () => {
@@ -37,6 +41,20 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", updateChrome, { passive: true });
   updateChrome();
 
+  const revealEls = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
+  if (revealEls.length && !window.__neptuneRevealInitialized) {
+    window.__neptuneRevealInitialized = true;
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -60px 0px" });
+
+    revealEls.forEach((el) => revealObserver.observe(el));
+  }
+
   const brandSelect = document.getElementById("principal-select");
   if (brandSelect) {
     const brandParam = new URLSearchParams(window.location.search).get("brand");
@@ -51,15 +69,60 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   document.querySelectorAll("[data-contact-form]").forEach((form) => {
-    form.addEventListener("submit", (event) => {
-      const accessKey = form.querySelector("input[name='access_key']");
-      if (accessKey && accessKey.value === "WEB3FORMS_ACCESS_KEY") {
-        event.preventDefault();
-        const note = form.querySelector("[data-form-note]");
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const note = form.querySelector("[data-form-note]");
+      const button = form.querySelector("button[type='submit']");
+      const originalButtonText = button ? button.innerHTML : "";
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      if (note) {
+        note.textContent = "Submitting your enquiry...";
+        note.style.color = "#475569";
+        note.style.fontWeight = "600";
+      }
+
+      if (button) {
+        button.disabled = true;
+        button.innerHTML = "<span>Submitting...</span>";
+      }
+
+      try {
+        const response = await fetch(form.action || "/api/contact", {
+          method: "POST",
+          body: JSON.stringify(Object.fromEntries(new FormData(form).entries())),
+          headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          }
+        });
+        const data = await response.json().catch(() => ({}));
+
+        if (!response.ok || data.success === false) {
+          throw new Error(data.message || "Submission failed");
+        }
+
+        form.reset();
         if (note) {
-          note.textContent = "The enquiry form is ready for Web3Forms. Add the live access key before enabling submissions.";
-          note.style.color = "#2563eb";
+          note.textContent = "Thank you. Your enquiry has been received by Neptune Trading Company.";
+          note.style.color = "#047857";
           note.style.fontWeight = "700";
+        }
+      } catch (error) {
+        if (note) {
+          note.textContent = "The form could not be submitted. Please email info@neptunelogistics.lk directly.";
+          note.style.color = "#dc2626";
+          note.style.fontWeight = "700";
+        }
+      } finally {
+        if (button) {
+          button.disabled = false;
+          button.innerHTML = originalButtonText;
         }
       }
     });

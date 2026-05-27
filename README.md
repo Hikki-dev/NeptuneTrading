@@ -6,8 +6,9 @@ Static corporate website for Neptune Trading Company (Pvt) Ltd. The site is buil
 
 - `index.html` is the homepage.
 - `about.html` presents Neptune Trading Company as a separate trading entity.
-- `principals.html` lists authorized principal brands.
-- `products.html` supports brand-level product enquiries.
+- `partners.html` lists authorized principal brands.
+- `capabilities.html` explains the trading capability model.
+- `principals.html` and `products.html` are retained as legacy static pages.
 - `contact.html` contains the enquiry form and contact details.
 - `privacy-policy.html`, `terms-of-use.html`, `404.html`, `robots.txt`, and `sitemap.xml` support legal and SEO requirements.
 
@@ -27,7 +28,11 @@ http://localhost:8080
 
 ## Forms
 
-The contact form is prepared for Web3Forms. Replace `WEB3FORMS_ACCESS_KEY` in `contact.html` with the live access key before enabling form submissions.
+The contact form posts to `/api/contact`, which forwards submissions to Web3Forms. Set this Vercel environment variable before enabling production submissions:
+
+```text
+WEB3FORMS_ACCESS_KEY=your_web3forms_key
+```
 
 ## SEO
 
@@ -41,6 +46,6 @@ Update all canonical URLs, Open Graph URLs, `robots.txt`, and `sitemap.xml` when
 
 ## Deployment
 
-Create the GitHub repository as `Hikki-dev/NeptuneTrading`, push this project, and connect the repository to Vercel as a static site. No build command is required.
+Create the GitHub repository as `Hikki-dev/NeptuneTrading`, push this project, and connect the repository to Vercel. No build command is required.
 # NeptuneTrading
 # NeptuneTrading
