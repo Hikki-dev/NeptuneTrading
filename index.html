@@ -3,23 +3,28 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Neptune Trading Company (Pvt) Ltd | Appointed Principal Representatives in Sri Lanka</title>
-    <meta name="description" content="Neptune Trading Company (Pvt) Ltd is the authorized agent in Sri Lanka for Hummer, Metal Alloy Corporation, and Aliaxis. We coordinate commercial trading and logistics.">
+    <title>Neptune Trading Company | Import Export Partnerships Sri Lanka</title>
+    <meta name="description" content="Neptune Trading Company is the official import, export, and trading arm of the Neptune network, representing Hummer, Metal Alloys Corporation, and Aliaxis in Sri Lanka.">
     <link rel="canonical" href="https://neptunetrading.vercel.app/">
-    <meta property="og:title" content="Neptune Trading Company (Pvt) Ltd">
-    <meta property="og:description" content="Authorized agents in Sri Lanka for Hummer, Metal Alloy Corporation, and Aliaxis.">
+    <meta property="og:title" content="Neptune Trading Company">
+    <meta property="og:description" content="Connecting global manufacturers with local industries through authorized trading partnerships.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://neptunetrading.vercel.app/">
-    <meta property="og:image" content="https://neptunetrading.vercel.app/assets/trading_hero.png">
+    <meta property="og:image" content="https://neptunetrading.vercel.app/assets/logos/neptune-trading-logo-display.png">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/services-explorer.css">
+    <link rel="stylesheet" href="css/trading-home.css">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Neptune Trading Company (Pvt) Ltd.",
         "url": "https://neptunetrading.vercel.app/",
-        "logo": "https://neptunetrading.vercel.app/assets/logos/neptune-trading-logo.png",
+        "logo": "https://neptunetrading.vercel.app/assets/logos/neptune-trading-logo-display.png",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "66B Vivekananda Hill, Kotahena",
@@ -30,248 +35,350 @@
           "@type": "ContactPoint",
           "telephone": "+94-117-991-105",
           "email": "info@neptunelogistics.lk",
-          "contactType": "Sales and corporate enquiries",
+          "contactType": "Trading enquiries",
           "areaServed": "LK"
         },
         "knowsAbout": [
-          "Authorized agency representation in Sri Lanka",
-          "Industrial trading",
-          "Commercial product supply"
+          "Strategic imports",
+          "Export distribution",
+          "Exclusive brand representation",
+          "Authorized agency representation in Sri Lanka"
         ]
       }
     </script>
   </head>
   <body>
-    <!-- Glassmorphic Sticky Header -->
-    <header class="site-header" data-header>
+    <header class="navbar at-top" role="banner" id="site-navbar">
       <div class="container">
-        <nav class="nav" aria-label="Primary navigation">
-          <a class="brand" href="index.html" aria-label="Neptune Trading Company home">
-            <img src="assets/logos/neptune-trading-logo.png" alt="Neptune Trading Company logo">
+        <nav class="nav-inner" aria-label="Main navigation">
+          <a href="#home" class="nav-logo" aria-label="Neptune Trading Company home">
+            <img src="assets/logos/neptune-trading-logo-display.png" alt="Neptune Trading Company Logo" class="nav-logo-img">
           </a>
-          <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" data-nav-toggle>
+          <ul class="nav-links" role="list">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#partners" class="nav-link">Partners</a></li>
+            <li><a href="#capabilities" class="nav-link">Capabilities</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li><a href="#contact" class="nav-link nav-cta">Enquire</a></li>
+          </ul>
+          <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-mobile-menu">
             <span></span><span></span><span></span>
           </button>
-          <div class="nav-links" data-nav-links>
-            <a class="active" href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="principals.html">Principals</a>
-            <a href="products.html">Products</a>
-            <a href="contact.html">Contact</a>
-            <a class="btn btn-primary" href="contact.html">Enquire</a>
-          </div>
         </nav>
       </div>
-      <div class="nav-scroll-progress" aria-hidden="true" data-nav-progress></div>
+      <div class="nav-scroll-progress" aria-hidden="true"></div>
     </header>
 
-    <!-- Mobile Drawer -->
-    <div class="nav-links-mobile" data-nav-links-mobile>
-      <a class="active" href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="principals.html">Principals</a>
-      <a href="products.html">Products</a>
-      <a href="contact.html">Contact</a>
-      <a class="btn btn-primary" href="contact.html">Enquire</a>
+    <div class="nav-mobile" id="nav-mobile-menu" role="dialog" aria-label="Mobile navigation">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#partners" class="nav-link">Partners</a>
+      <a href="#capabilities" class="nav-link">Capabilities</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <a href="#contact" class="nav-link nav-cta">Enquire</a>
     </div>
 
-    <main>
-      <!-- Hero Section -->
-      <section class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-grid"></div>
-        <div class="container hero-inner">
-          <div class="hero-left">
-            <span class="eyebrow">Appointed Local Agent</span>
-            <h1>Authorized Representation for <span class="gradient-text">Global Principals</span></h1>
-            <p class="hero-copy">Neptune Trading Company (Pvt) Ltd. acts as a dedicated, separate trading representative for appointed international manufacturing brands in Sri Lanka—facilitating formal commercial coordination, reliable technical inquiry routing, and disciplined market support.</p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="contact.html">Submit an Enquiry</a>
-              <a class="btn btn-secondary" href="principals.html">Explore Principals</a>
-            </div>
-          </div>
-          <div class="hero-right">
-            <div class="hero-visual-frame">
-              <img src="assets/trading_hero.png" alt="High-tech corporate global trading routes and connection lines vector illustration">
-              <!-- Floating Glass Cards -->
-              <div class="hero-card hero-card-1">
-                <div class="hero-card-label">Appointed Agent</div>
-                <div class="hero-card-value">Hummer • Metal Alloy • Aliaxis</div>
-                <div class="hero-card-sub">Local Market Trading Support</div>
+    <main id="home">
+      <section class="hero trading-hero" aria-labelledby="hero-title">
+        <div class="hero-bg" aria-hidden="true">
+          <div class="hero-bg-gradient"></div>
+          <div class="hero-grid"></div>
+        </div>
+        <div class="hero-content">
+          <div class="container">
+            <div class="hero-inner">
+              <div class="hero-left reveal-left">
+                <span class="hero-badge">Authorized Trading Arm</span>
+                <h1 class="hero-headline" id="hero-title">Connecting <span class="accent">Global Markets</span></h1>
+                <p class="hero-subtext">The official import/export and trading arm of the Neptune network, bridging international manufacturers with local industries.</p>
+                <div class="hero-actions">
+                  <a href="#partners" class="btn-primary"><span>View Partnerships</span></a>
+                  <a href="#contact" class="btn-outline">Start an Enquiry</a>
+                </div>
               </div>
-              <div class="hero-card hero-card-2">
-                <div class="hero-card-label">Operations</div>
-                <div class="hero-card-value">Colombo, Sri Lanka</div>
-                <div class="hero-card-sub">Direct Procurement Routing</div>
+
+              <div class="hero-right reveal-right">
+                <div class="hero-visual">
+                  <div class="globe-container">
+                    <div class="globe-ring globe-ring-1"></div>
+                    <div class="globe-ring globe-ring-2"></div>
+                    <div class="globe-ring globe-ring-3"></div>
+                    <svg class="globe-svg" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="200" cy="200" r="180" stroke="rgba(96,165,250,0.15)" stroke-width="1" />
+                      <circle cx="200" cy="200" r="180" fill="url(#gF)" />
+                      <ellipse cx="200" cy="200" rx="180" ry="60" stroke="rgba(96,165,250,0.12)" stroke-width="0.8"
+                        fill="none" />
+                      <ellipse cx="200" cy="200" rx="180" ry="120" stroke="rgba(96,165,250,0.08)" stroke-width="0.8"
+                        fill="none" />
+                      <path d="M200 20 Q260 200 200 380" stroke="rgba(96,165,250,0.1)" stroke-width="0.8" fill="none" />
+                      <path d="M200 20 Q140 200 200 380" stroke="rgba(96,165,250,0.1)" stroke-width="0.8" fill="none" />
+                      <path
+                        d="M160 160 L175 148 L195 150 L210 142 L225 148 L230 160 L225 175 L210 180 L195 178 L178 180 L160 172 Z"
+                        fill="rgba(96,165,250,0.2)" stroke="rgba(96,165,250,0.3)" stroke-width="0.8" />
+                      <path d="M235 175 L248 168 L258 172 L260 182 L252 190 L240 188 Z" fill="rgba(96,165,250,0.15)"
+                        stroke="rgba(96,165,250,0.25)" stroke-width="0.8" />
+                      <ellipse cx="155" cy="150" rx="60" ry="40" fill="url(#gG)" />
+                      <defs>
+                        <radialGradient id="gF" cx="35%" cy="35%">
+                          <stop offset="0%" stop-color="rgba(37,99,235,0.15)" />
+                          <stop offset="100%" stop-color="rgba(15,23,42,0.9)" />
+                        </radialGradient>
+                        <radialGradient id="gG" cx="50%" cy="50%">
+                          <stop offset="0%" stop-color="rgba(255,255,255,0.08)" />
+                          <stop offset="100%" stop-color="transparent" />
+                        </radialGradient>
+                      </defs>
+                    </svg>
+                    <div class="route-dot route-dot-1"></div>
+                    <div class="route-dot route-dot-2"></div>
+                    <div class="route-dot route-dot-3"></div>
+                    <div class="route-dot route-dot-4"></div>
+                    <div class="route-dot route-dot-5"></div>
+                  </div>
+
+                  <div class="hero-card hero-card-1">
+                    <div class="hero-card-label">Global Principal</div>
+                    <div class="hero-card-value">Direct Access</div>
+                    <div class="hero-card-sub">Authorized supply routes</div>
+                  </div>
+
+                  <div class="hero-card hero-card-2">
+                    <div class="hc2-header">
+                      <div class="hc2-header-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                          <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                          <line x1="8" y1="21" x2="16" y2="21" />
+                          <line x1="12" y1="17" x2="12" y2="21" />
+                        </svg>
+                      </div>
+                      <div>
+                        <div class="hc2-header-title">Principal Desk</div>
+                        <div class="hc2-header-sub">Enquiry Routing</div>
+                      </div>
+                    </div>
+                    <div class="hc2-rows">
+                      <div class="hc2-row">
+                        <span class="hc2-dot hc2-green"></span>
+                        <span class="hc2-row-label">Direct Principal Quote</span>
+                        <span class="hc2-tag hc2-tag-green">AUTHORIZED</span>
+                      </div>
+                      <div class="hc2-row">
+                        <span class="hc2-dot hc2-blue"></span>
+                        <span class="hc2-row-label">Engineering Specs</span>
+                        <span class="hc2-tag hc2-tag-blue">ROUTED</span>
+                      </div>
+                      <div class="hc2-row">
+                        <span class="hc2-dot hc2-amber"></span>
+                        <span class="hc2-row-label">Catalog Sourcing</span>
+                        <span class="hc2-tag hc2-tag-amber">VERIFIED</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Brand Logo Strip (Grayscale to Color on Hover) -->
-      <section class="brand-strip-section">
-        <div class="container brand-strip-inner">
-          <div class="brand-strip-title">Authorized Agent in Sri Lanka for:</div>
-          <div class="partner-logo-grid">
-            <a class="partner-logo-card" href="principals.html#hummer" aria-label="Learn about Hummer agency representation">
-              <img src="assets/logos/hummer-logo.png" alt="Hummer logo">
-            </a>
-            <a class="partner-logo-card" href="principals.html#metalco" aria-label="Learn about Metal Alloy Corporation agency representation">
-              <img src="assets/logos/metal-alloy-corporation-logo.png" alt="Metal Alloy Corporation logo">
-            </a>
-            <a class="partner-logo-card" href="principals.html#aliaxis" aria-label="Learn about Aliaxis agency representation">
-              <img src="assets/logos/aliaxis-logo.png" alt="Aliaxis logo">
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Capabilities Overview -->
-      <section class="section">
+      <section class="brand-strip-section" aria-label="Partner Brands">
         <div class="container">
-          <div class="section-head center">
-            <span class="eyebrow">Core Purpose</span>
-            <h2>Structured Local Support for Premium Brands</h2>
-            <div class="divider-sm divider-center"></div>
-            <p>We provide a reliable gateway for Sri Lankan businesses, contractors, and procurement departments to consult with and purchase from our selected global principals with total compliance.</p>
+          <div class="brand-strip-inner">
+            <h2 class="brand-strip-title">Authorized Representation Portfolio</h2>
+            <div class="partner-logo-grid">
+              <a href="#partners" class="partner-logo-card">
+                <img src="assets/logos/hummer-logo.png" alt="Hummer Logo">
+              </a>
+              <a href="#partners" class="partner-logo-card">
+                <img src="assets/logos/metal-alloy-corporation-logo-display.png" alt="Metal Alloy Corporation Logo">
+              </a>
+              <a href="#partners" class="partner-logo-card">
+                <img src="assets/logos/aliaxis-logo-display.png" alt="Aliaxis Logo">
+              </a>
+            </div>
           </div>
+        </div>
+      </section>
+
+      <section class="partners-section" id="partners" aria-labelledby="partners-title">
+        <div class="container">
+          <div class="section-intro reveal">
+            <span class="tag-label">Authorized Partnerships</span>
+            <h2 class="section-heading" id="partners-title">Global principal brands, represented with Neptune discipline.</h2>
+            <p class="section-sub">Neptune Trading Company provides a formal Sri Lankan contact point for appointed international manufacturers, helping local customers begin enquiries with the correct principal channel.</p>
+          </div>
+
           <div class="grid grid-3">
-            <article class="card">
-              <div class="card-badge">Representation</div>
-              <h3>Authorized Local Representative</h3>
-              <p>We provide official local company backing for our selected principals, maintaining clear commercial representation and compliance in Sri Lanka.</p>
+            <article class="card logo-card reveal">
+              <div>
+                <div class="logo-frame">
+                  <img src="assets/logos/hummer-logo.png" alt="Hummer logo">
+                </div>
+                <div class="logo-card-content">
+                  <span class="card-badge">Authorized Agency</span>
+                  <h3>Hummer</h3>
+                  <p>Principal representation for industrial machinery enquiries, product coordination, and commercial support in Sri Lanka.</p>
+                </div>
+              </div>
             </article>
-            <article class="card">
-              <div class="card-badge">Procurement</div>
-              <h3>Commercial Coordination</h3>
-              <p>Facilitating project bidding, industrial supply quotes, technical document routing, and commercial logistics processing for our principal lines.</p>
+
+            <article class="card logo-card reveal delay-1">
+              <div>
+                <div class="logo-frame">
+                  <img src="assets/logos/metal-alloy-corporation-logo-display.png" alt="Metal Alloy Corporation logo">
+                </div>
+                <div class="logo-card-content">
+                  <span class="card-badge">Authorized Agency</span>
+                  <h3>Metal Alloys Corporation</h3>
+                  <p>Commercial coordination for alloy, steel, and industrial material requirements routed through an appointed local channel.</p>
+                </div>
+              </div>
             </article>
-            <article class="card">
-              <div class="card-badge">Operations</div>
-              <h3>Continuous Market Support</h3>
-              <p>Providing responsive, structured communication channels for engineering teams and purchasers looking for authorized technical parts and resources.</p>
+
+            <article class="card logo-card reveal delay-2">
+              <div>
+                <div class="logo-frame">
+                  <img src="assets/logos/aliaxis-logo-display.png" alt="Aliaxis logo">
+                </div>
+                <div class="logo-card-content">
+                  <span class="card-badge">Authorized Agency</span>
+                  <h3>Aliaxis</h3>
+                  <p>Technical enquiry routing and local commercial communication for fluid management, piping, and related product lines.</p>
+                </div>
+              </div>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- Principals Section with Custom Photography -->
-      <section class="section section-alt">
+      <section class="capabilities-section" id="capabilities" aria-labelledby="capabilities-title">
         <div class="container">
-          <div class="section-head center">
-            <span class="eyebrow">Represented Principals</span>
-            <h2>Authorized Agent Relationships</h2>
-            <div class="divider-sm divider-center"></div>
-            <p>Each appointed brand is backed by verified commercial and technical agreements. Click through to explore their product domains or start a formal commercial inquiry.</p>
+          <div class="section-intro reveal">
+            <span class="tag-label">Core Capabilities</span>
+            <h2 class="section-heading" id="capabilities-title">Built for principal-led trade flows.</h2>
+            <p class="section-sub">Our role is to create a clear, professional route between represented manufacturers and local industries that require authorized products and accountable follow-up.</p>
           </div>
-          <div class="grid grid-3">
-            <article class="card logo-card" id="hummer">
-              <div class="card-img-frame">
-                <img src="assets/hummer_industrial.png" alt="Hummer heavy machinery and mechanical engineering parts stack">
+
+          <div class="services-explorer-grid capability-grid">
+            <article class="services-explorer-card capability-card reveal">
+              <div class="services-explorer-card-icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 7h18"></path>
+                  <path d="M6 7v12h12V7"></path>
+                  <path d="M9 7V5a3 3 0 0 1 6 0v2"></path>
+                  <path d="M8 13h8"></path>
+                </svg>
               </div>
-              <div class="logo-card-content">
-                <span class="card-badge">Heavy Duty Machinery</span>
-                <h3>Hummer</h3>
-                <p>Appointed local representative supporting product routing, technical support, and commercial supply for Hummer industrial machinery in Sri Lanka.</p>
+              <div class="services-explorer-card-info">
+                <h3 class="services-explorer-card-title">Strategic Imports</h3>
+                <p class="services-explorer-card-text">Coordinated import support for represented brands, product documentation, and customer requirements.</p>
               </div>
-              <a class="btn btn-secondary" href="contact.html?brand=hummer">Submit Enquiry</a>
             </article>
-            
-            <article class="card logo-card" id="metalco">
-              <div class="card-img-frame">
-                <img src="assets/metal_alloy.png" alt="Metal Alloy Corporation precise alloys and materials storage">
+
+            <article class="services-explorer-card capability-card reveal delay-1">
+              <div class="services-explorer-card-icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 17V7a2 2 0 0 1 2-2h9l5 5v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"></path>
+                  <path d="M14 5v5h5"></path>
+                  <path d="m9 14 2 2 4-4"></path>
+                </svg>
               </div>
-              <div class="logo-card-content">
-                <span class="card-badge">Industrial Materials</span>
-                <h3>Metal Alloy Corporation</h3>
-                <p>Commercial pipeline routing and local supply coordination for premium alloys, steel sheets, and heavy industrial metals in Sri Lanka.</p>
+              <div class="services-explorer-card-info">
+                <h3 class="services-explorer-card-title">Export Distribution</h3>
+                <p class="services-explorer-card-text">Structured trading coordination for distribution opportunities, market communication, and formal follow-up.</p>
               </div>
-              <a class="btn btn-secondary" href="contact.html?brand=metalco">Submit Enquiry</a>
             </article>
-            
-            <article class="card logo-card" id="aliaxis">
-              <div class="card-img-frame">
-                <img src="assets/aliaxis_piping.png" alt="Aliaxis modern industrial fluid management and polymer pipes system">
+
+            <article class="services-explorer-card capability-card reveal delay-2">
+              <div class="services-explorer-card-icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3 4 7v6c0 5 3.4 7.7 8 8 4.6-.3 8-3 8-8V7l-8-4Z"></path>
+                  <path d="m9 12 2 2 4-4"></path>
+                </svg>
               </div>
-              <div class="logo-card-content">
-                <span class="card-badge">Fluid Management</span>
-                <h3>Aliaxis</h3>
-                <p>Authorized agent supporting technical product inquiries, catalogs distribution, and supply chain logistics for Aliaxis fluids handling piping networks.</p>
+              <div class="services-explorer-card-info">
+                <h3 class="services-explorer-card-title">Exclusive Brand Representation</h3>
+                <p class="services-explorer-card-text">Authorized local representation for appointed principals, preserving brand standards and commercial clarity.</p>
               </div>
-              <a class="btn btn-secondary" href="contact.html?brand=aliaxis">Submit Enquiry</a>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- Trading Capabilities and Split Screen -->
-      <section class="section">
+      <section class="contact-band pre-footer-cta" id="contact" aria-labelledby="contact-title">
         <div class="container">
-          <div class="grid grid-2" style="align-items: center;">
-            <div class="section-head" style="margin-bottom: 0;">
-              <span class="eyebrow">Trading Operations</span>
-              <h2>Professional Channels for Principal-Led Supply</h2>
-              <div class="divider-sm"></div>
-              <p>We provide a reliable, single point of contact for local engineering, procurement, and industrial buyers to access catalog specifications and receive direct quotations from global principals.</p>
+          <div class="pre-footer-inner">
+            <div class="pre-footer-copy reveal-left">
+              <span class="tag-label">Contact</span>
+              <h2 class="cta-title" id="contact-title">Begin a formal trading enquiry.</h2>
+              <p class="cta-desc">Share the principal brand, product requirement, quantity, application, and delivery location so Neptune Trading Company can route the enquiry appropriately.</p>
             </div>
-            <div class="card">
-              <ul class="capability-list">
-                <li>Direct technical specifications & catalog routing</li>
-                <li>Authorized agency verification & local coordination</li>
-                <li>Commercial quotation management and logistics routing</li>
-                <li>Order tracking, import compliance, and local handling support</li>
-                <li>Continuous expansion support for new principal portfolios</li>
-              </ul>
+            <div class="contact-card reveal-right">
+              <a href="tel:+94117991105" class="contact-line">
+                <span>Phone</span>
+                <strong>0117 99 11 05</strong>
+              </a>
+              <a href="mailto:info@neptunelogistics.lk" class="contact-line">
+                <span>Email</span>
+                <strong>info@neptunelogistics.lk</strong>
+              </a>
+              <div class="contact-line">
+                <span>Office</span>
+                <strong>66B Vivekananda Hill, Kotahena, Colombo 13</strong>
+              </div>
+              <a href="mailto:info@neptunelogistics.lk?subject=Neptune%20Trading%20Company%20Enquiry" class="btn-primary"><span>Send Enquiry</span></a>
             </div>
           </div>
-        </div>
-      </section>
-
-      <!-- CTA Band -->
-      <section class="section cta-band">
-        <div class="cta-band-grid"></div>
-        <div class="container">
-          <div>
-            <h2>Contact Neptune Trading Company</h2>
-            <p>For Hummer, Metal Alloy Corporation, Aliaxis, or future principal brand enquiries in Sri Lanka, please contact our team with your company details and product specifications.</p>
-          </div>
-          <a class="btn btn-light" href="contact.html">Start an Enquiry</a>
         </div>
       </section>
     </main>
 
-    <!-- Site Footer -->
-    <footer class="site-footer">
+    <footer class="footer" role="contentinfo">
       <div class="container">
-        <div class="footer-grid">
-          <div>
-            <img class="footer-logo" src="assets/logos/neptune-trading-logo.png" alt="Neptune Trading Company logo">
-            <p>Neptune Trading Company (Pvt) Ltd. is a dedicated, separate trading entity representing selected international principals in Sri Lanka.</p>
+        <div class="footer-grid trading-footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <img src="assets/logos/neptune-trading-logo-display.png" alt="Neptune Trading Company Logo" class="footer-logo-img" loading="lazy" width="220" height="54">
+            </div>
+            <p class="footer-tagline">A dedicated trading company connecting international manufacturers with local industries.</p>
           </div>
           <div>
-            <h3>Company</h3>
-            <div class="footer-links">
-              <a href="about.html">About</a>
-              <a href="principals.html">Principals</a>
-              <a href="products.html">Products</a>
-              <a href="contact.html">Contact</a>
-            </div>
+            <div class="footer-col-title">Navigation</div>
+            <ul class="footer-links" role="list">
+              <li><a href="#home" class="footer-link">Home</a></li>
+              <li><a href="#partners" class="footer-link">Partners</a></li>
+              <li><a href="#capabilities" class="footer-link">Capabilities</a></li>
+              <li><a href="#contact" class="footer-link">Contact</a></li>
+            </ul>
           </div>
           <div>
-            <h3>Corporate Office</h3>
-            <div class="footer-contact-info">
-              <p>66B Vivekananda Hill, Kotahena,<br>Colombo 13, Sri Lanka</p>
-              <p><strong>Phone:</strong> +94 117 99 11 05<br><strong>Email:</strong> info@neptunelogistics.lk</p>
-            </div>
+            <div class="footer-col-title">Authorized Partners</div>
+            <ul class="footer-links" role="list">
+              <li><a href="#partners" class="footer-link">Hummer</a></li>
+              <li><a href="#partners" class="footer-link">Metal Alloys Corporation</a></li>
+              <li><a href="#partners" class="footer-link">Aliaxis</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-col-title">Contact</div>
+            <ul class="footer-links" role="list">
+              <li><a href="https://maps.app.goo.gl/YFt2YaJy2cF98gv99" target="_blank" rel="noopener" class="footer-link">66B Vivekananda Hill, Kotahena, Colombo 13</a></li>
+              <li><a href="tel:+94117991105" class="footer-link">0117 99 11 05</a></li>
+              <li><a href="mailto:info@neptunelogistics.lk" class="footer-link">info@neptunelogistics.lk</a></li>
+            </ul>
           </div>
         </div>
         <div class="footer-bottom">
-          <span>&copy; 2026 Neptune Trading Company (Pvt) Ltd. All rights reserved.</span>
-          <span><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-use.html">Terms of Use</a></span>
+          <div class="footer-copy">&copy; <span id="year">2026</span> Neptune Trading Company (Pvt) Ltd. All rights reserved.</div>
+          <div class="footer-bottom-links">
+            <a href="privacy-policy.html" class="footer-bottom-link">Privacy Policy</a>
+            <a href="terms-of-use.html" class="footer-bottom-link">Terms of Use</a>
+          </div>
         </div>
       </div>
     </footer>
+
+    <script src="js/animations.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
