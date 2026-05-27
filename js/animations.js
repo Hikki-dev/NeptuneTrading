@@ -561,7 +561,7 @@
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify({
           access_key: 'db47306b-6779-4d87-9279-d805de43c70c',
-          subject: `Neptune Logistics Enquiry from ${name}, ${company}`,
+          subject: `Neptune Trading Enquiry from ${name}, ${company}`,
           from_name: name,
           name,
           company,

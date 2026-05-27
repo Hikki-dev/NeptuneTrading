@@ -36,4 +36,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("scroll", updateChrome, { passive: true });
   updateChrome();
+
+  const brandSelect = document.getElementById("principal-select");
+  if (brandSelect) {
+    const brandParam = new URLSearchParams(window.location.search).get("brand");
+    if (brandParam) {
+      for (const option of brandSelect.options) {
+        if (option.value.toLowerCase() === brandParam.toLowerCase()) {
+          option.selected = true;
+          break;
+        }
+      }
+    }
+  }
+
+  document.querySelectorAll("[data-contact-form]").forEach((form) => {
+    form.addEventListener("submit", (event) => {
+      const accessKey = form.querySelector("input[name='access_key']");
+      if (accessKey && accessKey.value === "WEB3FORMS_ACCESS_KEY") {
+        event.preventDefault();
+        const note = form.querySelector("[data-form-note]");
+        if (note) {
+          note.textContent = "The enquiry form is ready for Web3Forms. Add the live access key before enabling submissions.";
+          note.style.color = "#2563eb";
+          note.style.fontWeight = "700";
+        }
+      }
+    });
+  });
 });
