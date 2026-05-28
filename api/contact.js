@@ -19,7 +19,7 @@ export default async function handler(request, response) {
       company: fields.company || "",
       email: fields.email || "",
       phone: fields.phone || "",
-      principal: fields.principal || "",
+      business_area: fields.business_area || fields.principal || "",
       message: fields.message || "",
       botcheck: fields.botcheck || ""
     };

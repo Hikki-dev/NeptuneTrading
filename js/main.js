@@ -55,12 +55,13 @@ document.addEventListener("DOMContentLoaded", () => {
     revealEls.forEach((el) => revealObserver.observe(el));
   }
 
-  const brandSelect = document.getElementById("principal-select");
-  if (brandSelect) {
-    const brandParam = new URLSearchParams(window.location.search).get("brand");
-    if (brandParam) {
-      for (const option of brandSelect.options) {
-        if (option.value.toLowerCase() === brandParam.toLowerCase()) {
+  const businessAreaSelect = document.getElementById("business-area-select");
+  if (businessAreaSelect) {
+    const params = new URLSearchParams(window.location.search);
+    const areaParam = params.get("area") || params.get("brand");
+    if (areaParam) {
+      for (const option of businessAreaSelect.options) {
+        if (option.value.toLowerCase() === areaParam.toLowerCase()) {
           option.selected = true;
           break;
         }

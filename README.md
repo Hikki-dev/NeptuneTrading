@@ -6,7 +6,7 @@ Static corporate website for Neptune Trading Company (Pvt) Ltd. The site is buil
 
 - `index.html` is the homepage.
 - `about.html` presents Neptune Trading Company as a separate trading entity.
-- `partners.html` lists authorized principal brands.
+- `partners.html` lists professional trade and export affiliations.
 - `capabilities.html` explains the trading capability model.
 - `principals.html` and `products.html` are retained as legacy static pages.
 - `contact.html` contains the enquiry form and contact details.
@@ -39,10 +39,10 @@ WEB3FORMS_ACCESS_KEY=your_web3forms_key
 The current canonical and sitemap URLs use:
 
 ```text
-https://neptunetrading.vercel.app/
+https://neptunetrading.lk/
 ```
 
-Update all canonical URLs, Open Graph URLs, `robots.txt`, and `sitemap.xml` when the final production domain is confirmed.
+Canonical URLs, Open Graph URLs, `robots.txt`, and `sitemap.xml` are configured for the production domain.
 
 ## Deployment
 
