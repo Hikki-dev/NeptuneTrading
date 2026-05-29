@@ -73,14 +73,50 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
 
+      // Clear previous error messages
+      form.querySelectorAll(".form-field-error").forEach((el) => el.remove());
+      form.querySelectorAll(".form-field").forEach((el) => el.classList.remove("has-error"));
+
+      let hasErrors = false;
+
+      // Validate required fields
+      const requiredInputs = form.querySelectorAll("[required]");
+      requiredInputs.forEach((input) => {
+        const value = input.value.trim();
+        const fieldName = input.getAttribute("name");
+        let errorMessage = "";
+
+        if (!value) {
+          if (fieldName === "name") errorMessage = "Please enter your name.";
+          else if (fieldName === "company") errorMessage = "Please enter your company name.";
+          else if (fieldName === "email") errorMessage = "Please enter your email address.";
+          else if (fieldName === "business_area") errorMessage = "Please select a business area.";
+          else if (fieldName === "message") errorMessage = "Please enter your message.";
+          else errorMessage = "This field is required.";
+        } else if (input.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+          errorMessage = "Please enter a valid email address.";
+        }
+
+        if (errorMessage) {
+          hasErrors = true;
+          const parentField = input.closest(".form-field");
+          if (parentField) {
+            parentField.classList.add("has-error");
+            const errorSpan = document.createElement("span");
+            errorSpan.className = "form-field-error";
+            errorSpan.textContent = errorMessage;
+            parentField.appendChild(errorSpan);
+          }
+        }
+      });
+
+      if (hasErrors) {
+        return;
+      }
+
       const note = form.querySelector("[data-form-note]");
       const button = form.querySelector("button[type='submit']");
       const originalButtonText = button ? button.innerHTML : "";
-
-      if (!form.checkValidity()) {
-        form.reportValidity();
-        return;
-      }
 
       if (note) {
         note.textContent = "Submitting your enquiry...";
@@ -108,20 +144,25 @@ document.addEventListener("DOMContentLoaded", () => {
           throw new Error(data.message || "Submission failed");
         }
 
+        // Successful submission: transition the form into a gorgeous success card
         form.reset();
-        if (note) {
-          note.textContent = "Thank you. Your enquiry has been received by Neptune Trading Company.";
-          note.style.color = "#047857";
-          note.style.fontWeight = "700";
-        }
+        form.innerHTML = `
+          <div class="enquiry-success-card reveal" style="text-align: center; padding: 48px 24px; display: flex; flex-direction: column; align-items: center; gap: 24px; background: #ffffff; border-radius: 16px; border: 1px solid rgba(4, 120, 87, 0.15); box-shadow: 0 20px 44px rgba(4, 120, 87, 0.05); margin-top: 10px;">
+            <div class="success-icon-wrap" style="width: 72px; height: 72px; border-radius: 50%; background: #ecfdf5; display: grid; place-items: center; color: #059669; border: 1px solid rgba(5, 150, 105, 0.15);">
+              <svg viewBox="0 0 24 24" width="36" height="36" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" style="display: block;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
+            <h3 style="color: #065f46; font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; margin: 0;">Enquiry Submitted</h3>
+            <p style="color: #047857; font-size: 1.02rem; line-height: 1.6; max-width: 420px; margin: 0; font-family: var(--font-body); font-weight: 500;">Thank you. Your enquiry has been received by Neptune Trading Company. Our trading desk will review your details and respond shortly.</p>
+          </div>
+        `;
       } catch (error) {
         if (note) {
-          note.textContent = "The form could not be submitted. Please email info@neptunelogistics.lk directly.";
+          note.textContent = "The form could not be submitted. Please email info@neptunetrading.lk directly.";
           note.style.color = "#dc2626";
           note.style.fontWeight = "700";
         }
       } finally {
-        if (button) {
+        if (button && form.contains(button)) {
           button.disabled = false;
           button.innerHTML = originalButtonText;
         }
