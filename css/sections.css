@@ -712,6 +712,33 @@
 }
 .footer-link:hover::before { background: var(--blue-accent); }
 
+/* Shared Footer Contact Styling */
+.footer-contact-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.footer-contact-label {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.05em;
+  padding-left: 10px;
+}
+.footer-link.address-link {
+  align-items: flex-start;
+  line-height: 1.5;
+}
+.footer-link.address-link::before {
+  margin-top: 6px;
+}
+.footer-contact-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.06);
+  margin: 6px 0;
+}
+
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.06);
   padding: 20px 0;
