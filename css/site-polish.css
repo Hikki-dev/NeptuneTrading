@@ -1213,3 +1213,274 @@ body.home-premium .navbar.at-top .nav-link.active {
   pointer-events: none !important;
   clip-path: inset(50%) !important;
 }
+
+/* ==========================================================================
+   ABOUT PAGE TIMELINE & LEADERSHIP CONTINUITY
+   ========================================================================== */
+
+.about-timeline-container {
+  padding-top: 40px;
+  position: relative;
+}
+
+.timeline-track {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.timeline-track::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: rgba(37, 99, 235, 0.14);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+  text-align: left;
+}
+
+/* Dots on the timeline track */
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  top: 36px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--blue-mid);
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.16);
+  z-index: 2;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.timeline-item:nth-child(odd)::after {
+  right: -7px;
+}
+
+.timeline-item:nth-child(even)::after {
+  left: -7px;
+}
+
+.timeline-item:hover::after {
+  transform: scale(1.2);
+  background: var(--blue-accent);
+}
+
+.timeline-year {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--blue-mid);
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  padding: 4px 12px;
+  border-radius: 100px;
+  margin-bottom: 12px;
+}
+
+.timeline-content-card {
+  background: #ffffff;
+  border: 1px solid rgba(37, 99, 235, 0.08);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(9, 19, 44, 0.03);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.timeline-content-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(37, 99, 235, 0.2);
+  box-shadow: 0 20px 40px rgba(9, 19, 44, 0.06);
+}
+
+.timeline-content-card.highlight {
+  border: 1.5px solid rgba(37, 99, 235, 0.22);
+  background: linear-gradient(180deg, #ffffff, #f8fafc);
+  box-shadow: 0 12px 36px rgba(37, 99, 235, 0.06);
+}
+
+.timeline-content-card.highlight:hover {
+  border-color: var(--blue-mid);
+}
+
+.timeline-content-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--blue-deep);
+  margin-bottom: 8px;
+}
+
+.timeline-content-card p {
+  font-size: 0.88rem;
+  color: var(--slate);
+  line-height: 1.6;
+}
+
+/* Leadership Continuity Section Styling */
+.leadership-continuity-section {
+  padding: clamp(60px, 8vw, 100px) 0;
+  background: var(--blue-bg);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.leadership-continuity-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(37, 99, 235, 0.03) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.leadership-continuity-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: clamp(32px, 5vw, 64px);
+  box-shadow: 0 20px 50px rgba(14, 38, 96, 0.03);
+  position: relative;
+}
+
+.leadership-continuity-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--blue-deep), var(--blue-mid));
+  border-radius: 24px 24px 0 0;
+}
+
+.leadership-continuity-content {
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.leadership-continuity-content h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 800;
+  color: var(--blue-deep);
+  margin-top: 18px;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.leadership-continuity-content p {
+  font-size: 1.05rem;
+  color: var(--slate);
+  line-height: 1.7;
+  margin-bottom: 36px;
+}
+
+.continuity-ecosystem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.ecosystem-node {
+  background: #f8fafc;
+  border: 1px solid rgba(37, 99, 235, 0.14);
+  padding: 16px 24px;
+  border-radius: 12px;
+  min-width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(14, 38, 96, 0.02);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.ecosystem-node:hover {
+  transform: translateY(-2px);
+  border-color: var(--blue-mid);
+}
+
+.ecosystem-node.bg-accent {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.04), rgba(37, 99, 235, 0.08));
+  border-color: rgba(37, 99, 235, 0.3);
+}
+
+.ecosystem-node strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--blue-deep);
+  margin-bottom: 4px;
+}
+
+.ecosystem-node span {
+  display: block;
+  font-size: 0.76rem;
+  color: var(--slate);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.ecosystem-arrow {
+  color: var(--blue-accent);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Timeline & Continuity Mobile Responsive */
+@media (max-width: 768px) {
+  .timeline-track::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 0;
+    text-align: left !important;
+  }
+
+  .timeline-item:nth-child(even) {
+    left: 0;
+  }
+
+  .timeline-item::after {
+    left: 13px !important;
+    right: auto !important;
+  }
+
+  .ecosystem-arrow {
+    transform: rotate(90deg);
+    margin: 8px 0;
+  }
+
+  .continuity-ecosystem {
+    flex-direction: column;
+  }
+}
