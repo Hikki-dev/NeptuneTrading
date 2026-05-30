@@ -523,8 +523,16 @@
 
 
 /* ============================================
-   BACK LINK
+   BACK LINK & BREADCRUMBS
    ============================================ */
+
+.hero-breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
 
 .division-back-link {
   display: inline-flex;
@@ -534,7 +542,7 @@
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--slate);
-  margin-bottom: 20px;
+  margin-bottom: 0;
   transition: color 0.2s ease;
 }
 
