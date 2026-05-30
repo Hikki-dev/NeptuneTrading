@@ -268,7 +268,7 @@
 .nav-dropdown-item {
   display: block;
   position: relative;
-  padding: 11px 14px 11px 44px;
+  padding: 11px 14px 11px 44px !important;
   border-radius: 8px;
   color: var(--dark-mid);
   text-decoration: none;
@@ -280,7 +280,7 @@
 .nav-dropdown-item::before {
   content: "";
   position: absolute;
-  left: 18px;
+  left: 18px !important;
   top: 50%;
   transform: translateY(-50%);
   width: 3px;
@@ -642,3 +642,12 @@ body.home-premium .navbar.at-top .nav-logo-img {
   transform: translateY(-2px);
   box-shadow: 0 12px 30px rgba(37, 99, 235, 0.35);
 }
+
+/* Highly specific overrides to prevent text overlap in navbar dropdown */
+.nav-links a.nav-dropdown-item {
+  padding: 11px 14px 11px 48px !important;
+}
+.nav-links a.nav-dropdown-item::before {
+  left: 20px !important;
+}
+

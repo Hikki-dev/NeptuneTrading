@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+  <title id="title">Snow and Aliaxis piping systems category visual</title>
+  <desc id="desc">Abstract piping systems visual with blue industrial pipe network.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fbff"/>
+      <stop offset="1" stop-color="#dcecff"/>
+    </linearGradient>
+    <linearGradient id="pipe" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#39b7ff"/>
+      <stop offset="1" stop-color="#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="560" rx="36" fill="url(#bg)"/>
+  <path d="M130 360h700M250 210v150M480 160v200M710 250v110" stroke="#cfe3ff" stroke-width="34" stroke-linecap="round"/>
+  <path d="M130 360h700M250 210v150M480 160v200M710 250v110" stroke="url(#pipe)" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="250" cy="210" r="48" fill="#fff" stroke="#36aef5" stroke-width="16"/>
+  <circle cx="480" cy="160" r="48" fill="#fff" stroke="#2563eb" stroke-width="16"/>
+  <circle cx="710" cy="250" r="48" fill="#fff" stroke="#1d4ed8" stroke-width="16"/>
+  <circle cx="130" cy="360" r="32" fill="#fff" stroke="#36aef5" stroke-width="12"/>
+  <circle cx="830" cy="360" r="32" fill="#fff" stroke="#1d4ed8" stroke-width="12"/>
+  <text x="480" y="458" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="800" fill="#1d4ed8">PIPING SYSTEMS</text>
+</svg>

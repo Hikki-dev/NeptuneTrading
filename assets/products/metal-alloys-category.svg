@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+  <title id="title">Metal Alloys Corporation product category visual</title>
+  <desc id="desc">Abstract alloy tubes, rods, and industrial metal materials visual.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffaf0"/>
+      <stop offset="1" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f59e0b"/>
+      <stop offset="0.5" stop-color="#b45309"/>
+      <stop offset="1" stop-color="#334155"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="560" rx="36" fill="url(#bg)"/>
+  <g transform="translate(185 148)">
+    <rect x="0" y="170" width="590" height="54" rx="27" fill="#d6a159"/>
+    <rect x="48" y="102" width="590" height="54" rx="27" fill="#c77b2b"/>
+    <rect x="96" y="34" width="590" height="54" rx="27" fill="url(#metal)"/>
+    <circle cx="590" cy="197" r="27" fill="#fff7ed" stroke="#d6a159" stroke-width="12"/>
+    <circle cx="638" cy="129" r="27" fill="#fff7ed" stroke="#c77b2b" stroke-width="12"/>
+    <circle cx="686" cy="61" r="27" fill="#fff7ed" stroke="#92400e" stroke-width="12"/>
+  </g>
+  <path d="M208 428h544" stroke="#e8d8bd" stroke-width="3"/>
+  <text x="480" y="474" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="800" fill="#92400e">INDUSTRIAL ALLOYS</text>
+</svg>

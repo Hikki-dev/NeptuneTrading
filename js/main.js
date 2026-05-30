@@ -32,6 +32,45 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  document.querySelectorAll(".nav-mobile-services-toggle").forEach((toggle) => {
+    toggle.addEventListener("click", () => {
+      const group = toggle.closest(".nav-mobile-services");
+      const list = group?.querySelector(".nav-mobile-services-list");
+      const isOpen = !list?.classList.contains("open");
+
+      list?.classList.toggle("open", isOpen);
+      group?.classList.toggle("open", isOpen);
+      toggle.setAttribute("aria-expanded", String(isOpen));
+    });
+  });
+
+  document.querySelectorAll(".has-dropdown").forEach((dropdown) => {
+    const trigger = dropdown.querySelector(".nav-link");
+    const menu = dropdown.querySelector(".nav-dropdown");
+
+    if (!trigger || !menu) return;
+
+    trigger.addEventListener("focus", () => {
+      menu.classList.add("open");
+      trigger.setAttribute("aria-expanded", "true");
+    });
+
+    dropdown.addEventListener("focusout", (event) => {
+      if (!dropdown.contains(event.relatedTarget)) {
+        menu.classList.remove("open");
+        trigger.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    dropdown.addEventListener("mouseenter", () => {
+      trigger.setAttribute("aria-expanded", "true");
+    });
+
+    dropdown.addEventListener("mouseleave", () => {
+      trigger.setAttribute("aria-expanded", "false");
+    });
+  });
+
   const updateChrome = () => {
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
     const scrollHeight =
@@ -71,16 +110,40 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const businessAreaSelect = document.getElementById("business-area-select");
+  const params = new URLSearchParams(window.location.search);
   if (businessAreaSelect) {
-    const params = new URLSearchParams(window.location.search);
     const areaParam = params.get("area") || params.get("brand");
-    if (areaParam) {
+    const productDivision = params.get("division");
+    const targetArea = productDivision ? "Sourcing and Procurement" : areaParam;
+    if (targetArea) {
       for (const option of businessAreaSelect.options) {
-        if (option.value.toLowerCase() === areaParam.toLowerCase()) {
+        if (option.value.toLowerCase() === targetArea.toLowerCase()) {
           option.selected = true;
           break;
         }
       }
+    }
+  }
+
+  const productDivision = params.get("division");
+  const productCategory = params.get("category");
+  const productFamily = params.get("product_family") || params.get("product-family") || params.get("family");
+  if (productDivision || productCategory || productFamily) {
+    const divisionField = document.getElementById("product-division-field");
+    const categoryField = document.getElementById("product-category-field");
+    const familyField = document.getElementById("product-family-field");
+    const messageField = document.querySelector("[data-contact-form] textarea[name='message']");
+
+    if (divisionField) divisionField.value = productDivision || "";
+    if (categoryField) categoryField.value = productCategory || "";
+    if (familyField) familyField.value = productFamily || "";
+
+    if (messageField && !messageField.value.trim()) {
+      const parts = [];
+      if (productDivision) parts.push(`Division: ${productDivision}`);
+      if (productCategory) parts.push(`Category: ${productCategory}`);
+      if (productFamily) parts.push(`Product Family: ${productFamily}`);
+      messageField.value = `Please send product information for the following requirement:\n\n${parts.join("\n")}\n\nApplication / Project:\nEstimated Quantity:\nDestination / Delivery Location:\nRequired Timeline:\nAdditional Notes:`;
     }
   }
 

@@ -8,6 +8,10 @@ Static corporate website for Neptune Trading Company (Pvt) Ltd. The site is buil
 - `about.html` presents Neptune Trading Company as a separate trading entity.
 - `what-we-do.html` explains sourcing, procurement, exports, and market-entry support.
 - `principals.html` presents represented principal brands.
+- `product-divisions.html` introduces HUMMER Power Products, Snow / Aliaxis Piping Systems, and Metal Alloys Corporation.
+- `hummer-products.html` presents HUMMER product categories for B2B enquiry.
+- `snow-aliaxis-products.html` presents Snow / Aliaxis piping system categories for B2B enquiry.
+- `metal-alloys-products.html` presents Metal Alloys Corporation product categories for B2B enquiry.
 - `contact.html` contains the enquiry form and contact details.
 - `privacy-policy.html`, `terms-of-use.html`, `404.html`, `robots.txt`, and `sitemap.xml` support legal and SEO requirements.
 

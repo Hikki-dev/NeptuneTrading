@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+  <title id="title">Neptune Trading product information placeholder</title>
+  <desc id="desc">A clean Neptune blue product information placeholder for B2B product categories.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fbff"/>
+      <stop offset="1" stop-color="#e9f1ff"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#11347d"/>
+      <stop offset="1" stop-color="#2d7cff"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="560" rx="36" fill="url(#bg)"/>
+  <path d="M120 398h720" stroke="#d6e4ff" stroke-width="2"/>
+  <path d="M166 354h178m272 0h178" stroke="#d6e4ff" stroke-width="2"/>
+  <rect x="260" y="160" width="440" height="220" rx="28" fill="#fff" stroke="#dbe7ff" stroke-width="4"/>
+  <path d="M320 308h320" stroke="url(#line)" stroke-width="12" stroke-linecap="round"/>
+  <path d="M354 252h252" stroke="#0f2d69" stroke-width="34" stroke-linecap="round"/>
+  <path d="M406 210h148" stroke="#2d7cff" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="480" cy="280" r="108" fill="none" stroke="#edf4ff" stroke-width="28"/>
+  <text x="480" y="448" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#11347d" letter-spacing="5">PRODUCT INFORMATION</text>
+</svg>
