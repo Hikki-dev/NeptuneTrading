@@ -594,6 +594,13 @@
   white-space: nowrap;
 }
 
+.hero-breadcrumbs .page-eyebrow {
+  margin: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  line-height: 1 !important;
+}
+
 .page-eyebrow::before {
   display: none !important;
 }
