@@ -3,10 +3,18 @@ document.addEventListener("DOMContentLoaded", () => {
     el.textContent = String(new Date().getFullYear());
   });
 
-  const navbar = document.getElementById("site-navbar") || document.querySelector("[data-header]");
-  const hamburger = document.querySelector(".nav-hamburger") || document.querySelector("[data-nav-toggle]");
-  const mobileMenu = document.getElementById("nav-mobile-menu") || document.querySelector("[data-nav-links-mobile]");
-  const progressBar = document.querySelector(".nav-scroll-progress") || document.querySelector("[data-nav-progress]");
+  const navbar =
+    document.getElementById("site-navbar") ||
+    document.querySelector("[data-header]");
+  const hamburger =
+    document.querySelector(".nav-hamburger") ||
+    document.querySelector("[data-nav-toggle]");
+  const mobileMenu =
+    document.getElementById("nav-mobile-menu") ||
+    document.querySelector("[data-nav-links-mobile]");
+  const progressBar =
+    document.querySelector(".nav-scroll-progress") ||
+    document.querySelector("[data-nav-progress]");
 
   if (hamburger && mobileMenu) {
     hamburger.addEventListener("click", () => {
@@ -26,7 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const updateChrome = () => {
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollHeight =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
 
     if (navbar) {
       navbar.classList.toggle("scrolled", scrollTop > 20);
@@ -41,16 +51,21 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", updateChrome, { passive: true });
   updateChrome();
 
-  const revealEls = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
+  const revealEls = document.querySelectorAll(
+    ".reveal, .reveal-left, .reveal-right",
+  );
   if (revealEls.length && !window.__neptuneRevealInitialized) {
     window.__neptuneRevealInitialized = true;
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("in-view");
-        }
-      });
-    }, { threshold: 0.12, rootMargin: "0px 0px -60px 0px" });
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -60px 0px" },
+    );
 
     revealEls.forEach((el) => revealObserver.observe(el));
   }
@@ -75,7 +90,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Clear previous error messages
       form.querySelectorAll(".form-field-error").forEach((el) => el.remove());
-      form.querySelectorAll(".form-field").forEach((el) => el.classList.remove("has-error"));
+      form
+        .querySelectorAll(".form-field")
+        .forEach((el) => el.classList.remove("has-error"));
 
       let hasErrors = false;
 
@@ -88,12 +105,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (!value) {
           if (fieldName === "name") errorMessage = "Please enter your name.";
-          else if (fieldName === "company") errorMessage = "Please enter your company name.";
-          else if (fieldName === "email") errorMessage = "Please enter your email address.";
-          else if (fieldName === "business_area") errorMessage = "Please select a business area.";
-          else if (fieldName === "message") errorMessage = "Please enter your message.";
+          else if (fieldName === "company")
+            errorMessage = "Please enter your company name.";
+          else if (fieldName === "email")
+            errorMessage = "Please enter your email address.";
+          else if (fieldName === "business_area")
+            errorMessage = "Please select a business area.";
+          else if (fieldName === "message")
+            errorMessage = "Please enter your message.";
           else errorMessage = "This field is required.";
-        } else if (input.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+        } else if (
+          input.type === "email" &&
+          !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
+        ) {
           errorMessage = "Please enter a valid email address.";
         }
 
@@ -132,11 +156,13 @@ document.addEventListener("DOMContentLoaded", () => {
       try {
         const response = await fetch(form.action || "/api/contact", {
           method: "POST",
-          body: JSON.stringify(Object.fromEntries(new FormData(form).entries())),
+          body: JSON.stringify(
+            Object.fromEntries(new FormData(form).entries()),
+          ),
           headers: {
-            "Accept": "application/json",
-            "Content-Type": "application/json"
-          }
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
         });
         const data = await response.json().catch(() => ({}));
 
@@ -157,7 +183,8 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
       } catch (error) {
         if (note) {
-          note.textContent = "The form could not be submitted. Please email info@neptunetrading.lk directly.";
+          note.textContent =
+            "The form could not be submitted. Please email info@neptunetrading.lk directly.";
           note.style.color = "#dc2626";
           note.style.fontWeight = "700";
         }

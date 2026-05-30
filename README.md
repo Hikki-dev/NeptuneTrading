@@ -6,9 +6,8 @@ Static corporate website for Neptune Trading Company (Pvt) Ltd. The site is buil
 
 - `index.html` is the homepage.
 - `about.html` presents Neptune Trading Company as a separate trading entity.
-- `partners.html` lists professional trade and export affiliations.
-- `capabilities.html` explains the trading capability model.
-- `principals.html` and `products.html` are retained as legacy static pages.
+- `what-we-do.html` explains sourcing, procurement, exports, and market-entry support.
+- `principals.html` presents represented principal brands.
 - `contact.html` contains the enquiry form and contact details.
 - `privacy-policy.html`, `terms-of-use.html`, `404.html`, `robots.txt`, and `sitemap.xml` support legal and SEO requirements.
 
