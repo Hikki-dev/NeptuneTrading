@@ -114,7 +114,36 @@ document.addEventListener("DOMContentLoaded", () => {
   if (businessAreaSelect) {
     const areaParam = params.get("area") || params.get("brand");
     const productDivision = params.get("division");
-    const targetArea = productDivision ? "Sourcing and Procurement" : areaParam;
+    
+    let targetArea = "";
+    if (productDivision) {
+      const pd = productDivision.toLowerCase();
+      if (pd.includes("hummer")) {
+        targetArea = "HUMMER Power Products";
+      } else if (pd.includes("aliaxis") || pd.includes("snow")) {
+        targetArea = "Snow / Aliaxis Piping Systems";
+      } else if (pd.includes("metal") || pd.includes("alloy")) {
+        targetArea = "Metal Alloys Corporation";
+      } else {
+        targetArea = "Strategic Sourcing Briefs";
+      }
+    } else if (areaParam) {
+      const ap = areaParam.toLowerCase();
+      if (ap.includes("tea") || ap.includes("spice") || ap.includes("fibre") || ap.includes("export")) {
+        targetArea = "Ceylon Tea & Agricultural Exports";
+      } else if (ap.includes("source") || ap.includes("procure")) {
+        targetArea = "Strategic Sourcing Briefs";
+      } else if (ap.includes("market") || ap.includes("entry") || ap.includes("expand")) {
+        targetArea = "Market Entry Coordination";
+      } else if (ap.includes("hummer")) {
+        targetArea = "HUMMER Power Products";
+      } else if (ap.includes("aliaxis") || ap.includes("snow")) {
+        targetArea = "Snow / Aliaxis Piping Systems";
+      } else if (ap.includes("metal") || ap.includes("alloy") || ap.includes("metalco")) {
+        targetArea = "Metal Alloys Corporation";
+      }
+    }
+
     if (targetArea) {
       for (const option of businessAreaSelect.options) {
         if (option.value.toLowerCase() === targetArea.toLowerCase()) {

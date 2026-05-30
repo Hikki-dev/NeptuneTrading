@@ -31,29 +31,28 @@ document.addEventListener("DOMContentLoaded", () => {
   const urlParams = new URLSearchParams(window.location.search);
   const brand = urlParams.get("brand");
   const area = urlParams.get("area");
+  const division = urlParams.get("division");
   
   const businessAreaSelect = document.getElementById("business-area-select");
   if (businessAreaSelect) {
     let targetValue = "";
     
-    if (brand) {
-      const b = brand.toLowerCase();
-      if (b === "hummer" || b === "aliaxis" || b === "snow" || b === "metalco" || b === "metal-alloys") {
-        targetValue = "Sourcing and Procurement";
-      }
-    } else if (area) {
-      const a = area.toLowerCase();
-      if (a === "sourcing" || a === "procurement" || a === "sourcing and procurement") {
-        targetValue = "Sourcing and Procurement";
-      } else if (a === "exports" || a === "tea exports") {
-        targetValue = "Tea Exports";
-      } else if (a === "spices exports") {
-        targetValue = "Spices Exports";
-      } else if (a === "fibre exports") {
-        targetValue = "Fibre Exports";
-      } else if (a === "market-entry" || a === "market research and expansion") {
-        targetValue = "Market Research and Expansion";
-      }
+    const d = (division || "").toLowerCase();
+    const b = (brand || "").toLowerCase();
+    const a = (area || "").toLowerCase();
+    
+    if (d.includes("hummer") || b.includes("hummer") || a.includes("hummer")) {
+      targetValue = "HUMMER Power Products";
+    } else if (d.includes("aliaxis") || d.includes("snow") || b.includes("aliaxis") || b.includes("snow") || a.includes("aliaxis") || a.includes("snow")) {
+      targetValue = "Snow / Aliaxis Piping Systems";
+    } else if (d.includes("metal") || d.includes("alloy") || b.includes("metalco") || b.includes("metal-alloys") || a.includes("metal") || a.includes("alloy")) {
+      targetValue = "Metal Alloys Corporation";
+    } else if (a.includes("tea") || a.includes("spice") || a.includes("fibre") || a.includes("export")) {
+      targetValue = "Ceylon Tea & Agricultural Exports";
+    } else if (a.includes("source") || a.includes("procure")) {
+      targetValue = "Strategic Sourcing Briefs";
+    } else if (a.includes("market") || a.includes("entry") || a.includes("expand")) {
+      targetValue = "Market Entry Coordination";
     }
     
     if (targetValue) {
