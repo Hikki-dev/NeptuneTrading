@@ -88,6 +88,18 @@
   --division-accent-text: #92400e;
 }
 
+/* MAC product cards — landscape thumbnail treatment */
+.product-card--metalco .product-card-image {
+  height: 180px;
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+  padding: 28px 40px;
+}
+
+.product-card--metalco .product-card-image img {
+  max-height: 120px;
+  filter: drop-shadow(0 4px 12px rgba(146, 64, 14, 0.12));
+}
+
 /* Logo frame within division card */
 .division-logo-frame {
   display: grid;
@@ -527,23 +539,30 @@
    ============================================ */
 
 .hero-breadcrumbs {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-bottom: 24px;
+  gap: 0;
+  margin-bottom: 28px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(9, 19, 44, 0.1);
+  border-radius: 100px;
+  padding: 6px 16px 6px 8px;
+  backdrop-filter: blur(8px);
 }
 
 .division-back-link {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   font-family: var(--font-display);
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: var(--slate);
-  margin-bottom: 0;
+  padding: 2px 10px 2px 4px;
+  border-right: 1px solid rgba(9, 19, 44, 0.1);
+  margin-right: 10px;
   transition: color 0.2s ease;
+  white-space: nowrap;
 }
 
 .division-back-link:hover {
@@ -551,13 +570,32 @@
 }
 
 .division-back-link svg {
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
   transition: transform 0.2s ease;
 }
 
 .division-back-link:hover svg {
-  transform: translateX(-3px);
+  transform: translateX(-2px);
+}
+
+.page-eyebrow {
+  font-family: var(--font-display) !important;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em !important;
+  text-transform: none !important;
+  padding: 2px 0 !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  color: var(--neptune-navy) !important;
+  white-space: nowrap;
+}
+
+.page-eyebrow::before {
+  display: none !important;
 }
 
 
