@@ -305,6 +305,30 @@
     });
   }
 
+  /* ─── 13. MAGNETIC BUTTONS ───────────────────────────────────── */
+  document.querySelectorAll('.btn-magnetic').forEach(btn => {
+    btn.addEventListener('mousemove', e => {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const rect = btn.getBoundingClientRect();
+      const dx = e.clientX - (rect.left + rect.width  / 2);
+      const dy = e.clientY - (rect.top  + rect.height / 2);
+      btn.style.transform = `translate(${dx * 0.18}px, ${dy * 0.18}px) translateY(-2px)`;
+    });
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transform = '';
+    });
+  });
+
+  /* ─── 14. STAGGER GRID CARDS ON REVEAL ──────────────────────── */
+  const staggerGrids = document.querySelectorAll('.grid-3, .grid-2');
+  staggerGrids.forEach(grid => {
+    const children = grid.children;
+    Array.from(children).forEach((child, i) => {
+      if (child.classList.contains('reveal') || child.closest('.reveal')) return;
+      child.style.transitionDelay = `${i * 0.1}s`;
+    });
+  });
+
   // ─── Globe Scroll Hint — hide only at the end of the scrollable area ─────────────
   const globeScrollHint = document.getElementById('globe-scroll-hint');
   const globeCountriesEl = document.getElementById('globe-countries-scroll');

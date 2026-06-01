@@ -114,20 +114,33 @@
       <section class="home-trade-hero" aria-labelledby="hero-title">
         <div class="hero-grid" aria-hidden="true"></div>
         <div class="hero-bg" aria-hidden="true"></div>
+        <canvas id="hero-canvas" aria-hidden="true"></canvas>
         <div class="container">
           <div class="hero-inner">
             <div class="hero-left reveal-left">
               <span class="tag-label">Established 1984 &bull; Colombo, Sri Lanka</span>
-              <h1 id="hero-title">Connecting Sri Lankan buyers with trusted international product principals.</h1>
+              <h1 id="hero-title">Connecting Sri Lankan buyers with <span class="hero-title-shimmer">trusted international</span> product principals.</h1>
               <p class="hero-copy">Neptune Trading represents selected international product manufacturers as their authorized local partner. We coordinate sourcing, procurement, and supply through our Colombo commercial desk since 1984.</p>
               <div class="hero-actions">
-                <a href="#principals" class="btn-primary"><span>Explore Product Divisions</span></a>
-                <a href="contact.html" class="btn-outline-ghost">Contact Trading Desk</a>
+                <a href="#principals" class="btn-primary btn-magnetic"><span>Explore Product Divisions</span></a>
+                <a href="contact.html" class="btn-outline-ghost btn-magnetic">Contact Trading Desk</a>
               </div>
             </div>
             <div class="hero-right reveal-right">
               <div class="hero-visual-frame ship-hover-frame">
                 <img src="assets/hero-ship-port.jpg" alt="Colombo port industrial operations" loading="eager" width="1200" height="900">
+                <div class="hero-float-card hero-float-card-1" aria-hidden="true">
+                  <div class="hfc-label">Established</div>
+                  <div class="hfc-value">1984</div>
+                  <div class="hfc-sub">Colombo, Sri Lanka</div>
+                </div>
+                <div class="hero-float-card hero-float-card-2" aria-hidden="true">
+                  <div class="hfc-dot hfc-dot-green"></div>
+                  <div>
+                    <div class="hfc-label">Active Divisions</div>
+                    <div class="hfc-value">3 Principals</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -166,7 +179,7 @@
           </div>
           <div class="grid grid-3 reveal">
             <!-- Hummer Card -->
-            <article class="card logo-card" id="hummer">
+            <article class="card logo-card" id="hummer" data-tilt data-tilt-intensity="4">
               <div>
                 <div class="logo-frame" style="background: #ffcc00; border-color: #e5b800;">
                   <img src="assets/logos/hummer-logo.png" alt="Hummer logo" loading="lazy" width="1182" height="141" style="mix-blend-mode: multiply;">
@@ -193,7 +206,7 @@
             </article>
 
             <!-- Aliaxis Card -->
-            <article class="card logo-card" id="aliaxis">
+            <article class="card logo-card" id="aliaxis" data-tilt data-tilt-intensity="4" style="transition-delay:0.12s;">
               <div>
                 <div class="logo-frame" style="background: #ffffff; border-color: rgba(9, 19, 44, 0.08);">
                   <img src="assets/logos/aliaxis-logo-display.png" alt="Aliaxis logo" loading="lazy" width="801" height="182">
@@ -220,7 +233,7 @@
             </article>
 
             <!-- Metal Alloys Card -->
-            <article class="card logo-card" id="metalco">
+            <article class="card logo-card" id="metalco" data-tilt data-tilt-intensity="4" style="transition-delay:0.24s;">
               <div>
                 <div class="logo-frame" style="background: #ffffff; border-color: rgba(9, 19, 44, 0.08);">
                   <img src="assets/logos/metal-alloy-corporation-logo-display.png" alt="Metal Alloys Corporation logo" loading="lazy" width="954" height="1139">
