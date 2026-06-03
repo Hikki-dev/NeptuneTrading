@@ -1996,3 +1996,174 @@ body.home-premium .navbar.at-top .nav-link.active {
 @media (prefers-reduced-motion: reduce) {
   .premium-contact-band::after { animation: none; }
 }
+
+/* ==========================================================================
+   FAQ SECTION — AI-SEARCH & SCHEMA OPTIMIZED
+   Flat Q&A layout. Always visible to crawlers. FAQPage schema attached inline.
+   ========================================================================== */
+
+.faq-section {
+  background: var(--neptune-bg, #f4f8ff);
+  padding: clamp(60px, 8vw, 96px) 0;
+  border-top: 1px solid rgba(37, 99, 235, 0.1);
+}
+
+.faq-section-white {
+  background: #ffffff;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 40px;
+}
+
+.faq-item {
+  background: #ffffff;
+  border: 1px solid rgba(37, 99, 235, 0.11);
+  border-radius: 14px;
+  padding: 26px 28px;
+  box-shadow: 0 8px 24px rgba(9, 19, 44, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.faq-section-white .faq-item {
+  background: #f4f8ff;
+}
+
+.faq-item:hover {
+  border-color: rgba(37, 99, 235, 0.22);
+  box-shadow: 0 14px 36px rgba(37, 99, 235, 0.08);
+}
+
+.faq-question {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--neptune-navy);
+  line-height: 1.35;
+  margin: 0 0 10px;
+}
+
+.faq-answer {
+  font-size: 0.9rem;
+  color: #52668a;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.faq-answer a {
+  color: var(--neptune-blue);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.faq-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+@media (max-width: 860px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   PRINCIPALS PAGE — PARTNERSHIP & REPRESENTATION EXPANSION
+   ========================================================================== */
+
+.principals-representation-section {
+  background: #ffffff;
+  padding: clamp(60px, 7vw, 90px) 0;
+  border-top: 1px solid rgba(37, 99, 235, 0.1);
+}
+
+.principals-partnership-section {
+  background: var(--neptune-bg, #f4f8ff);
+  padding: clamp(60px, 7vw, 90px) 0;
+  border-top: 1px solid rgba(37, 99, 235, 0.1);
+}
+
+.principals-benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 36px;
+}
+
+.principals-benefit-card {
+  background: #ffffff;
+  border: 1px solid rgba(37, 99, 235, 0.1);
+  border-radius: 14px;
+  padding: 24px 26px;
+  box-shadow: 0 8px 22px rgba(9, 19, 44, 0.04);
+}
+
+.principals-benefit-card h4 {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--neptune-navy);
+  margin: 0 0 8px;
+}
+
+.principals-benefit-card p {
+  font-size: 0.87rem;
+  color: #52668a;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.principals-process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 36px;
+}
+
+.principals-process-step {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 20px;
+  align-items: start;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(37, 99, 235, 0.08);
+}
+
+.principals-process-step:last-child {
+  border-bottom: none;
+}
+
+.principals-step-num {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: rgba(37, 99, 235, 0.15);
+  line-height: 1;
+  padding-top: 4px;
+}
+
+.principals-process-step h4 {
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: var(--neptune-navy);
+  margin: 0 0 6px;
+}
+
+.principals-process-step p {
+  font-size: 0.87rem;
+  color: #52668a;
+  line-height: 1.65;
+  margin: 0;
+}
+
+@media (max-width: 720px) {
+  .principals-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
