@@ -2167,3 +2167,437 @@ body.home-premium .navbar.at-top .nav-link.active {
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================================================
+   CORPORATE REFRESH — Light corporate theme, bold navy text on white
+   ========================================================================== */
+
+/* ── Remove all dash/line separators ─────────────────────────────────────── */
+.trust-divider,
+.footer-contact-divider,
+.breadcrumb-separator,
+.section-divider,
+.divider-sm {
+  display: none !important;
+}
+
+/* ── Color tokens ─────────────────────────────────────────────────────────── */
+:root {
+  --nt-navy:    #0b1f4a;
+  --nt-blue:    #1a56db;
+  --nt-accent:  #3b82f6;
+  --nt-surface: #f4f7fc;
+  --nt-border:  rgba(11,31,74,0.1);
+  --nt-dark:    #060d1a;
+}
+
+/* ── HERO — clean white with bold navy text ───────────────────────────────── */
+.home-trade-hero {
+  background:
+    linear-gradient(90deg, rgba(26,86,219,0.04) 1px, transparent 1px),
+    linear-gradient(rgba(26,86,219,0.04) 1px, transparent 1px),
+    linear-gradient(135deg, #ffffff 0%, #ffffff 52%, #eef3ff 100%) !important;
+  background-size: 64px 64px, 64px 64px, auto !important;
+}
+
+.home-trade-hero h1 {
+  color: var(--nt-navy) !important;
+}
+
+.home-trade-hero .hero-copy {
+  color: #3d5280 !important;
+}
+
+.home-trade-hero .tag-label {
+  background: rgba(26,86,219,0.07) !important;
+  border-color: rgba(26,86,219,0.2) !important;
+  color: var(--nt-blue) !important;
+  box-shadow: none !important;
+}
+.home-trade-hero .tag-label::before {
+  background: var(--nt-blue) !important;
+}
+
+/* Secondary outline button on light bg */
+.home-trade-hero .btn-outline-ghost {
+  color: var(--nt-navy) !important;
+  border-color: rgba(11,31,74,0.22) !important;
+  background: rgba(255,255,255,0.85) !important;
+  backdrop-filter: blur(8px) !important;
+}
+.home-trade-hero .btn-outline-ghost:hover {
+  background: var(--nt-navy) !important;
+  border-color: var(--nt-navy) !important;
+  color: #ffffff !important;
+}
+
+/* Hero frame */
+.home-trade-hero .hero-visual-frame {
+  border-color: #dde8f8 !important;
+  box-shadow: 0 32px 72px rgba(11,31,74,0.12) !important;
+}
+
+/* Float cards */
+.hero-float-card {
+  background: rgba(255,255,255,0.97) !important;
+  border-color: rgba(26,86,219,0.14) !important;
+  box-shadow: 0 16px 40px rgba(11,31,74,0.12) !important;
+}
+
+/* ── Trust bar — light surface, bold navy stats ───────────────────────────── */
+.home-trust-bar {
+  background: var(--nt-surface) !important;
+  border-top: 1px solid var(--nt-border) !important;
+  border-bottom: 1px solid var(--nt-border) !important;
+  padding: 0 !important;
+}
+
+.trust-bar-inner {
+  gap: 0 !important;
+  padding: 24px 0 !important;
+}
+
+.trust-item {
+  padding: 6px 44px !important;
+  border-right: 1px solid rgba(11,31,74,0.1);
+  flex: 1;
+  max-width: 360px;
+}
+
+.trust-item:last-child {
+  border-right: none;
+}
+
+.trust-item strong {
+  font-size: 1rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.005em !important;
+  color: var(--nt-navy) !important;
+}
+
+.trust-item span {
+  font-size: 0.75rem !important;
+  color: #5a7299 !important;
+}
+
+@media (max-width: 720px) {
+  .trust-item {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(11,31,74,0.08);
+    max-width: 100%;
+  }
+  .trust-item:last-child {
+    border-bottom: none;
+  }
+}
+
+/* ── Buttons — solid, corporate ───────────────────────────────────────────── */
+.btn-primary {
+  background: var(--nt-navy) !important;
+  border: none !important;
+  letter-spacing: 0.04em !important;
+  font-weight: 700 !important;
+}
+.btn-primary::before {
+  background: var(--nt-blue) !important;
+}
+.btn-primary:hover {
+  box-shadow: 0 16px 40px rgba(11,31,74,0.3) !important;
+}
+
+.nav-cta {
+  background: var(--nt-blue) !important;
+  font-weight: 700 !important;
+}
+.nav-cta:hover {
+  background: var(--nt-navy) !important;
+}
+
+/* ── Product division cards — top accent bar + stronger border ────────────── */
+.card.logo-card {
+  border-top: 3px solid var(--nt-blue) !important;
+  border-color: rgba(14,38,96,0.14) !important;
+  box-shadow: 0 12px 36px rgba(7,30,69,0.07) !important;
+  transition: transform 0.28s var(--ease-out-quart), box-shadow 0.28s var(--ease-out-quart), border-color 0.28s ease !important;
+}
+.card.logo-card:hover {
+  box-shadow: 0 28px 64px rgba(26,86,219,0.14), 0 0 0 1px rgba(26,86,219,0.16) !important;
+  border-color: rgba(26,86,219,0.2) !important;
+  transform: translateY(-4px) !important;
+}
+
+/* ── Section headings — strong navy on white ──────────────────────────────── */
+.section-heading {
+  color: var(--nt-navy) !important;
+  letter-spacing: -0.03em !important;
+}
+
+/* Headings that must stay white on dark backgrounds */
+.pre-footer-cta h2,
+.premium-contact-band h2,
+.pre-footer-cta p,
+.premium-contact-band p,
+.home-trade-hero h1 {
+  color: inherit;
+}
+
+/* ── Tag labels — blue pill on white ──────────────────────────────────────── */
+.tag-label {
+  background: rgba(26,86,219,0.07) !important;
+  border-color: rgba(26,86,219,0.18) !important;
+  color: var(--nt-blue) !important;
+  font-weight: 700 !important;
+}
+.tag-label::before {
+  background: var(--nt-blue) !important;
+}
+
+/* ── What We Do section — light surface, strong navy text ────────────────── */
+.home-capabilities-section {
+  background: var(--nt-surface) !important;
+  border-top: 1px solid var(--nt-border) !important;
+}
+
+.home-capabilities-section .section-heading,
+.home-capabilities-section h2 {
+  color: var(--nt-navy) !important;
+}
+
+.home-capabilities-section .tag-label {
+  background: rgba(26,86,219,0.07) !important;
+  border-color: rgba(26,86,219,0.18) !important;
+  color: var(--nt-blue) !important;
+}
+.home-capabilities-section .tag-label::before {
+  background: var(--nt-blue) !important;
+}
+
+.home-cap-left > p {
+  color: #4a6080 !important;
+}
+
+.home-cap-item {
+  border-bottom-color: rgba(11,31,74,0.08) !important;
+}
+
+.home-cap-item h3 {
+  color: var(--nt-navy) !important;
+}
+
+.home-cap-item p {
+  color: #4a6080 !important;
+}
+
+.home-cap-icon {
+  background: rgba(26,86,219,0.07) !important;
+  border: 1px solid rgba(26,86,219,0.14) !important;
+  color: var(--nt-blue) !important;
+}
+
+.home-cap-item:hover {
+  background: rgba(26,86,219,0.04) !important;
+}
+.home-cap-item:hover .home-cap-icon {
+  background: rgba(26,86,219,0.12) !important;
+  color: var(--nt-navy) !important;
+}
+
+/* ── Support strip — elevated card treatment ──────────────────────────────── */
+.home-support-strip-section {
+  background: var(--nt-surface) !important;
+  border-top: 1px solid rgba(7,30,69,0.1) !important;
+}
+
+.support-strip-head {
+  border-bottom-color: rgba(7,30,69,0.1) !important;
+}
+
+.support-entity {
+  border-color: rgba(7,30,69,0.12) !important;
+  box-shadow: 0 8px 32px rgba(7,30,69,0.07) !important;
+}
+
+.support-entity:hover {
+  border-color: rgba(26,86,219,0.28) !important;
+  box-shadow: 0 20px 52px rgba(26,86,219,0.13) !important;
+}
+
+/* ── FAQ section — slightly elevated cards ────────────────────────────────── */
+.faq-section {
+  background: #f0f5fb !important;
+}
+
+.faq-item {
+  box-shadow: 0 4px 14px rgba(7,30,69,0.05) !important;
+  border-color: rgba(7,30,69,0.1) !important;
+  border-left: 3px solid var(--nt-blue) !important;
+}
+
+.faq-item:hover {
+  border-left-color: var(--nt-navy) !important;
+  box-shadow: 0 12px 30px rgba(26,86,219,0.1) !important;
+}
+
+.faq-question {
+  color: var(--nt-navy) !important;
+}
+
+/* ── CTA band — rich navy, white text preserved ───────────────────────────── */
+.pre-footer-cta,
+.premium-contact-band {
+  background: var(--nt-navy) !important;
+}
+
+.pre-footer-cta h2,
+.premium-contact-band h2 {
+  color: #ffffff !important;
+}
+
+.pre-footer-cta p,
+.premium-contact-band p {
+  color: rgba(255,255,255,0.78) !important;
+}
+
+/* Any dark-bg card/panel — keep headings and text readable */
+[style*="background: #0"],
+[style*="background:#0"] {
+  /* handled per-component below */
+}
+
+/* Export operations dark card and similar inline-dark sections */
+.export-operations-card h2,
+.export-operations-card h3,
+.section-dark h2,
+.section-dark h3,
+.section-dark p {
+  color: inherit !important;
+}
+
+/* ── Footer contact column — gap instead of divider ──────────────────────── */
+.footer-links li.footer-contact-group + li.footer-contact-group {
+  margin-top: 12px;
+}
+
+/* ── Page-level heroes — clean white/navy for generic pages only ────────────
+   Excludes product-branded heroes (.page-hero--hummer/aliaxis/metalco)
+   which have intentional dark backgrounds with brand-colored text.
+   ─────────────────────────────────────────────────────────────────────────── */
+.trading-page-hero:not(.page-hero--hummer):not(.page-hero--aliaxis):not(.page-hero--metalco),
+.page-hero:not(.page-hero--hummer):not(.page-hero--aliaxis):not(.page-hero--metalco) {
+  background:
+    linear-gradient(90deg, rgba(26,86,219,0.04) 1px, transparent 1px),
+    linear-gradient(rgba(26,86,219,0.04) 1px, transparent 1px),
+    linear-gradient(135deg, #ffffff 0%, #ffffff 55%, #eef3ff 100%) !important;
+  background-size: 64px 64px, 64px 64px, auto !important;
+  border-bottom: 1px solid var(--nt-border) !important;
+}
+
+.trading-page-hero:not(.page-hero--hummer):not(.page-hero--aliaxis):not(.page-hero--metalco) h1,
+.page-hero:not(.page-hero--hummer):not(.page-hero--aliaxis):not(.page-hero--metalco) h1 {
+  color: var(--nt-navy) !important;
+}
+
+.trading-page-hero:not(.page-hero--hummer):not(.page-hero--aliaxis):not(.page-hero--metalco) p,
+.page-hero:not(.page-hero--hummer):not(.page-hero--aliaxis):not(.page-hero--metalco) p {
+  color: #3d5280 !important;
+}
+
+.page-hero:not(.page-hero--hummer):not(.page-hero--aliaxis):not(.page-hero--metalco) .eyebrow,
+.trading-page-hero:not(.page-hero--hummer):not(.page-hero--aliaxis):not(.page-hero--metalco) .eyebrow {
+  background: rgba(26,86,219,0.07) !important;
+  border-color: rgba(26,86,219,0.18) !important;
+  color: var(--nt-blue) !important;
+}
+
+/* ── Navbar — subtle authority ────────────────────────────────────────────── */
+.navbar,
+body.home-premium .navbar.at-top {
+  background: rgba(255,255,255,0.98) !important;
+  border-bottom: 1px solid rgba(7,30,69,0.1) !important;
+  box-shadow: 0 2px 20px rgba(7,30,69,0.06) !important;
+}
+
+/* ── About page stat cards ────────────────────────────────────────────────── */
+.about-stat-card {
+  border-top: 3px solid var(--nt-blue) !important;
+}
+
+/* ── Principals benefit cards ─────────────────────────────────────────────── */
+.principals-benefit-card {
+  border-top: 3px solid var(--nt-blue) !important;
+  border-color: rgba(7,30,69,0.12) !important;
+}
+
+/* ── Trading route cards ──────────────────────────────────────────────────── */
+.trading-route-card {
+  border-top: 3px solid var(--nt-blue) !important;
+  border-color: rgba(7,30,69,0.12) !important;
+}
+
+/* ── Data panels ──────────────────────────────────────────────────────────── */
+.data-panel::before {
+  background: linear-gradient(90deg, var(--nt-navy), var(--nt-blue)) !important;
+}
+
+/* ── Footer ───────────────────────────────────────────────────────────────── */
+.footer {
+  background: var(--nt-dark) !important;
+  border-top: 3px solid var(--nt-blue) !important;
+}
+
+.footer-col-title {
+  color: #ffffff !important;
+  letter-spacing: 0.09em !important;
+  font-weight: 800 !important;
+  font-size: 0.72rem !important;
+  text-transform: uppercase !important;
+}
+
+.footer-link {
+  color: rgba(255,255,255,0.5) !important;
+  font-size: 0.87rem !important;
+}
+.footer-link:hover {
+  color: #93c5fd !important;
+}
+
+.footer-tagline {
+  color: rgba(255,255,255,0.46) !important;
+  line-height: 1.65 !important;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.07) !important;
+  padding-top: 24px !important;
+  padding-bottom: 24px !important;
+}
+
+.footer-copy,
+.footer-bottom-link {
+  color: rgba(255,255,255,0.38) !important;
+  font-size: 0.82rem !important;
+}
+.footer-bottom-link:hover {
+  color: rgba(255,255,255,0.7) !important;
+}
+
+/* ── Divisions "all link" pill ────────────────────────────────────────────── */
+.divisions-all-link {
+  border-color: rgba(7,30,69,0.18) !important;
+  background: rgba(7,30,69,0.05) !important;
+  color: var(--nt-navy) !important;
+  font-weight: 700 !important;
+}
+.divisions-all-link:hover {
+  background: var(--nt-navy) !important;
+  color: #ffffff !important;
+  border-color: var(--nt-navy) !important;
+}
+
+/* ── Scrollbar ────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar-thumb {
+  background: #94a3b8 !important;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b !important;
+}
