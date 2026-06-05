@@ -3,15 +3,30 @@
     "api/contact.js": {
       "memory": 128,
       "maxDuration": 10
+    },
+    "api/markdown.js": {
+      "memory": 128,
+      "maxDuration": 10
     }
   },
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/api/markdown",
+      "has": [{ "type": "header", "key": "accept", "value": "(?:.*,\\s*)?text/markdown(?:,.*|;.*|$)" }]
+    }
+  ],
   "headers": [
     {
       "source": "/",
       "headers": [
         {
           "key": "Link",
-          "value": "</.well-known/api-catalog>; rel=\"api-catalog\", </auth.md>; rel=\"service-doc\", </.well-known/oauth-protected-resource>; rel=\"https://www.rfc-editor.org/rfc/rfc9728\""
+          "value": "</.well-known/api-catalog>; rel=\"api-catalog\", </auth.md>; rel=\"service-doc\", </.well-known/oauth-protected-resource>; rel=\"https://www.rfc-editor.org/rfc/rfc9728\", </.well-known/oauth-authorization-server>; rel=\"https://www.rfc-editor.org/rfc/rfc8414\""
+        },
+        {
+          "key": "Vary",
+          "value": "Accept"
         }
       ]
     },
@@ -39,6 +54,19 @@
     },
     {
       "source": "/.well-known/oauth-protected-resource",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "source": "/.well-known/oauth-authorization-server",
       "headers": [
         {
           "key": "Content-Type",

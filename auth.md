@@ -1,13 +1,19 @@
-# Agent Authentication
+# auth.md — Neptune Trading Company
 
-Neptune Trading Company does not currently require authentication for public discovery endpoints or the contact API.
+Neptune Trading Company does not currently require authentication for public discovery endpoints or the contact API. There are no protected APIs requiring OAuth tokens at this time.
 
-## Contact API
+## Public Endpoints
 
-- **Endpoint:** `POST https://neptunetrading.lk/api/contact`
-- **Auth required:** No
-- **Rate limiting:** Yes (standard Vercel limits)
+| Endpoint | Auth Required |
+|---|---|
+| `GET /.well-known/api-catalog` | No |
+| `GET /.well-known/oauth-protected-resource` | No |
+| `GET /.well-known/agent-skills/index.json` | No |
+| `GET /.well-known/mcp/server-card.json` | No |
+| `POST /api/contact` | No |
 
 ## Agent Registration
 
-For agent access inquiries, please contact us via https://neptunetrading.lk/contact.html
+No registration is required. Agents may call public endpoints freely.
+
+For business inquiries or partnership requests, submit via `POST /api/contact` or visit https://neptunetrading.lk/contact.html

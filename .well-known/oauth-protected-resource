@@ -1,7 +1,7 @@
 {
   "resource": "https://neptunetrading.lk",
-  "authorization_servers": [],
-  "scopes_supported": [],
+  "authorization_servers": ["https://neptunetrading.lk"],
+  "scopes_supported": ["contact:write"],
   "bearer_methods_supported": ["header"],
-  "resource_documentation": "https://neptunetrading.lk/contact.html"
+  "resource_documentation": "https://neptunetrading.lk/auth.md"
 }

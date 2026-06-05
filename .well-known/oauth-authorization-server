@@ -1,0 +1,18 @@
+{
+  "issuer": "https://neptunetrading.lk",
+  "authorization_endpoint": "https://neptunetrading.lk/auth/authorize",
+  "token_endpoint": "https://neptunetrading.lk/auth/token",
+  "jwks_uri": "https://neptunetrading.lk/.well-known/jwks.json",
+  "grant_types_supported": ["client_credentials"],
+  "response_types_supported": ["token"],
+  "scopes_supported": ["contact:write"],
+  "agent_auth": {
+    "skill": "https://neptunetrading.lk/.well-known/agent-skills/index.json",
+    "register_uri": "https://neptunetrading.lk/contact.html",
+    "identity_types_supported": ["anonymous"],
+    "anonymous": {
+      "credential_types_supported": ["none"],
+      "claim_uri": "https://neptunetrading.lk/contact.html"
+    }
+  }
+}
