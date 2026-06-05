@@ -687,5 +687,52 @@
     <script src="js/animations.js"></script>
     <script src="js/main.js"></script>
     <script src="js/forms.js"></script>
+    <script>
+      if (navigator.modelContext && navigator.modelContext.provideContext) {
+        navigator.modelContext.provideContext({
+          tools: [
+            {
+              name: "get_company_info",
+              description: "Get information about Neptune Trading Company, its history, products, and authorized distributorships.",
+              inputSchema: { type: "object", properties: {}, required: [] },
+              execute: async () => ({
+                name: "Neptune Trading Company (Pvt) Ltd",
+                founded: 1984,
+                location: "Sri Lanka",
+                website: "https://neptunetrading.lk",
+                distributorships: [
+                  "HUMMER Power Products — Sri Lanka & Maldives",
+                  "Snow/Aliaxis Piping Systems — Sri Lanka",
+                  "Metal Alloys Corporation — Sri Lanka"
+                ],
+                services: ["B2B Trading", "Strategic Sourcing", "Export Development", "Market Entry", "Product Representation"]
+              })
+            },
+            {
+              name: "submit_inquiry",
+              description: "Submit a business inquiry or contact request to Neptune Trading Company.",
+              inputSchema: {
+                type: "object",
+                properties: {
+                  name: { type: "string", description: "Full name" },
+                  email: { type: "string", description: "Email address" },
+                  company: { type: "string", description: "Company name" },
+                  message: { type: "string", description: "Inquiry message" }
+                },
+                required: ["name", "email", "message"]
+              },
+              execute: async ({ name, email, company, message }) => {
+                const res = await fetch("/api/contact", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify({ name, email, company, message })
+                });
+                return { success: res.ok, status: res.status };
+              }
+            }
+          ]
+        });
+      }
+    </script>
   </body>
 </html>

@@ -1,0 +1,9 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://neptunetrading.lk/api/contact",
+      "service-doc": [{ "href": "https://neptunetrading.lk/contact.html" }],
+      "type": [{ "href": "https://neptunetrading.lk/api/contact", "type": "application/json" }]
+    }
+  ]
+}

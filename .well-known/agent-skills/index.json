@@ -1,0 +1,12 @@
+{
+  "$schema": "https://agentskills.io/schema/v0.2.0/index.json",
+  "skills": [
+    {
+      "name": "contact",
+      "type": "api",
+      "description": "Submit a contact or business inquiry to Neptune Trading Company",
+      "url": "https://neptunetrading.lk/api/contact",
+      "sha256": ""
+    }
+  ]
+}
