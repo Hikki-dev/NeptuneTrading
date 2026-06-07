@@ -2791,15 +2791,32 @@ body.home-premium .navbar.at-top {
     font-size: clamp(2.1rem, 8vw, 2.8rem) !important;
   }
   .hero-right-credentials {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 10px;
+    max-width: 440px;
+    width: 100%;
   }
   .hero-cred-item {
-    border-right: none;
+    text-align: center;
+    padding: 16px 12px;
+    border-right: 1px solid rgba(255,255,255,0.08);
     border-bottom: 1px solid rgba(255,255,255,0.08);
-    padding: 14px 20px;
+  }
+  .hero-cred-item:nth-child(2) {
+    border-right: none;
   }
   .hero-cred-item:last-child {
+    grid-column: span 2;
+    border-right: none;
     border-bottom: none;
+    padding: 18px 20px;
+  }
+  .hero-cred-item strong {
+    font-size: 1.35rem;
+  }
+  .hero-cred-item:last-child strong {
+    font-size: 1.2rem;
   }
   .trust-item {
     padding: 20px 24px;
