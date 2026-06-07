@@ -8,9 +8,8 @@
 
 
   /* ─── 1. NAVBAR SCROLL BEHAVIOUR ─────────────────────── */
-  window.addEventListener('scroll', () => {
-    document.documentElement.style.setProperty('--scroll-y', window.scrollY);
-  }, { passive: true });
+  // Removed --scroll-y CSS variable: setting it on :root triggers a style
+  // recalculation for every descendant on each scroll tick.
 
   /* ─── 2. SCROLL REVEAL ────────────────────────────────── */
   const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');

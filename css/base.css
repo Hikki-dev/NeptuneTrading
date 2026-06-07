@@ -12,7 +12,7 @@
    NEPTUNE TRADING - BASE STYLES
    ============================================ */
 
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800&family=Barlow:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,800;1,400;1,700&display=swap");
 
 :root {
   /* Aligned Premium Corporate Ecosystem */
@@ -41,9 +41,9 @@
   --surface: var(--blue-bg);
   --muted: var(--slate);
 
-  --font-display: "Plus Jakarta Sans", sans-serif;
-  --font-body: "Inter", sans-serif;
-  --font-mono: "Space Mono", monospace;
+  --font-display: "Epilogue", sans-serif;
+  --font-body: "Barlow", sans-serif;
+  --font-mono: "Barlow", sans-serif;
 
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
@@ -175,10 +175,10 @@ textarea:focus-visible {
 /* ---- REVEAL ANIMATIONS ---- */
 .reveal {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(20px);
   transition:
-    opacity 0.8s var(--ease-out-expo),
-    transform 0.8s var(--ease-out-expo);
+    opacity 0.55s var(--ease-out-expo),
+    transform 0.55s var(--ease-out-expo);
 }
 .reveal.in-view {
   opacity: 1;
@@ -186,10 +186,10 @@ textarea:focus-visible {
 }
 .reveal-left {
   opacity: 0;
-  transform: translateX(-50px);
+  transform: translateX(-28px);
   transition:
-    opacity 0.9s var(--ease-out-expo),
-    transform 0.9s var(--ease-out-expo);
+    opacity 0.65s var(--ease-out-expo),
+    transform 0.65s var(--ease-out-expo);
 }
 .reveal-left.in-view {
   opacity: 1;
@@ -197,10 +197,10 @@ textarea:focus-visible {
 }
 .reveal-right {
   opacity: 0;
-  transform: translateX(50px);
+  transform: translateX(28px);
   transition:
-    opacity 0.9s var(--ease-out-expo),
-    transform 0.9s var(--ease-out-expo);
+    opacity 0.65s var(--ease-out-expo),
+    transform 0.65s var(--ease-out-expo);
 }
 .reveal-right.in-view {
   opacity: 1;
@@ -245,7 +245,9 @@ textarea:focus-visible {
   padding: 15px 32px;
   min-height: 48px;
   border-radius: 6px;
-  transition: all 0.3s var(--ease-out-quart);
+  transition:
+    transform 160ms var(--ease-out-quart),
+    box-shadow 200ms var(--ease-out-quart);
   position: relative;
   overflow: hidden;
 }
@@ -259,14 +261,20 @@ textarea:focus-visible {
     var(--blue-accent) 100%
   );
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 250ms ease;
 }
 .btn-primary:hover::before {
   opacity: 1;
 }
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 16px 40px rgba(37, 99, 235, 0.35);
+@media (hover: hover) and (pointer: fine) {
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 40px rgba(37, 99, 235, 0.35);
+  }
+}
+.btn-primary:active {
+  transform: scale(0.97);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
 }
 .btn-primary span,
 .btn-primary svg {
@@ -289,17 +297,27 @@ textarea:focus-visible {
   min-height: 48px;
   border-radius: 6px;
   border: 1px solid var(--white);
-  transition: all 0.3s var(--ease-out-quart);
+  transition:
+    transform 160ms var(--ease-out-quart),
+    box-shadow 200ms var(--ease-out-quart),
+    background 200ms ease,
+    border-color 200ms ease;
   text-decoration: none;
   cursor: pointer;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
 }
-.btn-white:hover {
-  background: #f1f5f9;
-  border-color: #f1f5f9;
-  color: var(--blue-deep) !important;
-  transform: translateY(-2px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+@media (hover: hover) and (pointer: fine) {
+  .btn-white:hover {
+    background: #f1f5f9;
+    border-color: #f1f5f9;
+    color: var(--blue-deep) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+  }
+}
+.btn-white:active {
+  transform: scale(0.97);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 
@@ -318,15 +336,25 @@ textarea:focus-visible {
   min-height: 48px;
   border-radius: 6px;
   border: 1.5px solid var(--border);
-  transition: all 0.3s var(--ease-out-quart);
+  transition:
+    transform 160ms var(--ease-out-quart),
+    box-shadow 200ms var(--ease-out-quart),
+    background 200ms ease,
+    border-color 200ms ease,
+    color 200ms ease;
   backdrop-filter: blur(8px);
 }
-.btn-outline:hover {
-  background: var(--blue-mid);
-  color: var(--white);
-  border-color: var(--blue-mid);
-  transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.15);
+@media (hover: hover) and (pointer: fine) {
+  .btn-outline:hover {
+    background: var(--blue-mid);
+    color: var(--white);
+    border-color: var(--blue-mid);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.15);
+  }
+}
+.btn-outline:active {
+  transform: scale(0.97);
 }
 
 .btn-ghost {
@@ -342,13 +370,48 @@ textarea:focus-visible {
   min-height: 48px;
   border-radius: 6px;
   border: 1.5px solid var(--blue-mid);
-  transition: all 0.3s var(--ease-out-quart);
+  transition:
+    transform 160ms var(--ease-out-quart),
+    box-shadow 200ms var(--ease-out-quart),
+    background 200ms ease,
+    color 200ms ease;
 }
-.btn-ghost:hover {
-  background: var(--blue-mid);
-  color: var(--white);
-  transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.25);
+@media (hover: hover) and (pointer: fine) {
+  .btn-ghost:hover {
+    background: var(--blue-mid);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.25);
+  }
+}
+.btn-ghost:active {
+  transform: scale(0.97);
+}
+
+/* ---- REDUCED MOTION ---- */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-left,
+  .reveal-right {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .btn-primary,
+  .btn-white,
+  .btn-outline,
+  .btn-ghost {
+    transition: none;
+  }
+  .btn-primary:active,
+  .btn-white:active,
+  .btn-outline:active,
+  .btn-ghost:active {
+    transform: none;
+  }
+  @keyframes pulse-dot {
+    from, to { opacity: 1; transform: none; }
+  }
 }
 
 /* ---- DIVIDER ---- */
@@ -986,9 +1049,9 @@ textarea:focus-visible {
   --radius: 8px;
   --radius-lg: 12px;
   
-  --font-display: "Plus Jakarta Sans", sans-serif;
-  --font-body: "Inter", sans-serif;
-  --font-mono: "Space Mono", monospace;
+  --font-display: "Epilogue", sans-serif;
+  --font-body: "Barlow", sans-serif;
+  --font-mono: "Barlow", sans-serif;
   
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);

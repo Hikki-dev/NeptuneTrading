@@ -1,3 +1,50 @@
+/* ── HUMMER Category Filter Tabs ────────────────────────────────────── */
+document.addEventListener("DOMContentLoaded", () => {
+  const tabs = document.querySelectorAll(".hummer-filter-tab");
+  const grid = document.getElementById("hummer-product-grid");
+  if (!tabs.length || !grid) return;
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      const filter = tab.dataset.filter;
+
+      // Update active tab
+      tabs.forEach(t => {
+        t.classList.remove("active");
+        t.setAttribute("aria-selected", "false");
+      });
+      tab.classList.add("active");
+      tab.setAttribute("aria-selected", "true");
+
+      // Show / hide cards
+      grid.querySelectorAll(".product-card").forEach(card => {
+        if (filter === "all" || card.dataset.category === filter) {
+          card.classList.remove("filter-hidden");
+        } else {
+          card.classList.add("filter-hidden");
+        }
+      });
+    });
+  });
+});
+
+/* ── FAQ Accordion ──────────────────────────────────────────────────── */
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".faq-item").forEach((item, index) => {
+    const question = item.querySelector(".faq-question");
+    if (!question) return;
+    // Open first item by default
+    if (index === 0) item.classList.add("open");
+    question.addEventListener("click", () => {
+      const isOpen = item.classList.contains("open");
+      // Close all
+      item.closest(".faq-grid").querySelectorAll(".faq-item").forEach(i => i.classList.remove("open"));
+      // Toggle clicked
+      if (!isOpen) item.classList.add("open");
+    });
+  });
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("#year, [data-current-year]").forEach((el) => {
     el.textContent = String(new Date().getFullYear());

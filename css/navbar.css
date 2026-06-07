@@ -125,17 +125,26 @@
   border-radius: 5px;
   font-weight: 600 !important;
   letter-spacing: 0.03em;
-  transition: all 0.25s ease !important;
+  transition:
+    transform 160ms var(--ease-out-quart),
+    box-shadow 200ms var(--ease-out-quart),
+    background 200ms ease !important;
   width: fit-content;
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
-.nav-cta:hover {
-  background: linear-gradient(135deg, var(--blue-mid), var(--blue-accent)) !important;
-  box-shadow: 0 8px 24px rgba(37,99,235,0.4) !important;
-  transform: translateY(-1px) !important;
+@media (hover: hover) and (pointer: fine) {
+  .nav-cta:hover {
+    background: linear-gradient(135deg, var(--blue-mid), var(--blue-accent)) !important;
+    box-shadow: 0 8px 24px rgba(37,99,235,0.4) !important;
+    transform: translateY(-1px) !important;
+  }
+}
+.nav-cta:active {
+  transform: scale(0.97) !important;
+  box-shadow: 0 3px 10px rgba(37,99,235,0.2) !important;
 }
 .nav-cta::after { display: none !important; }
 
@@ -518,30 +527,43 @@
 }
 
 body.home-premium .navbar.at-top {
-  background: rgba(255, 255, 255, 0.96);
-  border-bottom-color: rgba(37, 99, 235, 0.12);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03), 0 10px 40px rgba(37, 99, 235, 0.02);
+  background: transparent;
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+  transition: background 0.35s ease, border-bottom-color 0.35s ease;
 }
 
 body.home-premium .navbar.at-top .nav-link {
-  color: var(--dark-mid);
+  color: rgba(255, 255, 255, 0.88);
 }
 
 body.home-premium .navbar.at-top .nav-link:hover,
 body.home-premium .navbar.at-top .nav-link.active {
-  color: var(--blue-mid);
+  color: #ffffff;
 }
 
 body.home-premium .navbar.at-top .nav-link::after {
-  background: var(--blue-accent);
+  background: rgba(255, 255, 255, 0.7);
 }
 
 body.home-premium .navbar.at-top .nav-hamburger span {
-  background: var(--dark);
+  background: #ffffff;
 }
 
 body.home-premium .navbar.at-top .nav-logo-img {
-  filter: drop-shadow(0 6px 18px rgba(37, 99, 235, 0.2));
+  filter: brightness(0) invert(1) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+}
+
+body.home-premium .navbar.at-top .nav-cta {
+  background: rgba(255,255,255,0.15) !important;
+  border: 1.5px solid rgba(255,255,255,0.35) !important;
+  color: #ffffff !important;
+}
+@media (hover: hover) and (pointer: fine) {
+  body.home-premium .navbar.at-top .nav-cta:hover {
+    background: #ffffff !important;
+    color: var(--blue-deep) !important;
+  }
 }
 
 .nav-mobile.open {

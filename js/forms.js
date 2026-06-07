@@ -16,8 +16,29 @@ document.addEventListener("DOMContentLoaded", () => {
         parent.classList.remove("is-focused");
         if (input.value.trim() !== "") {
           parent.classList.add("has-value");
+          parent.classList.remove("has-error");
+          const err = parent.querySelector(".field-error");
+          if (err) err.remove();
         } else {
           parent.classList.remove("has-value");
+          if (input.hasAttribute("required")) {
+            parent.classList.add("has-error");
+            if (!parent.querySelector(".field-error")) {
+              const label = parent.querySelector("span")?.childNodes[0]?.textContent?.trim() || "This field";
+              const msg = document.createElement("span");
+              msg.className = "field-error";
+              msg.textContent = label + " is required";
+              parent.appendChild(msg);
+            }
+          }
+        }
+      });
+      // Clear error on input
+      input.addEventListener("input", () => {
+        if (input.value.trim() !== "") {
+          parent.classList.remove("has-error");
+          const err = parent.querySelector(".field-error");
+          if (err) err.remove();
         }
       });
       // Initial state check

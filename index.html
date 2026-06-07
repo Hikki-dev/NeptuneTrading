@@ -235,35 +235,33 @@
     <main>
       <!-- Hero -->
       <section class="home-trade-hero" aria-labelledby="hero-title">
-        <div class="hero-grid" aria-hidden="true"></div>
-        <div class="hero-bg" aria-hidden="true"></div>
-        <canvas id="hero-canvas" aria-hidden="true"></canvas>
+        <div class="hero-bg-image" aria-hidden="true">
+          <img src="assets/hero-ship-port.jpg" alt="" width="1200" height="900" loading="eager">
+        </div>
+        <div class="hero-overlay" aria-hidden="true"></div>
         <div class="container">
           <div class="hero-inner">
-            <div class="hero-left reveal-left">
-              <span class="tag-label">Established 1984   Colombo, Sri Lanka</span>
-              <h1 id="hero-title">Connecting Sri Lankan buyers with <span class="hero-title-shimmer">trusted international</span> product principals.</h1>
-              <p class="hero-copy">Neptune Trading represents selected international product manufacturers as their authorized local partner. We coordinate sourcing, procurement, and supply through our Colombo commercial desk since 1984.</p>
+            <div class="hero-left">
+              <p class="hero-since">Neptune Trading Company &mdash; Colombo, Sri Lanka</p>
+              <h1 id="hero-title">Three authorized divisions. One commercial desk.</h1>
+              <p class="hero-copy">Authorized distributor for HUMMER Power Products, Snow&thinsp;/&thinsp;Aliaxis Piping Systems, and Metal Alloys Corporation. B2B sourcing, procurement, and principal representation since 1984.</p>
               <div class="hero-actions">
                 <a href="#principals" class="btn-primary btn-magnetic"><span>Explore Product Divisions</span></a>
                 <a href="contact.html" class="btn-outline-ghost btn-magnetic">Contact Trading Desk</a>
               </div>
             </div>
-            <div class="hero-right reveal-right">
-              <div class="hero-visual-frame ship-hover-frame">
-                <img src="assets/hero-ship-port.jpg" alt="Colombo port industrial operations" loading="eager" width="1200" height="900">
-                <div class="hero-float-card hero-float-card-1" aria-hidden="true">
-                  <div class="hfc-label">Established</div>
-                  <div class="hfc-value">1984</div>
-                  <div class="hfc-sub">Colombo, Sri Lanka</div>
-                </div>
-                <div class="hero-float-card hero-float-card-2" aria-hidden="true">
-                  <div class="hfc-dot hfc-dot-green"></div>
-                  <div>
-                    <div class="hfc-label">Active Divisions</div>
-                    <div class="hfc-value">3 Principals</div>
-                  </div>
-                </div>
+            <div class="hero-right-credentials" aria-hidden="true">
+              <div class="hero-cred-item">
+                <strong>40+</strong>
+                <span>Years of operation</span>
+              </div>
+              <div class="hero-cred-item">
+                <strong>3</strong>
+                <span>Authorized product divisions</span>
+              </div>
+              <div class="hero-cred-item">
+                <strong>Sri Lanka &amp; Maldives</strong>
+                <span>Active distribution territory</span>
               </div>
             </div>
           </div>
@@ -294,8 +292,7 @@
       <section class="section" id="principals" style="background: var(--neptune-bg);" aria-labelledby="divisions-title">
         <div class="container">
           <div class="section-head center reveal">
-            <span class="tag-label">Authorized Portfolio</span>
-            <h2 id="divisions-title" class="section-heading" style="margin-top: 14px;">Three authorized product divisions</h2>
+            <h2 id="divisions-title" class="section-heading">Three authorized product divisions</h2>
             <p style="max-width: 620px; margin-top: 10px;">Formal local agency agreements with global industrial manufacturers, covering inquiry routing, compliance documentation, and structured bid coordination.</p>
           </div>
           <div class="grid grid-3 reveal">
@@ -306,16 +303,8 @@
                   <img src="assets/logos/hummer-logo.png" alt="Hummer logo" loading="lazy" width="1182" height="141" style="mix-blend-mode: multiply;">
                 </div>
                 <div class="logo-card-content">
-                  <span class="card-badge">Authorized Distributor</span>
                   <h3>HUMMER Power Products</h3>
-                  <div class="card-meta" style="font-size: 0.85rem; color: var(--neptune-blue); font-weight: 700; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.03em;">Specialized Power Systems</div>
-                  <p style="margin-bottom: 14px; font-size: 0.9rem; line-height: 1.58;">Portable automotive and outdoor power solutions for fleet operators, workshops, emergency users, outdoor buyers, and corporate procurement teams.</p>
-                  
-                  <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px;">
-                    <div style="font-size: 0.86rem; line-height: 1.45;"><strong style="color: var(--neptune-navy);">Buyer Scope:</strong> Jump starters, power banks, tyre inflators, power stations, flashlights, car inverters, and accessories.</div>
-                    <div style="font-size: 0.86rem; line-height: 1.45;"><strong style="color: var(--neptune-navy);">Business Value:</strong> Specifying durable, high-reliability battery technology and portable backup generators for fleet operations.</div>
-                  </div>
-
+                  <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 16px;">Portable automotive and outdoor power for fleet operators, workshops, emergency responders, and corporate procurement teams. GM-licensed. Authorized for Sri Lanka and Maldives.</p>
                   <ul class="capability-list" style="gap: 6px; font-size: 0.84rem; margin-top: 12px; border-top: 1px solid rgba(9, 19, 44, 0.05); padding-top: 12px;">
                     <li>Jump Starters &amp; Power Stations</li>
                     <li>Power Banks &amp; Tyre Inflators</li>
@@ -333,16 +322,8 @@
                   <img src="assets/logos/aliaxis-logo-display.png" alt="Aliaxis logo" loading="lazy" width="801" height="182">
                 </div>
                 <div class="logo-card-content">
-                  <span class="card-badge">Authorized Distributor</span>
                   <h3>Snow / Aliaxis Piping Systems</h3>
-                  <div class="card-meta" style="font-size: 0.85rem; color: var(--neptune-blue); font-weight: 700; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.03em;">Commercial Fluid Management</div>
-                  <p style="margin-bottom: 14px; font-size: 0.9rem; line-height: 1.58;">LESSO Snow brand solutions under the Aliaxis portfolio for commercial, infrastructure, drainage, plumbing, and fluid-management requirements.</p>
-                  
-                  <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px;">
-                    <div style="font-size: 0.86rem; line-height: 1.45;"><strong style="color: var(--neptune-navy);">Target Audience:</strong> For MEP contractors, construction companies, infrastructure projects, plumbing networks, and technical procurement teams.</div>
-                    <div style="font-size: 0.86rem; line-height: 1.45;"><strong style="color: var(--neptune-navy);">Business Value:</strong> Ensuring leak-free, long-life, and regulatory-compliant fluid management networks.</div>
-                  </div>
-
+                  <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 16px;">LESSO Snow brand industrial and commercial piping for MEP contractors, construction projects, and infrastructure procurement. Drainage, pressure, and fluid management systems.</p>
                   <ul class="capability-list" style="gap: 6px; font-size: 0.84rem; margin-top: 12px; border-top: 1px solid rgba(9, 19, 44, 0.05); padding-top: 12px;">
                     <li>Soil, Waste &amp; Vent Systems</li>
                     <li>Pressure &amp; Industrial Piping</li>
@@ -360,16 +341,8 @@
                   <img src="assets/logos/metal-alloy-corporation-logo-display.png" alt="Metal Alloys Corporation logo" loading="lazy" width="954" height="1139">
                 </div>
                 <div class="logo-card-content">
-                  <span class="card-badge">Authorized Distributor</span>
                   <h3>Metal Alloys Corporation</h3>
-                  <div class="card-meta" style="font-size: 0.85rem; color: var(--neptune-blue); font-weight: 700; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.03em;">Industrial Alloys &amp; Metallurgy</div>
-                  <p style="margin-bottom: 14px; font-size: 0.9rem; line-height: 1.58;">Technical copper, brass, bronze, and copper-nickel alloy products for marine, engineering, manufacturing, industrial maintenance, and project procurement requirements.</p>
-                  
-                  <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px;">
-                    <div style="font-size: 0.86rem; line-height: 1.45;"><strong style="color: var(--neptune-navy);">Target Audience:</strong> For marine engineering, industrial plants, fabrication, manufacturing, contractors, and technical procurement teams.</div>
-                    <div style="font-size: 0.86rem; line-height: 1.45;"><strong style="color: var(--neptune-navy);">Material Scope:</strong> Admiralty &amp; aluminium brass, hollow rods, naval pipes, bronze, and custom metallurgy.</div>
-                  </div>
-
+                  <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 16px;">Copper, brass, bronze, and copper-nickel alloys for marine engineering, industrial fabrication, manufacturing, and specialist project procurement across Sri Lanka.</p>
                   <ul class="capability-list" style="gap: 6px; font-size: 0.84rem; margin-top: 12px; border-top: 1px solid rgba(9, 19, 44, 0.05); padding-top: 12px;">
                     <li>Admiralty &amp; Aluminium Brass Tubes</li>
                     <li>Brass Hollow Rods &amp; Naval Pipes</li>
@@ -393,8 +366,7 @@
       <section class="section" id="ceylon-exports" style="background: var(--white); border-top: 1px solid var(--border);" aria-labelledby="exports-section-title">
         <div class="container">
           <div class="section-head center reveal">
-            <span class="tag-label">Tea &amp; Agricultural Sourcing</span>
-            <h2 id="exports-section-title" class="section-heading" style="margin-top: 14px;">Ceylon Export Support</h2>
+            <h2 id="exports-section-title" class="section-heading">Ceylon Export Support</h2>
             <p style="max-width: 680px; margin-top: 10px;">For Ceylon tea and selected agricultural export enquiries, Neptune Trading works with CEC Commercial Export Company for export supply, product preparation, documentation support, and buyer fulfilment coordination.</p>
           </div>
           
@@ -424,8 +396,7 @@
               </div>
             </div>
             <div>
-              <span class="tag-label" style="background: rgba(37,99,235,0.06); border-color: rgba(37,99,235,0.18);">CEC Supply Backing</span>
-              <h3 style="font-family: var(--font-display); font-size: 1.4rem; font-weight: 800; color: var(--blue-deep); margin: 14px 0 12px;">Agricultural Supply Backing</h3>
+              <h3 style="font-family: var(--font-display); font-size: 1.4rem; font-weight: 800; color: var(--blue-deep); margin: 0 0 12px;">Agricultural Supply Backing</h3>
               <p style="color: var(--slate); font-size: 0.92rem; line-height: 1.65; margin-bottom: 24px;">
                 Agricultural supply operations, custom blends, sorting, grading, and bulk warehouse packaging are backed directly by Commercial Export Company (CEC). This secures product origin and quality controls at source.
               </p>
@@ -436,12 +407,11 @@
       </section>
 
       <!-- What We Do — Compact Split -->
-      <section class="section home-capabilities-section" style="background: var(--white); border-top: 1px solid var(--border);" aria-labelledby="capabilities-title">
+      <section class="section home-capabilities-section home-capabilities-section--dark" aria-labelledby="capabilities-title">
         <div class="container">
           <div class="home-capabilities-grid">
             <div class="home-cap-left reveal-left">
-              <span class="tag-label">What We Do</span>
-              <h2 id="capabilities-title" class="section-heading" style="margin-top: 14px; font-size: clamp(1.9rem, 3.2vw, 2.6rem);">Four core capabilities. One commercial desk.</h2>
+              <h2 id="capabilities-title" class="section-heading" style="font-size: clamp(1.9rem, 3.2vw, 2.6rem);">Four core capabilities. One commercial desk.</h2>
               <p style="color: var(--slate); line-height: 1.7; margin: 18px 0 32px; max-width: 480px;">Neptune Trading Company coordinates product representation, international sourcing, Ceylon export development, and market-entry support from a single commercial team in Colombo.</p>
               <div class="home-cap-actions">
                 <a href="what-we-do.html" class="btn-primary"><span>Explore Capabilities</span></a>
@@ -495,8 +465,7 @@
         <div class="container">
           <div class="support-strip-head reveal">
             <div>
-              <span class="tag-label">Execution Support</span>
-              <h2 id="support-title" style="font-family: var(--font-display); font-size: clamp(1.5rem, 2.4vw, 2rem); font-weight: 800; color: var(--neptune-navy); margin-top: 12px; line-height: 1.2;">Commercial lead, backed by specialist execution.</h2>
+              <h2 id="support-title" style="font-family: var(--font-display); font-size: clamp(1.5rem, 2.4vw, 2rem); font-weight: 800; color: var(--neptune-navy); margin-top: 0; line-height: 1.2;">Commercial lead, backed by specialist execution.</h2>
             </div>
             <p class="support-strip-desc">Where requirements extend into export supply or shipment execution, Neptune Trading coordinates with specialist support partners to deliver seamless end-to-end execution.</p>
           </div>
@@ -540,8 +509,7 @@
       <section class="section" style="background:#ffffff; border-top:1px solid rgba(11,31,74,0.08); padding: clamp(48px,6vw,80px) 0;" aria-label="About Neptune Trading Company">
         <div class="container">
           <div style="max-width:860px; margin:0 auto; text-align:center;" class="reveal">
-            <span class="tag-label">About Neptune Trading</span>
-            <h2 class="section-heading" style="margin-top:16px;">What is Neptune Trading Company?</h2>
+            <h2 class="section-heading">What is Neptune Trading Company?</h2>
             <p style="font-size:1.05rem; line-height:1.8; color:#3d5280; margin-top:18px; max-width:760px; margin-left:auto; margin-right:auto;">
               Neptune Trading Company (Pvt) Ltd is a Sri Lankan B2B trading, sourcing, and procurement company established in <strong>Colombo in 1984</strong>. The company acts as the <strong>authorized local distributor and commercial representative</strong> for selected international manufacturers including <a href="hummer-products.html">HUMMER Power Products</a> (for Sri Lanka &amp; Maldives), <a href="snow-aliaxis-products.html">Snow / Aliaxis Piping Systems</a>, and <a href="metal-alloys-products.html">Metal Alloys Corporation</a>. Neptune Trading coordinates product sourcing, procurement support, export development, and market-entry assistance for businesses, institutions, and international suppliers from its Colombo commercial desk.
             </p>
@@ -567,9 +535,8 @@
       <section class="faq-section" aria-labelledby="faq-title">
         <div class="container">
           <div class="section-head center reveal">
-            <span class="tag-label">Common Questions</span>
-            <h2 id="faq-title" class="section-heading" style="margin-top: 14px;">Frequently Asked Questions</h2>
-            <p style="max-width: 580px; margin-top: 10px;">Quick answers about Neptune Trading Company, our product divisions, and how to work with us.</p>
+            <h2 id="faq-title" class="faq-heading">Frequently Asked <em>Questions</em></h2>
+            <p class="faq-sub">Quick answers about Neptune Trading Company, our product divisions, and how to work with us.</p>
           </div>
           <div class="faq-grid reveal">
             <div class="faq-item">
@@ -577,32 +544,16 @@
               <p class="faq-answer">Neptune Trading Company (Pvt) Ltd is a Sri Lankan B2B trading company established in 1984. We act as the authorized local distributor and commercial representative for selected international product principals, and coordinate sourcing, procurement, and export support from our Colombo desk.</p>
             </div>
             <div class="faq-item">
-              <p class="faq-question">Who should contact Neptune Trading Company?</p>
-              <p class="faq-answer">Importers, exporters, contractors, MEP engineers, industrial procurement teams, fleet operators, institutional buyers, and international suppliers seeking Sri Lankan market representation should contact us. We handle B2B, institutional, and bulk enquiries.</p>
-            </div>
-            <div class="faq-item">
               <p class="faq-question">What product divisions does Neptune Trading represent?</p>
               <p class="faq-answer">We represent three authorized product divisions: <a href="hummer-products.html">HUMMER Power Products</a> (jump starters, power stations, power banks), <a href="snow-aliaxis-products.html">Snow / Aliaxis Piping Systems</a> (industrial and commercial piping), and <a href="metal-alloys-products.html">Metal Alloys Corporation</a> (copper, brass, and bronze alloys).</p>
             </div>
             <div class="faq-item">
               <p class="faq-question">Is Neptune Trading Company an authorized distributor?</p>
-              <p class="faq-answer">Yes. Neptune Trading holds formal agency and distributorship agreements for HUMMER Power Products (authorized for Sri Lanka &amp; Maldives, General Motors licensed), Snow / Aliaxis Piping Systems (LESSO Snow brand), and Metal Alloys Corporation. All products are sourced through an officially authorized supply chain — no grey-market sourcing.</p>
-            </div>
-            <div class="faq-item">
-              <p class="faq-question">Does Neptune Trading sell directly to consumers?</p>
-              <p class="faq-answer">We primarily serve businesses, institutions, and commercial buyers. We handle B2B product enquiries, bulk procurement, fleet supply, and project-based requirements. Enquiries should include product required, quantity, application, and company details for our desk to respond appropriately.</p>
+              <p class="faq-answer">Yes. Neptune Trading holds formal agency and distributorship agreements for HUMMER Power Products (authorized for Sri Lanka &amp; Maldives, General Motors licensed), Snow / Aliaxis Piping Systems, and Metal Alloys Corporation. All products are sourced through an officially authorized supply chain.</p>
             </div>
             <div class="faq-item">
               <p class="faq-question">How can I submit a product or sourcing enquiry?</p>
-              <p class="faq-answer">Use our <a href="contact.html">contact form</a> or reach us directly at <a href="mailto:info@neptunetrading.lk">info@neptunetrading.lk</a> or <a href="tel:+94117991105">0117 99 11 05</a>. Please include the product required, quantity, industry or application, delivery location, and your company name for a structured commercial response.</p>
-            </div>
-            <div class="faq-item">
-              <p class="faq-question">What is principal representation in trading?</p>
-              <p class="faq-answer">Principal representation means a local trading company acts as the official commercial agent for an international manufacturer in a specific market. Neptune Trading represents selected international product manufacturers as their authorized Sri Lankan partner, handling local enquiries, bid coordination, compliance documentation, and supply chain routing on their behalf. This gives buyers a reliable, locally accountable source for internationally branded products.</p>
-            </div>
-            <div class="faq-item">
-              <p class="faq-question">Can international suppliers partner with Neptune Trading?</p>
-              <p class="faq-answer">Yes. International manufacturers seeking Sri Lankan market representation can contact Neptune Trading through our <a href="contact.html">trading desk</a>. We evaluate new principal partnerships based on product category, market fit, compliance standards, and commercial viability. Interested suppliers should include their company profile, product range, certifications, and target market requirement in their initial enquiry.</p>
+              <p class="faq-answer">Use our <a href="contact.html">contact form</a> or reach us at <a href="mailto:info@neptunetrading.lk">info@neptunetrading.lk</a> or <a href="tel:+94117991105">0117 99 11 05</a>. Include the product, quantity, application, and your company name for a structured response.</p>
             </div>
           </div>
           <div class="faq-cta reveal">
@@ -616,8 +567,7 @@
         <div class="container">
           <div class="home-cta-inner reveal">
             <div class="home-cta-copy">
-              <span class="tag-label tag-label-light">Discuss Your Requirement</span>
-              <h2 id="cta-title" style="color: var(--white); font-family: var(--font-display); font-size: clamp(2rem, 3.5vw, 2.8rem); margin-top: 14px; line-height: 1.1;">Ready to discuss your sourcing or representation needs?</h2>
+              <h2 id="cta-title" style="color: var(--white); font-family: var(--font-display); font-size: clamp(2rem, 3.5vw, 2.8rem); margin: 0; line-height: 1.1;">Ready to discuss your sourcing or representation needs?</h2>
               <p style="color: rgba(255,255,255,0.8); line-height: 1.65; margin-top: 14px; max-width: 520px;">Reach our trading desk directly. We respond to all commercial enquiries — product representation, sourcing briefs, export requirements, or market-entry questions.</p>
             </div>
             <div class="home-cta-actions">

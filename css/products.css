@@ -90,14 +90,17 @@
 
 /* MAC product cards — landscape thumbnail treatment */
 .product-card--metalco .product-card-image {
-  height: 180px;
+  height: 220px;
   background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
-  padding: 28px 40px;
+  padding: 24px 32px;
 }
 
 .product-card--metalco .product-card-image img {
-  max-height: 120px;
+  max-height: 160px;
+  width: auto;
+  max-width: 100%;
   filter: drop-shadow(0 4px 12px rgba(146, 64, 14, 0.12));
+  mix-blend-mode: multiply;
 }
 
 /* Logo frame within division card */
@@ -339,8 +342,8 @@
 .product-card-image {
   position: relative;
   height: 230px;
-  background: #ffffff;
-  padding: 16px;
+  background: #f4f7ff;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -354,6 +357,7 @@
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+  mix-blend-mode: multiply;
   transition: transform 0.4s var(--ease-out-expo);
 }
 
@@ -1208,7 +1212,7 @@
 /* ---- Improved CTA band (replaces inline grid) ---- */
 .product-cta-band {
   padding: 72px 0;
-  background: #060d1a;
+  background: #dbeafe;
   position: relative;
   overflow: hidden;
 }
@@ -1217,7 +1221,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 80% 50%, rgba(37,99,235,0.08) 0%, transparent 60%);
+  background: radial-gradient(circle at 80% 50%, rgba(37,99,235,0.10) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -1231,13 +1235,13 @@
 }
 
 .product-cta-copy .tag-label {
-  color: #bfdbfe;
-  background: rgba(255,255,255,0.08);
-  border-color: rgba(255,255,255,0.16);
+  color: #1e40af;
+  background: rgba(37,99,235,0.1);
+  border-color: rgba(37,99,235,0.2);
 }
 
 .product-cta-copy h2 {
-  color: #ffffff;
+  color: #0b1f4a;
   font-family: var(--font-display);
   font-size: clamp(1.7rem, 3vw, 2.4rem);
   font-weight: 800;
@@ -1246,7 +1250,7 @@
 }
 
 .product-cta-copy p {
-  color: rgba(255,255,255,0.72);
+  color: #334e7a;
   line-height: 1.65;
   margin-top: 12px;
   max-width: 520px;
@@ -1327,7 +1331,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: rgba(0,0,0,0.15);
+  background: #0b0d0f;
 }
 .hummer-story-inner {
   display: grid;
@@ -1337,26 +1341,26 @@
 }
 .hummer-story-tag {
   margin-bottom: 18px;
-  background: #0b1829 !important;
-  color: #ffd100 !important;
-  border-color: transparent !important;
+  background: rgba(0,0,0,0.1) !important;
+  color: #0b0d0f !important;
+  border-color: rgba(0,0,0,0.2) !important;
 }
 .hummer-story-tag::before {
-  background: #ffd100 !important;
+  background: #0b0d0f !important;
   animation: none !important;
 }
 .hummer-story-text h2 {
   font-size: clamp(2rem, 3.5vw, 2.8rem);
   font-weight: 700;
   line-height: 1.15;
-  color: #0b1829;
+  color: #0b0d0f;
   margin: 0 0 24px;
   letter-spacing: -0.02em;
 }
 .hummer-story-text p {
   font-size: 1rem;
   line-height: 1.75;
-  color: rgba(11, 24, 41, 0.75);
+  color: rgba(0, 0, 0, 0.7);
   margin: 0 0 16px;
   max-width: 540px;
 }
@@ -1468,14 +1472,14 @@
   --division-accent-text:   #0b0d0f;
 }
 
-/* Hero — stark black with yellow grid spark */
+/* Hero — HUMMER yellow */
 .trading-page-hero.page-hero--hummer {
   background:
-    linear-gradient(90deg, rgba(255,209,0,0.04) 1px, transparent 1px),
-    linear-gradient(rgba(255,209,0,0.04) 1px, transparent 1px),
-    linear-gradient(135deg, #0b0d0f 0%, #111418 55%, #191200 100%);
+    linear-gradient(90deg, rgba(0,0,0,0.06) 1px, transparent 1px),
+    linear-gradient(rgba(0,0,0,0.06) 1px, transparent 1px),
+    #ffd100;
   background-size: 56px 56px, 56px 56px, auto;
-  border-bottom: 3px solid #ffd100;
+  border-bottom: 3px solid #0b0d0f;
 }
 
 /* Yellow accent glow behind hero text */
@@ -1489,25 +1493,29 @@
   pointer-events: none;
 }
 
-/* Breadcrumb pill on dark bg */
+/* Breadcrumb pill on yellow bg */
 .page-hero--hummer .hero-breadcrumbs {
-  background: rgba(255,209,0,0.1);
-  border-color: rgba(255,209,0,0.25);
+  background: rgba(0,0,0,0.08);
+  border-color: rgba(0,0,0,0.16);
 }
 .page-hero--hummer .division-back-link {
-  color: rgba(255,255,255,0.55);
-  border-right-color: rgba(255,209,0,0.2);
+  color: rgba(0,0,0,0.55);
+  border-right-color: rgba(0,0,0,0.15);
 }
-.page-hero--hummer .division-back-link:hover { color: #ffd100; }
-.page-hero--hummer .page-eyebrow { color: #ffd100 !important; }
+.page-hero--hummer .division-back-link:hover { color: #0b0d0f; }
+.page-hero--hummer .page-eyebrow { color: #0b0d0f !important; }
 
-/* h1 and p in hero — .trading-page-hero + class = 0,2,1 beats site-polish 0,1,1 */
+/* h1 and p in hero — yellow bg = dark text */
 .trading-page-hero.page-hero--hummer h1 {
-  color: #ffd100 !important;
-  text-shadow: 0 0 80px rgba(255,209,0,0.35);
+  color: #0b0d0f !important;
 }
 .trading-page-hero.page-hero--hummer p {
-  color: rgba(255,255,255,0.72) !important;
+  color: rgba(0,0,0,0.68) !important;
+}
+
+/* Remove yellow glow — not needed on yellow bg */
+.trading-page-hero.page-hero--hummer::after {
+  display: none;
 }
 
 /* Intro section — white with yellow accent chips */
@@ -1558,13 +1566,9 @@
 }
 .gm-badge-item svg { color: #a07800; }
 
-/* Categories section — crisp off-white with yellow grid, fully corporate */
+/* Categories section — clean corporate white */
 .categories-section.division-card--hummer {
-  background:
-    linear-gradient(90deg, rgba(212,160,0,0.07) 1px, transparent 1px),
-    linear-gradient(rgba(212,160,0,0.07) 1px, transparent 1px),
-    linear-gradient(160deg, #fffdf5 0%, #fffcee 50%, #f9f8f2 100%);
-  background-size: 56px 56px, 56px 56px, auto;
+  background: #f4f6fa;
 }
 .categories-section.division-card--hummer .section-heading { color: #0b0d0f; }
 .categories-section.division-card--hummer p { color: #4a4a4a; }
@@ -1590,9 +1594,29 @@
   background: linear-gradient(90deg, #ffd100, #d4a000);
 }
 .categories-section.division-card--hummer .product-card-image {
-  background: #f9f6e8;
-  border-bottom-color: rgba(255,209,0,0.2);
+  background: #f5f3ee;
+  border-bottom-color: rgba(255,209,0,0.25);
 }
+
+/* Category-varied image backgrounds — products visible on light */
+.categories-section.division-card--hummer .product-card[data-category="jump-starters"] .product-card-image {
+  background: #f2f0ea;
+}
+.categories-section.division-card--hummer .product-card[data-category="power-stations"] .product-card-image {
+  background: #f4f2ec;
+}
+.categories-section.division-card--hummer .product-card[data-category="power-banks"] .product-card-image {
+  background: #f0eee8;
+}
+.categories-section.division-card--hummer .product-card[data-category="accessories"] .product-card-image {
+  background: #eeece6;
+}
+
+/* Hide repeated "Industry Applications" label */
+.categories-section.division-card--hummer .product-applications-label {
+  display: none;
+}
+
 .categories-section.division-card--hummer .product-card-content h3 { color: #0b0d0f; }
 .categories-section.division-card--hummer .product-card-content > p { color: #4a4a4a; }
 .categories-section.division-card--hummer .product-applications {
@@ -1682,6 +1706,112 @@
   border-color: rgba(0,0,0,0.5);
 }
 
+/* ── HUMMER: Category Filter Tabs ────────────────────────────────────── */
+.hummer-filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 36px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.hummer-filter-tab {
+  padding: 8px 20px;
+  border-radius: 100px;
+  border: 1.5px solid rgba(0,0,0,0.14);
+  background: #ffffff;
+  color: #3a3a3a;
+  font-family: var(--font-body, 'Barlow', sans-serif);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: background 200ms ease, border-color 200ms ease, color 200ms ease, transform 160ms ease;
+}
+
+.hummer-filter-tab:hover {
+  border-color: rgba(212,160,0,0.55);
+  background: rgba(255,209,0,0.08);
+  color: #1a1a1a;
+}
+
+.hummer-filter-tab.active {
+  background: #ffd100;
+  border-color: #d4a000;
+  color: #0b0d0f;
+}
+
+.hummer-filter-tab:active {
+  transform: scale(0.97);
+}
+
+/* Hidden card state during filter */
+.product-card.filter-hidden {
+  display: none !important;
+}
+
+/* ── HUMMER: Featured Flagship Card ─────────────────────────────────── */
+.categories-section.division-card--hummer .product-card--featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  max-height: none;
+}
+
+.categories-section.division-card--hummer .product-card--featured .product-card-image {
+  height: 100%;
+  min-height: 260px;
+  border-bottom: none;
+  border-right: 1px solid rgba(255,209,0,0.2);
+}
+
+.categories-section.division-card--hummer .product-card--featured .product-card-content {
+  padding: 32px 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.product-featured-flag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  background: #ffd100;
+  color: #0b0d0f;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  margin-bottom: 12px;
+}
+
+.product-featured-flag::before {
+  content: "★";
+  font-size: 0.7rem;
+}
+
+@media (max-width: 768px) {
+  .categories-section.division-card--hummer .product-card--featured {
+    grid-column: 1;
+    grid-template-columns: 1fr;
+  }
+  .categories-section.division-card--hummer .product-card--featured .product-card-image {
+    height: 220px;
+    min-height: 0;
+    border-right: none;
+    border-bottom: 1px solid rgba(255,209,0,0.2);
+  }
+  .hummer-filter-tabs {
+    gap: 6px;
+  }
+  .hummer-filter-tab {
+    padding: 7px 14px;
+    font-size: 0.8rem;
+  }
+}
 
 /* ─────────────────────────────────────────────────────────────────────────
    ALIAXIS  |  Deep Navy × Sky Blue  |  Precision · Infrastructure · Flow
@@ -1880,7 +2010,6 @@
 /* Hero text — warm gold heading */
 .trading-page-hero.page-hero--metalco h1 {
   color: #fbbf24 !important;
-  text-shadow: 0 0 80px rgba(251,191,36,0.3);
 }
 .trading-page-hero.page-hero--metalco p { color: rgba(254,243,199,0.72) !important; }
 
@@ -1957,12 +2086,12 @@
 }
 .categories-section.division-card--metalco .product-card-content h3 { color: #3d1906; }
 
-/* Metal Alloys CTA band — deep copper */
+/* Metal Alloys CTA band — warm amber cream */
 .product-cta-band.division-card--metalco {
-  background: linear-gradient(135deg, #1c0e04 0%, #3d1906 100%);
+  background: #fef3c7;
 }
 .product-cta-band.division-card--metalco::before {
-  background: radial-gradient(circle at 80% 50%, rgba(217,119,6,0.15) 0%, transparent 60%);
+  background: radial-gradient(circle at 80% 50%, rgba(180,83,9,0.08) 0%, transparent 60%);
 }
 .product-cta-band.division-card--metalco .btn-primary {
   background: linear-gradient(135deg, #b45309 0%, #d97706 100%);
@@ -1970,23 +2099,23 @@
 .product-cta-band.division-card--metalco .btn-primary::before {
   background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
 }
-.product-cta-band.division-card--metalco .product-cta-copy h2 { color: #ffffff; }
-.product-cta-band.division-card--metalco .product-cta-copy p  { color: rgba(254,243,199,0.72); }
+.product-cta-band.division-card--metalco .product-cta-copy h2 { color: #3d1906; }
+.product-cta-band.division-card--metalco .product-cta-copy p  { color: #78350f; }
 .product-cta-band.division-card--metalco .product-cta-copy .tag-label {
-  background: rgba(217,119,6,0.15);
-  border-color: rgba(217,119,6,0.3);
-  color: #fbbf24;
+  background: rgba(180,83,9,0.1);
+  border-color: rgba(180,83,9,0.22);
+  color: #b45309;
 }
-.product-cta-band.division-card--metalco .product-cta-copy .tag-label::before { background: #fbbf24; }
+.product-cta-band.division-card--metalco .product-cta-copy .tag-label::before { background: #d97706; }
 .product-cta-band.division-card--metalco .btn-outline-ghost {
-  border-color: rgba(251,191,36,0.35);
-  color: #fbbf24;
-  background: rgba(217,119,6,0.08);
+  border-color: rgba(180,83,9,0.35);
+  color: #b45309;
+  background: rgba(180,83,9,0.06);
 }
 .product-cta-band.division-card--metalco .btn-outline-ghost:hover {
-  background: rgba(217,119,6,0.18);
-  border-color: rgba(251,191,36,0.6);
-  color: #fef08a;
+  background: rgba(180,83,9,0.14);
+  border-color: rgba(180,83,9,0.55);
+  color: #92400e;
 }
 
 /* B2B section */
