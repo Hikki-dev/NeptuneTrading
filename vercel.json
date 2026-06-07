@@ -11,8 +11,8 @@
   },
   "rewrites": [
     {
-      "source": "/",
-      "destination": "/api/markdown",
+      "source": "/((?!api/|\\.well-known/).*)",
+      "destination": "/api/markdown?path=/$1",
       "has": [{ "type": "header", "key": "accept", "value": "(?:.*,\\s*)?text/markdown(?:,.*|;.*|$)" }]
     }
   ],

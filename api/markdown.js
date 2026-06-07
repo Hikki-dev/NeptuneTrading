@@ -1,66 +1,145 @@
-const PAGES = {
-  "/": `# Neptune Trading Company
+function stripTags(html) {
+  return html.replace(/<[^>]+>/g, "");
+}
 
-Connecting Sri Lankan buyers with trusted international product principals.
+function decodeEntities(str) {
+  return str
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&mdash;/g, "—")
+    .replace(/&ndash;/g, "–")
+    .replace(/&thinsp;/g, " ")
+    .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(Number(n)));
+}
 
-Neptune Trading represents selected international product manufacturers as their authorized local partner. We coordinate sourcing, procurement, and supply through our Colombo commercial desk since 1984.
+function htmlToMarkdown(html) {
+  const titleMatch = html.match(/<title[^>]*>([^<]+)<\/title>/i);
+  const descMatch = html.match(/<meta[^>]+name=["']description["'][^>]+content=["']([^"']+)["']/i)
+    || html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+name=["']description["']/i);
 
-## Three Authorized Product Divisions
+  const title = titleMatch ? decodeEntities(titleMatch[1].trim()) : "";
+  const description = descMatch ? decodeEntities(descMatch[1].trim()) : "";
 
-Formal local agency agreements with global industrial manufacturers, covering inquiry routing, compliance documentation, and structured bid coordination.
+  let frontmatter = "---\n";
+  if (title) frontmatter += `title: "${title.replace(/"/g, '\\"')}"\n`;
+  if (description) frontmatter += `description: "${description.replace(/"/g, '\\"')}"\n`;
+  frontmatter += "---\n\n";
 
-### HUMMER Power Products
+  // Strip non-content blocks
+  let body = html
+    .replace(/<script[\s\S]*?<\/script>/gi, "")
+    .replace(/<style[\s\S]*?<\/style>/gi, "")
+    .replace(/<nav[\s\S]*?<\/nav>/gi, "")
+    .replace(/<header[\s\S]*?<\/header>/gi, "")
+    .replace(/<footer[\s\S]*?<\/footer>/gi, "")
+    .replace(/<svg[\s\S]*?<\/svg>/gi, "")
+    .replace(/<!--[\s\S]*?-->/g, "");
 
-Authorized distributor for Sri Lanka & Maldives. Portable automotive and outdoor power solutions for fleet operators, workshops, emergency users, outdoor buyers, and corporate procurement teams.
+  // Prefer <main> content if present
+  const mainMatch = body.match(/<main[\s\S]*?>([\s\S]*?)<\/main>/i);
+  if (mainMatch) body = mainMatch[1];
 
-More info: https://neptunetrading.lk/hummer-products.html
+  // Headings
+  for (let i = 6; i >= 1; i--) {
+    const hashes = "#".repeat(i);
+    body = body.replace(
+      new RegExp(`<h${i}[^>]*>([\\s\\S]*?)<\/h${i}>`, "gi"),
+      (_, t) => `\n${hashes} ${decodeEntities(stripTags(t).trim())}\n`
+    );
+  }
 
-### Snow / Aliaxis Piping Systems
+  // Links (before stripping tags)
+  body = body.replace(
+    /<a[^>]+href=["']([^"'#][^"']*)["'][^>]*>([\s\S]*?)<\/a>/gi,
+    (_, href, text) => {
+      const clean = decodeEntities(stripTags(text).trim());
+      return clean ? `[${clean}](${href})` : "";
+    }
+  );
+  // Anchor-only links - just keep text
+  body = body.replace(/<a[^>]*>([\s\S]*?)<\/a>/gi, (_, t) => decodeEntities(stripTags(t).trim()));
 
-LESSO Snow brand solutions under the Aliaxis portfolio for commercial, infrastructure, drainage, plumbing, and fluid-management requirements.
+  // Bold / italic
+  body = body
+    .replace(/<strong[^>]*>([\s\S]*?)<\/strong>/gi, (_, t) => `**${decodeEntities(stripTags(t).trim())}**`)
+    .replace(/<b[^>]*>([\s\S]*?)<\/b>/gi, (_, t) => `**${decodeEntities(stripTags(t).trim())}**`)
+    .replace(/<em[^>]*>([\s\S]*?)<\/em>/gi, (_, t) => `_${decodeEntities(stripTags(t).trim())}_`)
+    .replace(/<i[^>]*>([\s\S]*?)<\/i>/gi, (_, t) => `_${decodeEntities(stripTags(t).trim())}_`);
 
-More info: https://neptunetrading.lk/snow-aliaxis-products.html
+  // Lists
+  body = body.replace(/<li[^>]*>([\s\S]*?)<\/li>/gi, (_, t) => `- ${decodeEntities(stripTags(t).trim())}\n`);
+  body = body.replace(/<\/?(ul|ol)[^>]*>/gi, "\n");
 
-### Metal Alloys Corporation
+  // Table rows to plain text
+  body = body.replace(/<tr[^>]*>([\s\S]*?)<\/tr>/gi, (_, t) => `${decodeEntities(stripTags(t).trim())}\n`);
+  body = body.replace(/<\/?(table|thead|tbody|tfoot)[^>]*>/gi, "\n");
 
-Technical copper, brass, bronze, and copper-nickel alloy products for marine, engineering, manufacturing, industrial maintenance, and project procurement requirements.
+  // Paragraphs and divs
+  body = body.replace(/<p[^>]*>([\s\S]*?)<\/p>/gi, (_, t) => {
+    const clean = decodeEntities(stripTags(t).trim());
+    return clean ? `\n${clean}\n` : "";
+  });
+  body = body.replace(/<br\s*\/?>/gi, "\n");
+  body = body.replace(/<\/(div|section|article|aside)[^>]*>/gi, "\n");
 
-More info: https://neptunetrading.lk/metal-alloys-products.html
+  // Strip any remaining tags
+  body = stripTags(body);
+  body = decodeEntities(body);
 
-## Ceylon Export Support
+  // Normalise whitespace
+  body = body
+    .replace(/[ \t]+/g, " ")
+    .replace(/ *\n */g, "\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
 
-For Ceylon tea and selected agricultural export enquiries, Neptune Trading works with CEC Commercial Export Company for export supply, product preparation, documentation support, and buyer fulfilment coordination.
+  return frontmatter + body;
+}
 
-## Four Core Capabilities
-
-- **Represent** — Authorized product representation for selected international principals in Sri Lanka.
-- **Source** — Supplier identification, pricing support, and technical procurement coordination.
-- **Export** — Commercial export development for Ceylon tea and selected goods, backed by CEC where relevant.
-- **Launch** — Market-entry coordination and regulatory setup compliance for brands entering Sri Lanka.
-
-## Contact
-
-Website: https://neptunetrading.lk/contact.html
-Email: info@neptunetrading.lk
-Established: 1984
-Location: Colombo, Sri Lanka
-`,
-};
-
-export default function handler(req, res) {
+export default async function handler(req, res) {
   const accept = req.headers["accept"] || "";
-  const path = req.query.path || "/";
 
   if (!accept.includes("text/markdown")) {
     res.status(406).json({ error: "Not Acceptable — use Accept: text/markdown" });
     return;
   }
 
-  const content = PAGES[path] || PAGES["/"];
-  const tokens = content.split(/\s+/).length;
+  let path = req.query.path || "/";
+  if (!path.startsWith("/")) path = "/" + path;
+  // Strip markdown-handler path to avoid loops
+  if (path.startsWith("/api/")) {
+    res.status(400).json({ error: "Cannot convert API routes" });
+    return;
+  }
+
+  const protocol = req.headers["x-forwarded-proto"] || "https";
+  const host = req.headers["host"];
+  const origin = `${protocol}://${host}`;
+
+  let html;
+  try {
+    const response = await fetch(`${origin}${path}`, {
+      headers: { accept: "text/html", "user-agent": "markdown-negotiation/1.0" },
+    });
+    if (!response.ok) {
+      res.status(response.status).json({ error: `Upstream returned ${response.status}` });
+      return;
+    }
+    html = await response.text();
+  } catch (err) {
+    res.status(502).json({ error: "Failed to fetch page" });
+    return;
+  }
+
+  const markdown = htmlToMarkdown(html);
+  const tokens = markdown.split(/\s+/).filter(Boolean).length;
 
   res.setHeader("Content-Type", "text/markdown; charset=utf-8");
   res.setHeader("x-markdown-tokens", String(tokens));
   res.setHeader("Vary", "Accept");
-  res.status(200).send(content);
+  res.status(200).send(markdown);
 }
