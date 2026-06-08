@@ -1,0 +1,65 @@
+Options -Indexes
+Options +FollowSymLinks
+
+# ─── MIME TYPES ───────────────────────────────────────────────────────────────
+
+AddType text/markdown .md
+AddType text/markdown .markdown
+
+# Force application/json for extensionless .well-known files
+<FilesMatch "^(oauth-protected-resource|oauth-authorization-server|api-catalog|server-card)$">
+    ForceType application/json
+</FilesMatch>
+
+# ─── CORS FOR WELL-KNOWN & DISCOVERY ENDPOINTS ───────────────────────────────
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.(json|md)$">
+        Header always set Access-Control-Allow-Origin "*"
+        Header always set Access-Control-Allow-Methods "GET, OPTIONS"
+        Header always set Access-Control-Allow-Headers "Accept, Content-Type"
+    </FilesMatch>
+    <FilesMatch "^(oauth-protected-resource|oauth-authorization-server|api-catalog)$">
+        Header always set Access-Control-Allow-Origin "*"
+        Header always set Access-Control-Allow-Methods "GET, OPTIONS"
+        Header always set Access-Control-Allow-Headers "Accept, Content-Type"
+        Header always set Cache-Control "public, max-age=3600"
+    </FilesMatch>
+</IfModule>
+
+# ─── REWRITE ENGINE ───────────────────────────────────────────────────────────
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Markdown for Agents — when Accept: text/markdown, serve .md counterpart.
+    # All .html pages in this project have a .md counterpart, so no file-check needed.
+
+    # / → index.md
+    RewriteCond %{HTTP_ACCEPT} text/markdown
+    RewriteRule ^$ /index.md [L]
+
+    # /page.html → /page.md
+    RewriteCond %{HTTP_ACCEPT} text/markdown
+    RewriteRule ^([^/]+)\.html$ /$1.md [L,NC]
+
+    # /page (no extension) → /page.md
+    RewriteCond %{HTTP_ACCEPT} text/markdown
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.md -f
+    RewriteRule ^([^/]+)$ /$1.md [L,NC]
+</IfModule>
+
+# ─── LINK RESPONSE HEADERS — RFC 8288 / RFC 9727 ─────────────────────────────
+
+<IfModule mod_headers.c>
+    Header always set Link "</.well-known/api-catalog>; rel=\"api-catalog\", </.well-known/mcp/server-card.json>; rel=\"service-desc\", </auth.md>; rel=\"describedby\", </.well-known/oauth-protected-resource>; rel=\"oauth-protected-resource\""
+</IfModule>
+
+# ─── SECURITY HEADERS ─────────────────────────────────────────────────────────
+
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

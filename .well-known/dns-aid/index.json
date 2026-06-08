@@ -1,0 +1,21 @@
+{
+  "$schema": "https://dnsaid.org/schema/v0.1/index.json",
+  "domain": "neptunetrading.lk",
+  "endpoints": [
+    {
+      "type": "agent-index",
+      "url": "https://neptunetrading.lk/.well-known/agent-skills/index.json",
+      "description": "Agent skill index for Neptune Trading Company"
+    },
+    {
+      "type": "mcp",
+      "url": "https://neptunetrading.lk/.well-known/mcp/server-card.json",
+      "description": "MCP server card"
+    },
+    {
+      "type": "api-catalog",
+      "url": "https://neptunetrading.lk/.well-known/api-catalog",
+      "description": "API catalog (RFC 9727)"
+    }
+  ]
+}
