@@ -1,0 +1,35 @@
+{
+  "name": "Neptune Trading Company",
+  "description": "B2B trading agent for Neptune Trading Company (Pvt) Ltd — authorized distributor for HUMMER Power Products and Metal Alloys Corporation in Sri Lanka & Maldives. Handles product enquiries, sourcing briefs, and export coordination.",
+  "url": "https://neptunetrading.lk",
+  "version": "1.0.0",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "defaultInputModes": ["text/plain"],
+  "defaultOutputModes": ["text/plain"],
+  "skills": [
+    {
+      "id": "submit-enquiry",
+      "name": "Submit Business Enquiry",
+      "description": "Submit a B2B product enquiry, sourcing brief, or export coordination request to Neptune Trading Company's Colombo trading desk.",
+      "inputModes": ["text/plain"],
+      "outputModes": ["text/plain"],
+      "tags": ["b2b", "trading", "enquiry", "sourcing"]
+    },
+    {
+      "id": "product-information",
+      "name": "Product Information",
+      "description": "Retrieve information about HUMMER Power Products or Metal Alloys Corporation product lines represented by Neptune Trading.",
+      "inputModes": ["text/plain"],
+      "outputModes": ["text/plain"],
+      "tags": ["products", "hummer", "metal-alloys"]
+    }
+  ],
+  "contact": {
+    "email": "info@neptunetrading.lk",
+    "url": "https://neptunetrading.lk/contact.html"
+  }
+}
