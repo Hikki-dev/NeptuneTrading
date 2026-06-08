@@ -34,15 +34,15 @@
         gap: 8px;
         margin-bottom: 20px;
         font-size: 0.78rem;
-        color: rgba(0,0,0,0.72);
-        background: rgba(0,0,0,0.1);
-        border: 1px solid rgba(0,0,0,0.14);
+        color: #0b0d0f;
+        background: rgba(0,0,0,0.12);
+        border: 1px solid rgba(0,0,0,0.22);
         border-radius: 100px;
         padding: 6px 14px;
       }
-      .hpd-breadcrumb a { color: rgba(0,0,0,0.7); text-decoration: none; font-weight: 600; }
+      .hpd-breadcrumb a { color: #0b0d0f; text-decoration: none; font-weight: 600; }
       .hpd-breadcrumb a:hover { color: #0b0d0f; }
-      .hpd-breadcrumb span { color: rgba(0,0,0,0.45); }
+      .hpd-breadcrumb span { color: rgba(0,0,0,0.6); }
       .hpd-category-tag {
         display: inline-flex;
         align-items: center;
@@ -76,13 +76,13 @@
       .hpd-keyspecs {
         display: flex;
         gap: 0;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         border: 1px solid rgba(0,0,0,0.15);
         border-radius: 10px;
         overflow: hidden;
         max-width: 540px;
       }
-      .hpd-keyspec {
+      .hpd-keyspec { min-width: 0;
         flex: 1 1 auto;
         min-width: 110px;
         padding: 10px 14px;
@@ -270,7 +270,7 @@
         text-decoration: none;
         transition: background 200ms;
       }
-      .hpd-btn-primary:hover { background: #1a1f26; }
+      .hpd-btn-primary:hover { background: #1a1f26; color: #fff; }
       .hpd-btn-ghost {
         display: inline-flex;
         align-items: center;

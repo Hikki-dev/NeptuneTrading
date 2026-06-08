@@ -83,8 +83,169 @@
             }
           }
         ]
-      }
     </script>
+    <style>
+      /* ── Specialty Metallurgy Showcase Banner ──────────────── */
+      .special-products-showcase {
+        padding: 64px 0;
+        background: #FAF9F6;
+        border-bottom: 1px solid rgba(146, 64, 14, 0.08);
+      }
+      .sp-showcase-card {
+        background: linear-gradient(135deg, #1c0e04 0%, #2e1405 60%, #471c08 100%);
+        border-radius: 16px;
+        padding: 48px;
+        color: #ffffff;
+        box-shadow: 0 20px 40px rgba(28, 14, 4, 0.15);
+        border: 1px solid rgba(217, 119, 6, 0.2);
+        position: relative;
+        overflow: hidden;
+      }
+      .sp-showcase-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: radial-gradient(circle at top right, rgba(217, 119, 6, 0.12), transparent 60%);
+        pointer-events: none;
+      }
+      .sp-showcase-inner {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 48px;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+      }
+      .sp-showcase-left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .sp-showcase-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: rgba(217, 119, 6, 0.15);
+        border: 1px solid rgba(217, 119, 6, 0.4);
+        color: #fbbf24;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 5px 12px;
+        border-radius: 100px;
+        margin-bottom: 20px;
+      }
+      .sp-showcase-left h2 {
+        font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+        font-weight: 800;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+        color: #ffffff;
+        margin: 0 0 16px;
+      }
+      .sp-showcase-left p {
+        font-size: 0.98rem;
+        line-height: 1.65;
+        color: rgba(255, 255, 255, 0.75);
+        margin: 0 0 32px;
+      }
+      .sp-showcase-btns {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .sp-btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #d97706;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 0.9rem;
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        border: 1px solid transparent;
+      }
+      .sp-btn-primary:hover {
+        background: #f59e0b;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+      }
+      .sp-btn-outline {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: transparent;
+        color: rgba(255, 255, 255, 0.85);
+        font-weight: 600;
+        font-size: 0.9rem;
+        padding: 11px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        border: 1.5px solid rgba(255, 255, 255, 0.25);
+      }
+      .sp-btn-outline:hover {
+        border-color: rgba(255, 255, 255, 0.6);
+        background: rgba(255, 255, 255, 0.05);
+        color: #ffffff;
+      }
+      .sp-showcase-right {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .sp-feature-box {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 12px;
+        padding: 16px 20px;
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+        transition: border-color 0.25s ease, background 0.25s ease;
+      }
+      .sp-feature-box:hover {
+        border-color: rgba(217, 119, 6, 0.15);
+        background: rgba(255, 255, 255, 0.05);
+      }
+      .sp-icon-wrap {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        background: rgba(217, 119, 6, 0.15);
+        color: #fbbf24;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        flex-shrink: 0;
+      }
+      .sp-feature-text h4 {
+        margin: 0 0 4px;
+        font-size: 0.92rem;
+        font-weight: 700;
+        color: #ffffff;
+      }
+      .sp-feature-text p {
+        margin: 0;
+        font-size: 0.82rem;
+        line-height: 1.45;
+        color: rgba(255, 255, 255, 0.6);
+      }
+      @media (max-width: 990px) {
+        .sp-showcase-inner {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        .sp-showcase-card {
+          padding: 32px;
+        }
+      }
+    </style>
   </head>
   <body>
     <header class="navbar at-top" role="banner" id="site-navbar">
@@ -170,6 +331,62 @@
         </div>
       </section>
 
+      <!-- Specialty Metallurgy Showcase Section -->
+      <section class="special-products-showcase" aria-labelledby="sp-showcase-title">
+        <div class="container reveal">
+          <div class="sp-showcase-card">
+            <div class="sp-showcase-inner">
+              <div class="sp-showcase-left">
+                <div class="sp-showcase-badge">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  Specialty Metallurgy
+                </div>
+                <h2 id="sp-showcase-title">Precision Specialty Alloys &amp; Custom Formulations</h2>
+                <p>For mission-critical engineering applications, Metal Alloys Corporation offers high-precision, specialty drawn tubes and custom smelting. Engineered for extreme maritime, automotive, and industrial environments.</p>
+                <div class="sp-showcase-btns">
+                  <a href="mac-special-products.html" class="sp-btn-primary">
+                    Explore Special Product Range
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </a>
+                  <a href="contact.html?division=Metal%20Alloys&category=Special%20Products" class="sp-btn-outline">
+                    Technical Sourcing Enquiry
+                  </a>
+                </div>
+              </div>
+              <div class="sp-showcase-right">
+                <div class="sp-feature-box">
+                  <div class="sp-icon-wrap">
+                    <svg class="lucide lucide-anchor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22A10 10 0 0 0 22 12h-3a7 7 0 0 1-14 0H2a10 10 0 0 0 10 10z"/><path d="M12 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10z"/><path d="M12 12v10"/></svg>
+                  </div>
+                  <div class="sp-feature-text">
+                    <h4>Marine &amp; Shipbuilding Tubes</h4>
+                    <p>High-integrity CuNi 90/10 &amp; 70/30 alloys for constant seawater immersion.</p>
+                  </div>
+                </div>
+                <div class="sp-feature-box">
+                  <div class="sp-icon-wrap">
+                    <svg class="lucide lucide-cog" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"/><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m17 5-1.5 1.5"/><path d="m8.5 17.5-1.5 1.5"/><path d="M22 12h-2"/><path d="M4 12H2"/><path d="m17 19-1.5-1.5"/><path d="m8.5 6.5-1.5-1.5"/></svg>
+                  </div>
+                  <div class="sp-feature-text">
+                    <h4>Bearing Cages &amp; Sync Rings</h4>
+                    <p>Precision-drawn manganese-aluminium brass and ALCOP alloy tubes.</p>
+                  </div>
+                </div>
+                <div class="sp-feature-box">
+                  <div class="sp-icon-wrap">
+                    <svg class="lucide lucide-droplet" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-4.3-7-11-7-11S5 10.7 5 15a7 7 0 0 0 7 7z"/></svg>
+                  </div>
+                  <div class="sp-feature-text">
+                    <h4>Faucets &amp; Plumbing Bend Quality</h4>
+                    <p>Arsenic-bearing stress-relieved brass with superior hot-bending ductility.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Product Categories Grid -->
       <section class="categories-section division-card--metalco" aria-labelledby="metalco-categories-title">
         <div class="container">
@@ -199,7 +416,8 @@
                     <li>Aesthetic builder hardware & fixtures</li>
                   </ul>
                 </div>
-                <div class="product-cta">
+                <div class="product-cta" style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+                  <a href="mac-brass-rods.html" class="product-cta-btn" style="background:#3d1906;color:#fef3c7;border:none;">View Product Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
                   <a href="contact.html?division=Metal%20Alloys&category=Brass%20Alloys" class="product-cta-btn">Technical Enquiry <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
                 </div>
               </div>
@@ -225,7 +443,8 @@
                     <li>High-load hydraulic cylinder liners</li>
                   </ul>
                 </div>
-                <div class="product-cta">
+                <div class="product-cta" style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+                  <a href="mac-bronze-alloys.html" class="product-cta-btn" style="background:#3d1906;color:#fef3c7;border:none;">View Product Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
                   <a href="contact.html?division=Metal%20Alloys&category=Bronze%20Alloys" class="product-cta-btn">Technical Enquiry <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
                 </div>
               </div>
@@ -251,7 +470,8 @@
                     <li>Heat sinks & electronics cooling plates</li>
                   </ul>
                 </div>
-                <div class="product-cta">
+                <div class="product-cta" style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+                  <a href="mac-copper-tubes.html" class="product-cta-btn" style="background:#3d1906;color:#fef3c7;border:none;">View Product Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
                   <a href="contact.html?division=Metal%20Alloys&category=Copper%20Alloys" class="product-cta-btn">Technical Enquiry <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
                 </div>
               </div>
@@ -277,7 +497,8 @@
                     <li>Oil refinery process heat exchangers</li>
                   </ul>
                 </div>
-                <div class="product-cta">
+                <div class="product-cta" style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+                  <a href="mac-admiralty-brass-tubes.html" class="product-cta-btn" style="background:#3d1906;color:#fef3c7;border:none;">View Product Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
                   <a href="contact.html?division=Metal%20Alloys&category=Tubes" class="product-cta-btn">Technical Enquiry <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
                 </div>
               </div>
@@ -303,7 +524,8 @@
                     <li>Shipbuilding plumbing structural networks</li>
                   </ul>
                 </div>
-                <div class="product-cta">
+                <div class="product-cta" style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+                  <a href="mac-naval-brass-pipe.html" class="product-cta-btn" style="background:#3d1906;color:#fef3c7;border:none;">View Product Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
                   <a href="contact.html?division=Metal%20Alloys&category=Pipes" class="product-cta-btn">Technical Enquiry <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
                 </div>
               </div>
@@ -329,7 +551,8 @@
                     <li>Automotive & electrical pin connectors</li>
                   </ul>
                 </div>
-                <div class="product-cta">
+                <div class="product-cta" style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+                  <a href="mac-brass-rods.html" class="product-cta-btn" style="background:#3d1906;color:#fef3c7;border:none;">View Product Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
                   <a href="contact.html?division=Metal%20Alloys&category=Rods" class="product-cta-btn">Technical Enquiry <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
                 </div>
               </div>
@@ -355,7 +578,8 @@
                     <li>Metallurgical material selection consultancy</li>
                   </ul>
                 </div>
-                <div class="product-cta">
+                <div class="product-cta" style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+                  <a href="mac-cupro-nickel.html" class="product-cta-btn" style="background:#3d1906;color:#fef3c7;border:none;">View Product Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
                   <a href="contact.html?division=Metal%20Alloys&category=Industrial%20Alloy%20Solutions" class="product-cta-btn">Technical Enquiry <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
                 </div>
               </div>

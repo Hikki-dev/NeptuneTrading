@@ -343,3 +343,190 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+/* ── Product Image Lightbox ──────────────────────────────────────────── */
+(function () {
+  const ZOOM_MIN = 1;
+  const ZOOM_MAX = 3;
+  const ZOOM_STEPS = [1, 1.5, 2, 3];
+
+  let overlay, lbImg, lbCaption, zoomLabel;
+  let currentZoom = 1;
+  let isDragging = false;
+  let dragStart = { x: 0, y: 0 };
+  let panOffset = { x: 0, y: 0 };
+  let panStart  = { x: 0, y: 0 };
+
+  function buildOverlay() {
+    if (document.getElementById('lb-overlay')) return;
+
+    overlay = document.createElement('div');
+    overlay.className = 'lb-overlay';
+    overlay.id = 'lb-overlay';
+    overlay.setAttribute('role', 'dialog');
+    overlay.setAttribute('aria-modal', 'true');
+    overlay.setAttribute('aria-label', 'Product image viewer');
+    overlay.style.display = 'none';
+
+    overlay.innerHTML = `
+      <button class="lb-close" id="lb-close" aria-label="Close image viewer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="lb-inner" id="lb-inner">
+        <img class="lb-img" id="lb-img" alt="" draggable="false">
+        <div class="lb-caption" id="lb-caption"></div>
+      </div>
+      <div class="lb-controls" id="lb-controls">
+        <button class="lb-ctrl-btn" id="lb-zoom-out" aria-label="Zoom out">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M8 11h6"/></svg>
+        </button>
+        <span class="lb-zoom-label" id="lb-zoom-label">100%</span>
+        <button class="lb-ctrl-btn" id="lb-zoom-in" aria-label="Zoom in">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg>
+        </button>
+        <button class="lb-ctrl-btn" id="lb-zoom-reset" aria-label="Reset zoom" style="font-size:0.72rem;font-weight:700;letter-spacing:0.04em;">1:1</button>
+      </div>`;
+
+    document.body.appendChild(overlay);
+
+    lbImg     = overlay.querySelector('#lb-img');
+    lbCaption = overlay.querySelector('#lb-caption');
+    zoomLabel = overlay.querySelector('#lb-zoom-label');
+
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) closeLightbox(); });
+    overlay.querySelector('#lb-close').addEventListener('click', closeLightbox);
+    overlay.querySelector('#lb-zoom-in').addEventListener('click', (e) => { e.stopPropagation(); stepZoom(1); });
+    overlay.querySelector('#lb-zoom-out').addEventListener('click', (e) => { e.stopPropagation(); stepZoom(-1); });
+    overlay.querySelector('#lb-zoom-reset').addEventListener('click', (e) => { e.stopPropagation(); setZoom(1); });
+
+    lbImg.addEventListener('click', (e) => {
+      e.stopPropagation();
+      setZoom(currentZoom === 1 ? 2 : 1);
+    });
+
+    overlay.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      const delta = e.deltaY < 0 ? 0.15 : -0.15;
+      setZoom(Math.min(ZOOM_MAX, Math.max(ZOOM_MIN, currentZoom + delta)), true);
+    }, { passive: false });
+
+    lbImg.addEventListener('mousedown', startDrag);
+    window.addEventListener('mousemove', onDrag);
+    window.addEventListener('mouseup', endDrag);
+
+    let lastTouchDist = null;
+    overlay.addEventListener('touchstart', (e) => {
+      if (e.touches.length === 2) {
+        lastTouchDist = getTouchDist(e.touches);
+      } else if (e.touches.length === 1 && currentZoom > 1) {
+        startDrag({ clientX: e.touches[0].clientX, clientY: e.touches[0].clientY });
+      }
+    }, { passive: true });
+    overlay.addEventListener('touchmove', (e) => {
+      if (e.touches.length === 2 && lastTouchDist !== null) {
+        e.preventDefault();
+        const dist = getTouchDist(e.touches);
+        setZoom(Math.min(ZOOM_MAX, Math.max(ZOOM_MIN, currentZoom * (dist / lastTouchDist))), true);
+        lastTouchDist = dist;
+      } else if (e.touches.length === 1 && isDragging) {
+        e.preventDefault();
+        onDrag({ clientX: e.touches[0].clientX, clientY: e.touches[0].clientY });
+      }
+    }, { passive: false });
+    overlay.addEventListener('touchend', () => { lastTouchDist = null; endDrag(); });
+
+    document.addEventListener('keydown', (e) => {
+      if (!overlay.classList.contains('lb-visible')) return;
+      if (e.key === 'Escape')      closeLightbox();
+      if (e.key === '+' || e.key === '=') stepZoom(1);
+      if (e.key === '-')           stepZoom(-1);
+      if (e.key === '0')           setZoom(1);
+    });
+  }
+
+  function getTouchDist(t) {
+    const dx = t[0].clientX - t[1].clientX, dy = t[0].clientY - t[1].clientY;
+    return Math.sqrt(dx * dx + dy * dy);
+  }
+
+  function startDrag(e) {
+    if (currentZoom <= 1) return;
+    isDragging = true;
+    dragStart = { x: e.clientX, y: e.clientY };
+    panStart  = { x: panOffset.x, y: panOffset.y };
+    lbImg.style.cursor = 'grabbing';
+  }
+  function onDrag(e) {
+    if (!isDragging) return;
+    panOffset.x = panStart.x + (e.clientX - dragStart.x);
+    panOffset.y = panStart.y + (e.clientY - dragStart.y);
+    applyTransform();
+  }
+  function endDrag() {
+    if (!isDragging) return;
+    isDragging = false;
+    lbImg.style.cursor = currentZoom > 1 ? 'grab' : 'zoom-in';
+  }
+
+  function setZoom(z, noAnim) {
+    currentZoom = Math.max(ZOOM_MIN, Math.min(ZOOM_MAX, Math.round(z * 100) / 100));
+    if (currentZoom <= 1) { currentZoom = 1; panOffset = { x: 0, y: 0 }; }
+    zoomLabel.textContent = Math.round(currentZoom * 100) + '%';
+    lbImg.classList.toggle('lb-zoomed', currentZoom > 1);
+    lbImg.style.cursor = currentZoom > 1 ? 'grab' : 'zoom-in';
+    lbImg.style.transition = noAnim ? 'none' : 'transform 220ms cubic-bezier(0.25,0.46,0.45,0.94)';
+    applyTransform();
+  }
+
+  function stepZoom(dir) {
+    const steps = ZOOM_STEPS;
+    if (dir > 0) { setZoom(steps.find(s => s > currentZoom + 0.05) || ZOOM_MAX); }
+    else         { setZoom([...steps].reverse().find(s => s < currentZoom - 0.05) || ZOOM_MIN); }
+  }
+
+  function applyTransform() {
+    lbImg.style.transform = `scale(${currentZoom}) translate(${panOffset.x / currentZoom}px, ${panOffset.y / currentZoom}px)`;
+  }
+
+  function openLightbox(src, alt) {
+    buildOverlay();
+    currentZoom = 1;
+    panOffset   = { x: 0, y: 0 };
+    lbImg.src   = src;
+    lbImg.alt   = alt || '';
+    lbCaption.textContent = alt || '';
+    lbImg.style.transform = '';
+    lbImg.style.cursor    = 'zoom-in';
+    lbImg.classList.remove('lb-zoomed');
+    zoomLabel.textContent = '100%';
+    document.body.classList.add('lb-open');
+    overlay.style.display = 'flex';
+    requestAnimationFrame(() => requestAnimationFrame(() => overlay.classList.add('lb-visible')));
+  }
+
+  function closeLightbox() {
+    if (!overlay) return;
+    overlay.classList.remove('lb-visible');
+    document.body.classList.remove('lb-open');
+    setTimeout(() => { overlay.style.display = 'none'; lbImg.src = ''; }, 230);
+  }
+
+  function initPanels() {
+    document.querySelectorAll('.hpd-img-panel, .mpd-img-panel').forEach(panel => {
+      const img = panel.querySelector('img');
+      if (!img || panel.dataset.lbInit) return;
+      panel.dataset.lbInit = '1';
+
+      const hint = document.createElement('span');
+      hint.className = 'lb-hint';
+      hint.innerHTML = '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg> Click to enlarge';
+      panel.appendChild(hint);
+
+      panel.addEventListener('click', () => {
+        openLightbox(panel.dataset.lbSrc || img.src, img.alt || '');
+      });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initPanels);
+})();

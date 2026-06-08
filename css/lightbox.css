@@ -1,0 +1,203 @@
+/* ── Product Image Lightbox ──────────────────────────────────────────── */
+
+/* Cursor hint on image panels */
+.hpd-img-panel,
+.mpd-img-panel {
+  cursor: zoom-in;
+}
+
+.hpd-img-panel .lb-hint,
+.mpd-img-panel .lb-hint {
+  position: absolute;
+  bottom: 10px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.72);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(4px);
+  padding: 4px 10px;
+  border-radius: 100px;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  pointer-events: none;
+  transition: opacity 200ms;
+  user-select: none;
+}
+
+.mpd-img-panel .lb-hint {
+  color: rgba(255, 255, 255, 0.6);
+  background: rgba(0, 0, 0, 0.35);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.hpd-img-panel:hover .lb-hint,
+.mpd-img-panel:hover .lb-hint {
+  opacity: 0;
+}
+
+/* Overlay */
+.lb-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(5, 8, 14, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 220ms ease;
+  cursor: zoom-out;
+}
+
+.lb-overlay.lb-visible {
+  opacity: 1;
+}
+
+/* Inner container — stops click propagation */
+.lb-inner {
+  position: relative;
+  max-width: min(1100px, 94vw);
+  max-height: 90vh;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* The image itself */
+.lb-img {
+  display: block;
+  width: auto;
+  max-width: min(1100px, 94vw);
+  max-height: calc(88vh - 70px);
+  min-width: min(600px, 90vw);
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6);
+  transform: scale(0.94);
+  transition: transform 260ms cubic-bezier(0.34, 1.4, 0.64, 1);
+  user-select: none;
+  -webkit-user-drag: none;
+
+  /* Zoom state */
+  cursor: zoom-in;
+  transform-origin: center center;
+}
+
+.lb-overlay.lb-visible .lb-img {
+  transform: scale(1);
+}
+
+.lb-img.lb-zoomed {
+  cursor: zoom-out;
+}
+
+/* Caption */
+.lb-caption {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+}
+
+/* Close button */
+.lb-close {
+  position: fixed;
+  top: 18px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 180ms, transform 180ms;
+  z-index: 10000;
+}
+
+.lb-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.08);
+}
+
+/* Zoom controls */
+.lb-controls {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 100px;
+  padding: 6px 10px;
+  backdrop-filter: blur(8px);
+  z-index: 10000;
+}
+
+.lb-ctrl-btn {
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 150ms, color 150ms;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.lb-ctrl-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+.lb-zoom-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.45);
+  min-width: 38px;
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+/* No scroll on body when open */
+body.lb-open {
+  overflow: hidden;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .lb-controls {
+    bottom: 16px;
+  }
+
+  .lb-close {
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+  }
+}
