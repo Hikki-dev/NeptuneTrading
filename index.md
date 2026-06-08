@@ -8,7 +8,7 @@ Neptune Trading Company — Colombo, Sri Lanka
 
 # Three authorized divisions. One commercial desk.
 
-Authorized distributor for HUMMER Power Products, Snow / Aliaxis Piping Systems, and Metal Alloys Corporation. B2B sourcing, procurement, and principal representation since 1984.
+Authorized distributor for HUMMER Power Products, , and Metal Alloys Corporation. B2B sourcing, procurement, and principal representation since 1984.
 
 Explore Product Divisions
 [Contact Trading Desk](contact.html)
@@ -47,7 +47,7 @@ Portable automotive and outdoor power for fleet operators, workshops, emergency 
 
 [Explore HUMMER Products](hummer-products.html)
 
-### Snow / Aliaxis Piping Systems
+### 
 
 LESSO Snow brand industrial and commercial piping for MEP contractors, construction projects, and infrastructure procurement. Drainage, pressure, and fluid management systems.
 
@@ -57,7 +57,7 @@ LESSO Snow brand industrial and commercial piping for MEP contractors, construct
 
 - Valves, Fittings & Drainage
 
-[Explore Piping Systems](snow-aliaxis-products.html)
+[Explore Piping Systems]()
 
 ### Metal Alloys Corporation
 
@@ -75,7 +75,7 @@ Copper, brass, bronze, and copper-nickel alloys for marine engineering, industri
 
 ## Ceylon Export Support
 
-For Ceylon tea and selected agricultural export enquiries, Neptune Trading works with CEC Commercial Export Company for export supply, product preparation, documentation support, and buyer fulfilment coordination.
+For Ceylon tea and selected agricultural export enquiries, Neptune Trading works with Neptune Trading for export supply, product preparation, documentation support, and buyer fulfilment coordination.
 
 ### Export Supply Sourcing Channels
 
@@ -91,7 +91,7 @@ Agricultural Sourcing
 
 ### Agricultural Supply Backing
 
-Agricultural supply operations, custom blends, sorting, grading, and bulk warehouse packaging are backed directly by Commercial Export Company (CEC). This secures product origin and quality controls at source.
+Agricultural supply operations, custom blends, sorting, grading, and bulk warehouse packaging are backed directly by Neptune Trading. This secures product origin and quality controls at source.
 
 [Discuss an Export Enquiry](ceylon-exports.html)
 
@@ -112,7 +112,7 @@ Supplier identification, pricing support, and technical procurement coordination
 
 ### Export
 
-Commercial export development for Ceylon tea and selected goods, backed by CEC where relevant.
+Commercial export development for Ceylon tea and selected goods,  where relevant.
 
 ### Launch
 
@@ -124,11 +124,10 @@ Where requirements extend into export supply or shipment execution, Neptune Trad
 
 Export Supply Support
 
-### Commercial Export Company
+### 
 
 Specialist agricultural export supply — Ceylon tea, spices, and fibre — when buyer requirements need dedicated export handling.
 
-[Visit CEC](http://cecteas.com/)
 
 Supply Chain Support
 
@@ -140,7 +139,7 @@ Freight forwarding, customs clearance, warehousing, and inland movement when a t
 
 ## What is Neptune Trading Company?
 
-Neptune Trading Company (Pvt) Ltd is a Sri Lankan B2B trading, sourcing, and procurement company established in **Colombo in 1984**. The company acts as the **authorized local distributor and commercial representative** for selected international manufacturers including [HUMMER Power Products](hummer-products.html) (for Sri Lanka & Maldives), [Snow / Aliaxis Piping Systems](snow-aliaxis-products.html), and [Metal Alloys Corporation](metal-alloys-products.html). Neptune Trading coordinates product sourcing, procurement support, export development, and market-entry assistance for businesses, institutions, and international suppliers from its Colombo commercial desk.
+Neptune Trading Company (Pvt) Ltd is a Sri Lankan B2B trading, sourcing, and procurement company established in **Colombo in 1984**. The company acts as the **authorized local distributor and commercial representative** for selected international manufacturers including [HUMMER Power Products](hummer-products.html) (for Sri Lanka & Maldives), [](), and [Metal Alloys Corporation](metal-alloys-products.html). Neptune Trading coordinates product sourcing, procurement support, export development, and market-entry assistance for businesses, institutions, and international suppliers from its Colombo commercial desk.
 
 ### Who Should Contact Us
 
@@ -148,7 +147,7 @@ Importers, exporters, MEP contractors, fleet operators, hospital procurement tea
 
 ### What We Supply
 
-GM-licensed HUMMER portable power products, Snow/Aliaxis LESSO brand industrial piping systems, and Metal Alloys Corporation copper, brass, and bronze industrial alloys — all through an officially authorized supply chain.
+GM-licensed HUMMER portable power products,  LESSO brand industrial piping systems, and Metal Alloys Corporation copper, brass, and bronze industrial alloys — all through an officially authorized supply chain.
 
 ### How to Enquire
 
@@ -164,11 +163,11 @@ Neptune Trading Company (Pvt) Ltd is a Sri Lankan B2B trading company establishe
 
 What product divisions does Neptune Trading represent?
 
-We represent three authorized product divisions: [HUMMER Power Products](hummer-products.html) (jump starters, power stations, power banks), [Snow / Aliaxis Piping Systems](snow-aliaxis-products.html) (industrial and commercial piping), and [Metal Alloys Corporation](metal-alloys-products.html) (copper, brass, and bronze alloys).
+We represent three authorized product divisions: [HUMMER Power Products](hummer-products.html) (jump starters, power stations, power banks), []() (industrial and commercial piping), and [Metal Alloys Corporation](metal-alloys-products.html) (copper, brass, and bronze alloys).
 
 Is Neptune Trading Company an authorized distributor?
 
-Yes. Neptune Trading holds formal agency and distributorship agreements for HUMMER Power Products (authorized for Sri Lanka & Maldives, General Motors licensed), Snow / Aliaxis Piping Systems, and Metal Alloys Corporation. All products are sourced through an officially authorized supply chain.
+Yes. Neptune Trading holds formal agency and distributorship agreements for HUMMER Power Products (authorized for Sri Lanka & Maldives, General Motors licensed), , and Metal Alloys Corporation. All products are sourced through an officially authorized supply chain.
 
 How can I submit a product or sourcing enquiry?
 

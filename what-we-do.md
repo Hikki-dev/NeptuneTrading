@@ -102,9 +102,9 @@ High-grade structural steel plating, raw non-ferrous bars, and industrial polyme
 
 ## Export Development & Supply Chain
 
-Sri Lanka's premium commodities command global market demand. Neptune Trading coordinates estate procurement, standard chemical analysis clearance, customs documentation, and containerized dispatch for traditional export items, with CEC Commercial Export Company supporting tea, spices, fibre, and agricultural export supply requirements.
+Sri Lanka's premium commodities command global market demand. Neptune Trading coordinates estate procurement, standard chemical analysis clearance, customs documentation, and containerized dispatch for traditional export items, with Neptune Trading supporting tea, spices, fibre, and agricultural export supply requirements.
 
-- **CEC Export Supply Support:** Coordinating pure Ceylon Tea packaging, standard blends, fibre, spices, and direct bulk export options ([cecteas.com](http://cecteas.com/)).
+- **Export Supply Support:** Coordinating pure Ceylon Tea packaging, standard blends, fibre, spices, and direct bulk export options ([cecteas.com](http://cecteas.com/)).
 
 - **Commodity Exports:** Sourcing high-oil Ceylon Cinnamon, pure cloves, black pepper, and high-tensile coconut coir fibre for industrial farming.
 
@@ -116,7 +116,7 @@ Sri Lanka's premium commodities command global market demand. Neptune Trading co
 
 ### Export Portfolio Scope
 
-CEC Ceylon Tea
+Ceylon Tea
 OP, BOP, Dust Blends & Packaged Packs
 
 Ceylon Cinnamon
@@ -136,7 +136,7 @@ Foreign industrial manufacturers seeking to participate in Sri Lanka's public in
 
 - **Regulatory & Import Management:** Handling import licensing, Sri Lanka Standards (SLS) certification, and port clearances.
 
-- **Localized Account Representation:** Regular commercial channel management and direct marketing of represented lines (Hummer, Aliaxis, Metal Alloys).
+- **Localized Account Representation:** Regular commercial channel management and direct marketing of represented lines (Hummer, Metal Alloys).
 
 [Enquire on Brand Agency](contact.html?area=Market%20Research%20and%20Expansion)
 
@@ -148,7 +148,7 @@ HUMMER Power Products
 
 Power Systems & Automotive Equipment
 
-Snow / Aliaxis Piping
+ Piping
 
 Industrial & Commercial Piping Systems
 
@@ -166,7 +166,7 @@ Product sourcing means we identify, vet, and coordinate supply from internationa
 
 What export products does Neptune Trading coordinate?
 
-We coordinate export development for Ceylon black and CTC tea, Ceylon cinnamon and spices, and coconut coir fibre, supported by CEC Commercial Export Company. Key export markets include the Middle East, South Asia, Malaysia, Singapore, and East Asia.
+We coordinate export development for Ceylon black and CTC tea, Ceylon cinnamon and spices, and coconut coir fibre, supported by Neptune Trading. Key export markets include the Middle East, South Asia, Malaysia, Singapore, and East Asia.
 
 Can Neptune Trading help international manufacturers enter Sri Lanka?
 

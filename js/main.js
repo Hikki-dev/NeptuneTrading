@@ -167,8 +167,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const pd = productDivision.toLowerCase();
       if (pd.includes("hummer")) {
         targetArea = "HUMMER Power Products";
-      } else if (pd.includes("aliaxis") || pd.includes("snow")) {
-        targetArea = "Snow / Aliaxis Piping Systems";
       } else if (pd.includes("metal") || pd.includes("alloy")) {
         targetArea = "Metal Alloys Corporation";
       } else {
@@ -184,8 +182,6 @@ document.addEventListener("DOMContentLoaded", () => {
         targetArea = "Market Entry Coordination";
       } else if (ap.includes("hummer")) {
         targetArea = "HUMMER Power Products";
-      } else if (ap.includes("aliaxis") || ap.includes("snow")) {
-        targetArea = "Snow / Aliaxis Piping Systems";
       } else if (ap.includes("metal") || ap.includes("alloy") || ap.includes("metalco")) {
         targetArea = "Metal Alloys Corporation";
       }
@@ -293,11 +289,22 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       try {
-        const response = await fetch(form.action || "/api/contact", {
+        const payload = Object.fromEntries(new FormData(form).entries());
+
+        // Honeypot: unchecked checkboxes are absent from FormData, so explicitly
+        // send an empty string. Web3Forms rejects the submission if this is non-empty.
+        if (payload.botcheck === undefined) payload.botcheck = "";
+
+        // Abort if the honeypot was filled (bot submitted via fetch)
+        if (payload.botcheck !== "") throw new Error("Bot detected");
+
+        // Map sender identity so Web3Forms shows the right From/Reply-To in the inbox
+        if (payload.name)  payload.from_name = payload.name;
+        if (payload.email) payload.replyto   = payload.email;
+
+        const response = await fetch(form.action, {
           method: "POST",
-          body: JSON.stringify(
-            Object.fromEntries(new FormData(form).entries()),
-          ),
+          body: JSON.stringify(payload),
           headers: {
             Accept: "application/json",
             "Content-Type": "application/json",

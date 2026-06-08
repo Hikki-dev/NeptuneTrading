@@ -1,5 +1,5 @@
 ---
-title: "Product Divisions | HUMMER, Snow/Aliaxis & Metal Alloys | Neptune Trading Sri Lanka & Maldives"
+title: "Product Divisions | HUMMER,  & Metal Alloys | Neptune Trading Sri Lanka & Maldives"
 description: "Neptune Trading Company"
 url: "https://neptunetrading.lk/product-divisions.html"
 ---
@@ -30,7 +30,7 @@ Auto Accessories
 
 Authorized Distributor
 
-### Snow / Aliaxis Piping Systems
+### 
 
 Premium commercial fluid management piping networks. Supply communication, regulatory compliance routing, and project bid coordination.
 
@@ -42,7 +42,7 @@ Infrastructure
 Industrial Piping
 Valves & Fittings
 
-[Explore Division](snow-aliaxis-products.html)
+[Explore Division]()
 
 Authorized Distributor
 

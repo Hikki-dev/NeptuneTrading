@@ -64,8 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
     
     if (d.includes("hummer") || b.includes("hummer") || a.includes("hummer")) {
       targetValue = "HUMMER Power Products";
-    } else if (d.includes("aliaxis") || d.includes("snow") || b.includes("aliaxis") || b.includes("snow") || a.includes("aliaxis") || a.includes("snow")) {
-      targetValue = "Snow / Aliaxis Piping Systems";
     } else if (d.includes("metal") || d.includes("alloy") || b.includes("metalco") || b.includes("metal-alloys") || a.includes("metal") || a.includes("alloy")) {
       targetValue = "Metal Alloys Corporation";
     } else if (a.includes("tea") || a.includes("spice") || a.includes("fibre") || a.includes("export")) {

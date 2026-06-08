@@ -3,7 +3,7 @@
   "serverInfo": {
     "name": "Neptune Trading Company",
     "version": "1.0.0",
-    "description": "Neptune Trading Company (Pvt) Ltd — authorized distributor for HUMMER Power Products (Sri Lanka & Maldives), Snow/Aliaxis Piping Systems, and Metal Alloys Corporation in Sri Lanka. Established 1984."
+    "description": "Neptune Trading Company (Pvt) Ltd — authorized distributor for HUMMER Power Products (Sri Lanka & Maldives) and Metal Alloys Corporation in Sri Lanka. Established 1984."
   },
   "transport": {
     "type": "http",

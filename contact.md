@@ -28,7 +28,7 @@ Contact Name *
 Company Name *
 Email Address *
 Phone
-Business Area of Interest *Select business areaHUMMER Power ProductsSnow / Aliaxis Piping SystemsMetal Alloys CorporationCeylon Tea & Agricultural ExportsStrategic Sourcing BriefsMarket Entry CoordinationOther Trading Enquiry
+Business Area of Interest *Select business areaHUMMER Power ProductsMetal Alloys CorporationCeylon Tea & Agricultural ExportsStrategic Sourcing BriefsMarket Entry CoordinationOther Trading Enquiry
 Message *
 
 Submit Enquiry

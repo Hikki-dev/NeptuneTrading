@@ -1,6 +1,6 @@
 ---
 title: "Authorized Principals & Principal Representation in Sri Lanka | Neptune Trading Company"
-description: "Neptune Trading Company is the authorized distributor for HUMMER Power Products in Sri Lanka & Maldives, and Snow/Aliaxis Piping Systems and Metal Alloys Corporation in Sri Lanka. International suppliers can enquire about principal representation in Sri Lanka."
+description: "Neptune Trading Company is the authorized distributor for HUMMER Power Products in Sri Lanka & Maldives, and  and Metal Alloys Corporation in Sri Lanka. International suppliers can enquire about principal representation in Sri Lanka."
 url: "https://neptunetrading.lk/principals.html"
 ---
 
@@ -26,11 +26,9 @@ We represent Metal Alloys Corporation's high-precision non-ferrous products, sup
 
 Authorized Distributor
 
-### Snow / Aliaxis Piping Systems
+### 
 
-We represent LESSO Snow brand solutions under the Aliaxis global portfolio for commercial, agricultural, infrastructure, and heavy-duty industrial fluid-management piping networks in Sri Lanka.
 
-[Enquire About Piping](contact.html?division=Snow%20Aliaxis)
 
 ## What Is Principal Representation?
 
@@ -90,7 +88,7 @@ Formal agency agreement is established and the product division is integrated in
 
 What is principal representation in trading?
 
-Principal representation means a local trading company acts as the official commercial agent for an international manufacturer in a specific country. Neptune Trading Company performs this role for HUMMER (in Sri Lanka & Maldives), and Snow/Aliaxis and Metal Alloys Corporation in Sri Lanka — handling local enquiries, bid coordination, compliance documentation, and supply on behalf of each principal.
+Principal representation means a local trading company acts as the official commercial agent for an international manufacturer in a specific country. Neptune Trading Company performs this role for HUMMER (in Sri Lanka & Maldives), and  and Metal Alloys Corporation in Sri Lanka — handling local enquiries, bid coordination, compliance documentation, and supply on behalf of each principal.
 
 Can international suppliers partner with Neptune Trading?
 

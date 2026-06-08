@@ -1,38 +1,38 @@
 ---
 title: "Ceylon Export Support | Neptune Trading Company"
-description: "Commercial sourcing and trade backing for Ceylon tea, spices, and agricultural fibre exports. Neptune Trading coordinates international enquiries backed by CEC Commercial Export Company."
+description: "Commercial sourcing and trade backing for Ceylon tea, spices, and agricultural fibre exports. Neptune Trading coordinates international enquiries backed by Neptune Trading."
 url: "https://neptunetrading.lk/ceylon-exports.html"
 ---
 
 # Ceylon Export Support
 
-We coordinate premium B2B export sourcing, commercial procurement, and logistics preparation under a single Colombo trading desk, backed by the agricultural supply capabilities of Commercial Export Company.
+We coordinate premium B2B export sourcing, commercial procurement, and logistics preparation under a single Colombo trading desk, backed by the agricultural supply capabilities of .
 
-## Backed by CEC Commercial Export Company
+## Backed by Neptune Trading
 
-While Neptune Trading acts as your clear commercial contact and contract manager, all Ceylon Tea and agricultural export products are prepared, graded, packed, and supplied directly through **Commercial Export Company (CEC)**.
+While Neptune Trading acts as your clear commercial contact and contract manager, all Ceylon Tea and agricultural export products are prepared, graded, packed, and supplied directly through **Neptune Trading**.
 
-Founded to elevate Sri Lankan exports, CEC operates specialized bulk agricultural storage, quality certification coordination, and customized packing facilities. This allows us to combine Neptune's commercial trading controls with CEC's strict agricultural supply chain backing.
+Founded to elevate Sri Lankan exports, operates specialized bulk agricultural storage, quality certification coordination, and customized packing facilities. This gives buyers confidence in product origin and quality control at source.
 
 Sourced from Origin
 
-CEC Facility Inspected
+Facility Inspected
 
 Est. Ceylon Exporter
 
-### Commercial Export Company
+### 
 
 Dedicated agricultural warehousing, tea blending, spice grading, and custom packaging support.
 
-[Visit CEC Website](http://cecteas.com/)
+[Visit Website](http://cecteas.com/)
 
 ## Agricultural Sourcing Portfolio
 
-Through Neptune Trading's commercial desk and CEC's supply network, we route bulk sourcing briefs for premium Sri Lankan exports.
+Through Neptune Trading's commercial desk, we route bulk sourcing briefs for premium Sri Lankan exports.
 
 ### Premium Ceylon Tea
 
-Coordinated B2B sourcing for bulk black tea, green tea, CTC grades, and specialty orthodox blends. Backed by CEC's dedicated tasting, grading, and private-label packaging facilities.
+Coordinated B2B sourcing for bulk black tea, green tea, CTC grades, and specialty orthodox blends. Dedicated tasting, grading, and private-label packaging coordination.
 
 - Bulk Blend Formulation
 
@@ -84,9 +84,9 @@ Specification mapping, certificate check, and direct manufacturer pricing confir
 
 03
 
-### CEC Sourcing
+### Sourcing
 
-CEC completes grading, custom packaging, origin verification, and phytosanitary certificate preparation.
+completes grading, custom packaging, origin verification, and phytosanitary certificate preparation.
 
 04
 

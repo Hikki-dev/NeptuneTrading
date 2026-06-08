@@ -1,6 +1,6 @@
 ---
 title: "About Neptune Trading Company | Sri Lankan B2B Trading Since 1984 | Colombo"
-description: "Neptune Trading Company (Pvt) Ltd is a family-led Sri Lankan B2B trading company founded in 1984. Authorized distributor for HUMMER (Sri Lanka & Maldives), Snow/Aliaxis, and Metal Alloys Corporation. Based in Colombo."
+description: "Neptune Trading Company (Pvt) Ltd is a family-led Sri Lankan B2B trading company founded in 1984. Authorized distributor for HUMMER (Sri Lanka & Maldives), , and Metal Alloys Corporation. Based in Colombo."
 url: "https://neptunetrading.lk/about.html"
 ---
 
@@ -48,7 +48,7 @@ Import & Distribution Representation
 
 - Hummer machinery, equipment, and spare parts
 
-- Aliaxis piping systems, conduits, and fittings
+- 
 
 - Metal Alloys steel, alloys, and industrial materials
 
@@ -80,7 +80,7 @@ Neptune Trading Company is currently led by Inam Ul Hassan, Managing Director an
 
 What products does Neptune Trading Company represent?
 
-Neptune Trading is the authorized distributor for [HUMMER Power Products](hummer-products.html) in Sri Lanka & Maldives (GM-licensed jump starters and power solutions), and [Snow / Aliaxis Piping Systems](snow-aliaxis-products.html) and [Metal Alloys Corporation](metal-alloys-products.html) in Sri Lanka.
+Neptune Trading is the authorized distributor for [HUMMER Power Products](hummer-products.html) in Sri Lanka & Maldives (GM-licensed jump starters and power solutions), and []() and [Metal Alloys Corporation](metal-alloys-products.html) in Sri Lanka.
 
 Where is Neptune Trading Company based?
 
