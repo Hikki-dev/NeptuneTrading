@@ -58,14 +58,10 @@ AddType text/markdown .markdown
 
 # ─── BLOCK SENSITIVE DIRECTORIES ─────────────────────────────────────────────
 
-# Block public access to .git, .claude, and other internal directories
-<DirectoryMatch "/(\.git|\.claude|\.agents|\.impeccable)(\/|$)">
-    Require all denied
-</DirectoryMatch>
-
-<FilesMatch "^\.">
-    Require all denied
-</FilesMatch>
+# Block public access to .git and internal directories via rewrite
+<IfModule mod_rewrite.c>
+    RewriteRule ^(\.git|\.claude|\.agents|\.impeccable)(\/.*)?$ - [F,L]
+</IfModule>
 
 # ─── SECURITY HEADERS ─────────────────────────────────────────────────────────
 
