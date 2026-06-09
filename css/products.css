@@ -1585,6 +1585,22 @@
   border-radius: 5px;
   flex-shrink: 0;
 }
+
+/* GM chip line structure — two lines on desktop, one line on mobile */
+.gm-line1, .gm-line2 { display: block; }
+
+/* GM chip always spans full width of the 2-col grid */
+.div-intro-fact--gm {
+  grid-column: 1 / -1;
+}
+.gm-line1, .gm-line2 { display: inline; }
+.gm-line1::after { content: '\00a0'; }
+
+@media (min-width: 721px) {
+  /* Two lines on desktop — re-enable block display */
+  .gm-line1, .gm-line2 { display: block; }
+  .gm-line1::after { content: ''; }
+}
 .division-intro-premium.division-card--hummer .div-intro-auth-badge {
   background: rgba(255,209,0,0.12);
   border-color: rgba(212,160,0,0.3);
