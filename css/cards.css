@@ -615,6 +615,28 @@
 }
 .footer-bottom-link:hover { color: var(--blue-accent); }
 
+.footer-social-links {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.4);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.footer-social-link:hover {
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+}
+.footer-social-link svg { display: block; }
+
 .footer-disclaimer {
   font-size: 0.72rem;
   color: rgba(255, 255, 255, 0.22);
