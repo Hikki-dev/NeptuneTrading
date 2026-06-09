@@ -513,7 +513,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function initPanels() {
     document.querySelectorAll('.hpd-img-panel, .mpd-img-panel').forEach(panel => {
-      const img = panel.querySelector('img');
+      const img = panel.querySelector('img:not([data-no-lb])');
       if (!img || panel.dataset.lbInit) return;
       panel.dataset.lbInit = '1';
 

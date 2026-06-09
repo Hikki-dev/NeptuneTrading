@@ -820,18 +820,15 @@
 
 .gm-seal-badge {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 120px;
-  height: 120px;
-  background: #1e3b8b;
-  border: 3px solid #ffffff;
-  border-radius: 14px;
-  box-shadow: 0 8px 28px rgba(30, 59, 139, 0.22);
-  text-align: center;
-  padding: 12px;
   flex-shrink: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  width: 110px;
+  height: 110px;
 }
 
 .gm-seal-logo {
@@ -920,9 +917,39 @@
 }
 
 .gm-licensed-badge {
-  background: #1e3b8b;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: #0e2357;
   color: #ffffff;
-  border: 1px solid rgba(30,59,139,0.15);
+  border: none;
+  padding: 5px 11px 5px 5px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 6px;
+}
+
+.gm-badge-logo {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+/* GM logo in fact chip */
+.div-intro-fact--gm {
+  padding-left: 6px;
+}
+
+.gm-fact-logo {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  border-radius: 3px;
+  flex-shrink: 0;
 }
 
 @media (max-width: 768px) {
@@ -1539,6 +1566,24 @@
 }
 .division-intro-premium.division-card--hummer .div-intro-fact svg {
   color: #a07800;
+}
+
+/* GM chip — larger logo, no svg, bolder presence */
+.division-intro-premium.division-card--hummer .div-intro-fact--gm {
+  background: #f0f4ff;
+  border-color: rgba(30, 90, 200, 0.25);
+  color: #0d1a3a;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 8px 16px 8px 8px;
+  gap: 10px;
+}
+.gm-fact-logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 5px;
+  flex-shrink: 0;
 }
 .division-intro-premium.division-card--hummer .div-intro-auth-badge {
   background: rgba(255,209,0,0.12);
