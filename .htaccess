@@ -56,6 +56,17 @@ AddType text/markdown .markdown
     Header always set Link "</.well-known/api-catalog>; rel=\"api-catalog\", </.well-known/mcp/server-card.json>; rel=\"service-desc\", </auth.md>; rel=\"describedby\", </.well-known/oauth-protected-resource>; rel=\"oauth-protected-resource\""
 </IfModule>
 
+# ─── BLOCK SENSITIVE DIRECTORIES ─────────────────────────────────────────────
+
+# Block public access to .git, .claude, and other internal directories
+<DirectoryMatch "/(\.git|\.claude|\.agents|\.impeccable)(\/|$)">
+    Require all denied
+</DirectoryMatch>
+
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
 # ─── SECURITY HEADERS ─────────────────────────────────────────────────────────
 
 <IfModule mod_headers.c>
