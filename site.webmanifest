@@ -1,0 +1,15 @@
+{
+  "name": "Neptune Trading Company (Pvt) Ltd",
+  "short_name": "Neptune Trading",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "theme_color": "#51515a",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
