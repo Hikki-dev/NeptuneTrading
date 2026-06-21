@@ -1,14 +1,14 @@
 ---
-title: "Product Divisions | HUMMER,  & Metal Alloys | Neptune Trading Sri Lanka & Maldives"
-description: "Neptune Trading Company"
+title: "Product Divisions | HUMMER & Metal Alloys | Neptune Trading Sri Lanka & Maldives"
+description: "Neptune Trading represents HUMMER Power Products in Sri Lanka and Maldives, and Metal Alloys Corporation products in Sri Lanka."
 url: "https://neptunetrading.lk/product-divisions.html"
 ---
 
 # Authorized Product Divisions in Sri Lanka & Maldives
 
-Neptune Trading Company holds formal local agency agreements to represent global industrial leaders in Sri Lanka. Explore our three authorized product divisions.
+Neptune Trading Company holds formal local agency agreements to represent global industrial leaders in Sri Lanka and the Maldives. Explore our two authorized product divisions.
 
-## Three Specialized Product Divisions
+## Two Specialized Product Divisions
 
 Each division represents a world-class manufacturer. Select a division below to view the full product range and request technical information.
 
@@ -27,22 +27,6 @@ Power Inverters
 Auto Accessories
 
 [Explore Division](hummer-products.html)
-
-Authorized Distributor
-
-### 
-
-Premium commercial fluid management piping networks. Supply communication, regulatory compliance routing, and project bid coordination.
-
-Soil, Waste & Vent
-Underground Drainage
-Rainwater Drainage
-Pressure Piping
-Infrastructure
-Industrial Piping
-Valves & Fittings
-
-[Explore Division]()
 
 Authorized Distributor
 

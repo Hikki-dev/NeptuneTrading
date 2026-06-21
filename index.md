@@ -6,9 +6,9 @@ url: "https://neptunetrading.lk/"
 
 Neptune Trading Company — Colombo, Sri Lanka
 
-# Three authorized divisions. One commercial desk.
+# Two authorized product divisions. One commercial desk.
 
-Authorized distributor for HUMMER Power Products, , and Metal Alloys Corporation. B2B sourcing, procurement, and principal representation since 1984.
+Authorized distributor for HUMMER Power Products and Metal Alloys Corporation. B2B sourcing, procurement, and principal representation since 1984.
 
 Explore Product Divisions
 [Contact Trading Desk](contact.html)
@@ -25,13 +25,13 @@ Active distribution territory
 **Established 1984**
 Over 40 Years of Sourcing Expertise
 
-**3 Product Divisions**
+**2 Product Divisions**
 Authorized Representation for Global Brands
 
 **Colombo Commercial Desk**
 Direct Local Procurement Support
 
-## Three authorized product divisions
+## Two authorized product divisions
 
 Formal local agency agreements with global industrial manufacturers, covering inquiry routing, compliance documentation, and structured bid coordination.
 
@@ -46,18 +46,6 @@ Portable automotive and outdoor power for fleet operators, workshops, emergency 
 - Power Inverters & Accessories
 
 [Explore HUMMER Products](hummer-products.html)
-
-### 
-
-LESSO Snow brand industrial and commercial piping for MEP contractors, construction projects, and infrastructure procurement. Drainage, pressure, and fluid management systems.
-
-- Soil, Waste & Vent Systems
-
-- Pressure & Industrial Piping
-
-- Valves, Fittings & Drainage
-
-[Explore Piping Systems]()
 
 ### Metal Alloys Corporation
 
@@ -135,11 +123,11 @@ Supply Chain Support
 
 Freight forwarding, customs clearance, warehousing, and inland movement when a trading requirement moves into shipment execution.
 
-[Visit Neptune Logistics](https://web-three-theta-40.vercel.app/)
+[Ask About Logistics Support](contact.html?service=logistics)
 
 ## What is Neptune Trading Company?
 
-Neptune Trading Company (Pvt) Ltd is a Sri Lankan B2B trading, sourcing, and procurement company established in **Colombo in 1984**. The company acts as the **authorized local distributor and commercial representative** for selected international manufacturers including [HUMMER Power Products](hummer-products.html) (for Sri Lanka & Maldives), [](), and [Metal Alloys Corporation](metal-alloys-products.html). Neptune Trading coordinates product sourcing, procurement support, export development, and market-entry assistance for businesses, institutions, and international suppliers from its Colombo commercial desk.
+Neptune Trading Company (Pvt) Ltd is a Sri Lankan B2B trading, sourcing, and procurement company established in **Colombo in 1984**. The company acts as the **authorized local distributor and commercial representative** for selected international manufacturers including [HUMMER Power Products](hummer-products.html) (for Sri Lanka & Maldives) and [Metal Alloys Corporation](metal-alloys-products.html). Neptune Trading coordinates product sourcing, procurement support, export development, and market-entry assistance for businesses, institutions, and international suppliers from its Colombo commercial desk.
 
 ### Who Should Contact Us
 
@@ -147,7 +135,7 @@ Importers, exporters, MEP contractors, fleet operators, hospital procurement tea
 
 ### What We Supply
 
-GM-licensed HUMMER portable power products,  LESSO brand industrial piping systems, and Metal Alloys Corporation copper, brass, and bronze industrial alloys — all through an officially authorized supply chain.
+GM-licensed HUMMER portable power products and Metal Alloys Corporation copper, brass, and bronze industrial alloys — all through an officially authorized supply chain.
 
 ### How to Enquire
 
@@ -163,11 +151,11 @@ Neptune Trading Company (Pvt) Ltd is a Sri Lankan B2B trading company establishe
 
 What product divisions does Neptune Trading represent?
 
-We represent three authorized product divisions: [HUMMER Power Products](hummer-products.html) (jump starters, power stations, power banks), []() (industrial and commercial piping), and [Metal Alloys Corporation](metal-alloys-products.html) (copper, brass, and bronze alloys).
+We represent two authorized product divisions: [HUMMER Power Products](hummer-products.html) (jump starters, power stations, power banks) and [Metal Alloys Corporation](metal-alloys-products.html) (copper, brass, and bronze alloys).
 
 Is Neptune Trading Company an authorized distributor?
 
-Yes. Neptune Trading holds formal agency and distributorship agreements for HUMMER Power Products (authorized for Sri Lanka & Maldives, General Motors licensed), , and Metal Alloys Corporation. All products are sourced through an officially authorized supply chain.
+Yes. Neptune Trading holds formal agency and distributorship agreements for HUMMER Power Products (authorized for Sri Lanka & Maldives, General Motors licensed) and Metal Alloys Corporation. All products are sourced through an officially authorized supply chain.
 
 How can I submit a product or sourcing enquiry?
 

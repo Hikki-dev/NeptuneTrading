@@ -15,7 +15,7 @@ All three need the same thing fast: "this is a serious, established, active trad
 
 ## Product Purpose
 
-Neptune Trading Company (Pvt) Ltd is Sri Lanka's authorized distributor for HUMMER Power Products (Sri Lanka and Maldives), , and Metal Alloys Corporation. Founded 1984. The website's job is to convert qualified B2B visitors — either into product enquiries or into an understanding of what Neptune does well enough to start a commercial conversation.
+Neptune Trading Company (Pvt) Ltd is Sri Lanka's authorized distributor for HUMMER Power Products (Sri Lanka and Maldives) and Metal Alloys Corporation. Founded 1984. The website's job is to convert qualified B2B visitors — either into product enquiries or into an understanding of what Neptune does well enough to start a commercial conversation.
 
 Success: a procurement manager or international supplier spends 2–3 minutes on the site and leaves knowing exactly what Neptune offers, feeling confident in their credibility, and knowing how to reach them.
 
@@ -39,7 +39,7 @@ Emotional goal: make visitors feel like they've found the right partner — not 
 
 1. **Authority through specificity** — every section names real things: actual product lines, real territory (Sri Lanka, Maldives), real year (1984). No vague claims.
 2. **Blue as identity, not decoration** — the Neptune navy-to-blue range is the brand. Use it boldly and purposefully: hero backgrounds, section accents, CTA hierarchy. Not as decoration everywhere.
-3. **Show the three divisions clearly** — HUMMER, , Metal Alloys are the core business. They must feel like three distinct, real things — not generic cards.
+3. **Show the product divisions clearly** — HUMMER and Metal Alloys are the core product representation lines. They must feel like distinct, real things — not generic cards.
 4. **Motion earns its place** — animations should make the site feel like a living operation, not add friction. Scroll reveals are tasteful, not theatrical. Counters, subtle parallax, and entrance transitions only where they reinforce credibility.
 5. **One clear path per visitor type** — buyers go to product divisions; suppliers go to contact; browsers go to What We Do. Navigation and CTAs must reflect this.
 

@@ -1,8 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /api/
 
 Sitemap: https://neptunetrading.lk/sitemap.xml
-
-# Content Signals (https://contentsignals.org/)
-Content-Signal: ai-train=no, search=yes, ai-input=yes
