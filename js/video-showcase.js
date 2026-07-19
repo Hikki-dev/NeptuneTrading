@@ -102,10 +102,12 @@
       loadHlsLibrary((loaded) => {
         if (loaded && window.Hls && Hls.isSupported()) {
           hlsInstance = new Hls({
-            maxBufferLength: 8,
-            maxMaxBufferLength: 16,
+            maxBufferLength: 6,
+            maxMaxBufferLength: 12,
             enableWorker: true,
-            lowLatencyMode: true
+            lowLatencyMode: true,
+            startLevel: 0, // Force lowest resolution (360p) at startup for instant play
+            testBandwidth: false // Play immediately without initial speed test latency
           });
           hlsInstance.loadSource(hlsSrc);
           hlsInstance.attachMedia(video);
@@ -241,6 +243,13 @@
     // Wait for the window load event so we do not block critical rendering resources
     window.addEventListener('load', () => {
       setTimeout(() => {
+        // Pre-load the Hls.js library script when the browser is idle
+        // so that it's cached in memory and ready for instant execution when a video is clicked
+        const testVideo = document.createElement('video');
+        if (!testVideo.canPlayType('application/vnd.apple.mpegurl')) {
+          loadHlsLibrary(() => {});
+        }
+
         document.querySelectorAll('.field-video-card, .testimonial-quote-video').forEach((card) => {
           const videoUrl = card.dataset.video;
           if (videoUrl) {
