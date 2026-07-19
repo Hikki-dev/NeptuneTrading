@@ -18,6 +18,5 @@ assets/HUMMER/
 !generated-assets/hummer-field-video/
 generated-assets/hummer-field-video/*
 !generated-assets/hummer-field-video/*.jpg
-!generated-assets/hummer-field-video/testimonial-dead-battery.mp4
-!generated-assets/hummer-field-video/testimonial-sean.mp4
+!generated-assets/hummer-field-video/*.mp4
 
