@@ -123,6 +123,16 @@
 
   function initCards() {
     document.querySelectorAll('.field-video-card, .testimonial-quote-video').forEach((card) => {
+      // Preload video on hover to ensure instant playback upon click
+      card.addEventListener('mouseenter', () => {
+        const videoUrl = card.dataset.video;
+        if (videoUrl) {
+          const preloadVideo = document.createElement('video');
+          preloadVideo.src = videoUrl;
+          preloadVideo.preload = 'auto';
+        }
+      }, { once: true });
+
       card.addEventListener('click', () => {
         openLightbox(card.dataset.video, card.dataset.caption, card.dataset.landscape === 'true');
       });
