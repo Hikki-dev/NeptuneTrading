@@ -47,17 +47,86 @@
     });
   }
 
+  let hlsInstance = null;
+
+  function destroyHls() {
+    if (hlsInstance) {
+      hlsInstance.destroy();
+      hlsInstance = null;
+    }
+  }
+
+  function loadHlsLibrary(callback) {
+    if (window.Hls) {
+      callback(true);
+      return;
+    }
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/hls.js@1.5.8/dist/hls.min.js';
+    script.onload = () => callback(true);
+    script.onerror = () => {
+      console.warn('Failed to load Hls.js library from CDN');
+      callback(false);
+    };
+    document.head.appendChild(script);
+  }
+
   function openLightbox(src, captionText, landscape) {
     buildOverlay();
-    video.src = src;
     caption.textContent = captionText || '';
     overlay.querySelector('#vlb-inner').classList.toggle('vlb-inner-landscape', !!landscape);
     document.body.classList.add('vlb-open');
     overlay.style.display = 'flex';
+    
     requestAnimationFrame(() => requestAnimationFrame(() => {
       overlay.classList.add('vlb-visible');
-      video.play().catch(() => {});
     }));
+
+    // Resolve adaptive streaming playlist path (.m3u8)
+    let hlsSrc = src;
+    if (src.endsWith('.mp4')) {
+      const parts = src.split('/');
+      const filename = parts.pop().replace('.mp4', '.m3u8');
+      hlsSrc = [...parts, 'hls', filename].join('/');
+    }
+
+    destroyHls();
+
+    // 1. Play native HLS if supported (Safari / iOS)
+    if (video.canPlayType('application/vnd.apple.mpegurl')) {
+      video.src = hlsSrc;
+      video.play().catch(() => {});
+    } 
+    // 2. Play adaptive HLS using Hls.js (Chrome / Firefox / Edge / Android)
+    else {
+      loadHlsLibrary((loaded) => {
+        if (loaded && window.Hls && Hls.isSupported()) {
+          hlsInstance = new Hls({
+            maxBufferLength: 8,
+            maxMaxBufferLength: 16,
+            enableWorker: true,
+            lowLatencyMode: true
+          });
+          hlsInstance.loadSource(hlsSrc);
+          hlsInstance.attachMedia(video);
+          hlsInstance.on(Hls.Events.MANIFEST_PARSED, () => {
+            video.play().catch(() => {});
+          });
+          hlsInstance.on(Hls.Events.ERROR, (event, data) => {
+            if (data.fatal) {
+              console.warn('Hls.js fatal error, falling back to progressive MP4:', data);
+              destroyHls();
+              video.src = src; // fallback to progressive MP4
+              video.play().catch(() => {});
+            }
+          });
+        } else {
+          // Fallback to progressive MP4
+          video.src = src;
+          video.play().catch(() => {});
+        }
+      });
+    }
   }
 
   function closeLightbox() {
@@ -65,6 +134,7 @@
     overlay.classList.remove('vlb-visible');
     document.body.classList.remove('vlb-open');
     video.pause();
+    destroyHls();
     setTimeout(() => { overlay.style.display = 'none'; video.src = ''; }, 230);
   }
 
@@ -139,9 +209,25 @@
       card.addEventListener('mouseenter', () => {
         const videoUrl = card.dataset.video;
         if (videoUrl) {
-          const preloadVideo = document.createElement('video');
-          preloadVideo.src = videoUrl;
-          preloadVideo.preload = 'auto';
+          const testVideo = document.createElement('video');
+          if (testVideo.canPlayType('application/vnd.apple.mpegurl')) {
+            // Safari / iOS HLS manifest preload
+            let hlsSrc = videoUrl;
+            if (videoUrl.endsWith('.mp4')) {
+              const parts = videoUrl.split('/');
+              const filename = parts.pop().replace('.mp4', '.m3u8');
+              hlsSrc = [...parts, 'hls', filename].join('/');
+            }
+            const link = document.createElement('link');
+            link.rel = 'prefetch';
+            link.href = hlsSrc;
+            document.head.appendChild(link);
+          } else {
+            // Chrome / Firefox progressive MP4 preload
+            const preloadVideo = document.createElement('video');
+            preloadVideo.src = videoUrl;
+            preloadVideo.preload = 'auto';
+          }
         }
       }, { once: true });
 
@@ -158,10 +244,26 @@
         document.querySelectorAll('.field-video-card, .testimonial-quote-video').forEach((card) => {
           const videoUrl = card.dataset.video;
           if (videoUrl) {
-            const preloadVideo = document.createElement('video');
-            preloadVideo.src = videoUrl;
-            preloadVideo.preload = 'auto';
-            preloadVideo.muted = true;
+            const testVideo = document.createElement('video');
+            if (testVideo.canPlayType('application/vnd.apple.mpegurl')) {
+              // Safari / iOS HLS manifest preload
+              let hlsSrc = videoUrl;
+              if (videoUrl.endsWith('.mp4')) {
+                const parts = videoUrl.split('/');
+                const filename = parts.pop().replace('.mp4', '.m3u8');
+                hlsSrc = [...parts, 'hls', filename].join('/');
+              }
+              const link = document.createElement('link');
+              link.rel = 'prefetch';
+              link.href = hlsSrc;
+              document.head.appendChild(link);
+            } else {
+              // Chrome / Firefox progressive MP4 preload
+              const preloadVideo = document.createElement('video');
+              preloadVideo.src = videoUrl;
+              preloadVideo.preload = 'auto';
+              preloadVideo.muted = true;
+            }
           }
         });
       }, 1000); // 1-second delay after full load to ensure idle bandwidth
