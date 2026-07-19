@@ -11,3 +11,9 @@ build/
 # Exclude large 137MB B2B PDF catalogue from GitHub limits
 assets/catalogues/snow-sanitary-plumbing-system.pdf
 
+# Raw unedited HUMMER footage (raw .mov source, never commit) and the
+# compressed field-video clips served on hummer-products.html — upload
+# generated-assets/hummer-field-video/ to cPanel manually, don't push via git
+assets/HUMMER/
+generated-assets/hummer-field-video/
+

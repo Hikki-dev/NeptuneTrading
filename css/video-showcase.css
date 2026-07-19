@@ -1,0 +1,531 @@
+/* ==========================================================================
+   Video Showcase — light GM-blue theme, language switch, scenario filters,
+   horizontal-scroll field clips + click-to-play lightbox
+   ========================================================================== */
+
+.field-video-section {
+  --gm-blue: #0a56ff;
+  background: var(--blue-bg);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: var(--section-pad) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.field-video-section .section-heading,
+.field-video-section h2 {
+  color: var(--blue-deep) !important;
+}
+
+.field-video-section .section-head p {
+  color: var(--slate);
+}
+
+/* ── Controls: language switch + scenario filter ─────────────────────── */
+
+.field-video-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 36px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.field-lang-switch {
+  display: inline-flex;
+  gap: 4px;
+  background: #ffffff;
+  border: 1.5px solid var(--border);
+  border-radius: 100px;
+  padding: 4px;
+}
+
+.field-lang-btn {
+  padding: 7px 16px;
+  border-radius: 100px;
+  border: none;
+  background: transparent;
+  color: var(--slate);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 200ms ease, color 200ms ease;
+}
+
+.field-lang-btn:hover {
+  color: var(--blue-deep);
+}
+
+.field-lang-btn.active {
+  background: var(--gm-blue);
+  color: #ffffff;
+}
+
+.field-filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.field-filter-tab {
+  padding: 8px 18px;
+  border-radius: 100px;
+  border: 1.5px solid var(--border);
+  background: #ffffff;
+  color: var(--slate);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: background 200ms ease, border-color 200ms ease, color 200ms ease, transform 160ms ease;
+}
+
+.field-filter-tab:hover {
+  border-color: rgba(10, 86, 255, 0.4);
+  color: var(--blue-deep);
+}
+
+.field-filter-tab.active {
+  background: var(--gm-blue);
+  border-color: var(--gm-blue);
+  color: #ffffff;
+}
+
+.field-filter-tab:active,
+.field-lang-btn:active {
+  transform: scale(0.97);
+}
+
+/* ── Card rail ─────────────────────────────────────────────────────────── */
+
+.field-video-rail-wrap {
+  position: relative;
+  margin-top: 28px;
+}
+
+.field-video-rail {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  padding: 4px 4px 12px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(10, 86, 255, 0.3) transparent;
+}
+
+.field-video-rail-arrow {
+  position: absolute;
+  top: 44%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: #ffffff;
+  color: var(--blue-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: 0 8px 22px rgba(9, 19, 44, 0.16);
+  transition: background 180ms, transform 180ms, opacity 180ms, visibility 180ms;
+}
+
+.field-video-rail-arrow:hover {
+  background: var(--gm-blue);
+  color: #ffffff;
+}
+
+.field-video-rail-arrow:active {
+  transform: translateY(-50%) scale(0.92);
+}
+
+.field-video-rail-arrow--prev {
+  left: -8px;
+}
+
+.field-video-rail-arrow--next {
+  right: -8px;
+}
+
+.field-video-rail-arrow[disabled] {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@media (max-width: 640px) {
+  .field-video-rail-arrow--prev {
+    left: 2px;
+  }
+  .field-video-rail-arrow--next {
+    right: 2px;
+  }
+}
+
+.field-video-rail::-webkit-scrollbar {
+  height: 6px;
+}
+.field-video-rail::-webkit-scrollbar-thumb {
+  background: rgba(10, 86, 255, 0.25);
+  border-radius: 100px;
+}
+
+.field-video-card {
+  position: relative;
+  flex: 0 0 auto;
+  width: clamp(168px, 22vw, 224px);
+  border-radius: 18px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  scroll-snap-align: start;
+  transform: translateZ(0);
+  transition: transform 260ms var(--ease-out-quart), box-shadow 260ms var(--ease-out-quart), border-color 260ms;
+  box-shadow: 0 8px 24px rgba(9, 19, 44, 0.08);
+}
+
+.field-video-card.filter-hidden {
+  display: none !important;
+}
+
+@media (hover: hover) {
+  .field-video-card:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 16px 40px rgba(9, 19, 44, 0.16);
+    border-color: rgba(10, 86, 255, 0.35);
+  }
+  .field-video-card:hover .field-video-play {
+    background: var(--gm-blue);
+    transform: translate(-50%, -50%) scale(1.08);
+  }
+}
+
+.field-video-card:active {
+  transform: scale(0.97);
+}
+
+.field-video-thumb {
+  display: block;
+  position: relative;
+  aspect-ratio: 9 / 16;
+}
+
+.field-video-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.field-video-thumb::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 38%);
+  pointer-events: none;
+}
+
+.field-video-lang {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 3px 9px;
+  border-radius: 100px;
+  background: rgba(5, 8, 14, 0.55);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.field-video-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(10, 86, 255, 0.85);
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 220ms, transform 220ms;
+  box-shadow: 0 6px 18px rgba(9, 19, 44, 0.25);
+}
+
+.field-video-play svg {
+  margin-left: 2px;
+}
+
+.field-video-caption {
+  display: block;
+  padding: 10px 12px 12px;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--blue-deep);
+  line-height: 1.3;
+  text-align: left;
+}
+
+/* ── Testimonials section ─────────────────────────────────────────────── */
+
+.hummer-testimonials-section {
+  --gm-blue: #0a56ff;
+  background: #ffffff;
+  padding: var(--section-pad) 0;
+}
+
+.testimonial-quote-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 480px;
+  margin: 36px auto 0;
+  background: var(--blue-bg);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: clamp(28px, 5vw, 44px) clamp(24px, 5vw, 40px);
+}
+
+.testimonial-quote-video {
+  width: clamp(150px, 32vw, 190px);
+  border: none;
+  padding: 0;
+  background: none;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 10px 28px rgba(9, 19, 44, 0.12);
+  transition: transform 260ms var(--ease-out-quart), box-shadow 260ms var(--ease-out-quart);
+}
+
+@media (hover: hover) {
+  .testimonial-quote-video:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 40px rgba(9, 19, 44, 0.18);
+  }
+  .testimonial-quote-video:hover .field-video-play {
+    background: var(--gm-blue);
+  }
+}
+
+.testimonial-quote-video:active {
+  transform: scale(0.97);
+}
+
+.testimonial-quote-mark {
+  color: rgba(10, 86, 255, 0.25);
+  margin-top: 22px;
+}
+
+.testimonial-quote-text {
+  margin: 10px 0 0;
+}
+
+.testimonial-quote-text p {
+  color: var(--blue-deep);
+  font-size: clamp(1.05rem, 2.6vw, 1.25rem);
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.testimonial-quote-attribution {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  width: 100%;
+}
+
+.testimonial-quote-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.testimonial-quote-attribution-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  text-align: left;
+}
+
+.testimonial-quote-name {
+  color: var(--blue-deep);
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.testimonial-quote-role {
+  color: var(--slate-light);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* ── Video Lightbox — stays dark; it's a theatre-mode player, not page chrome ── */
+
+.vlb-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(5, 8, 14, 0.9);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+
+.vlb-overlay.vlb-visible {
+  opacity: 1;
+}
+
+.vlb-inner {
+  position: relative;
+  width: min(420px, 88vw);
+  aspect-ratio: 9 / 16;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6);
+  transform: scale(0.94);
+  transition: transform 260ms cubic-bezier(0.34, 1.4, 0.64, 1);
+  background: #000;
+}
+
+.vlb-overlay.vlb-visible .vlb-inner {
+  transform: scale(1);
+}
+
+.vlb-inner.vlb-inner-landscape {
+  width: min(720px, 92vw);
+  aspect-ratio: 16 / 9;
+}
+
+.vlb-inner video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.vlb-caption {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+  z-index: 10000;
+  max-width: 90vw;
+}
+
+.vlb-close {
+  position: fixed;
+  top: 18px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 180ms, transform 180ms;
+  z-index: 10000;
+}
+
+.vlb-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.08);
+}
+
+body.vlb-open {
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .field-video-card,
+  .field-video-play,
+  .vlb-inner {
+    transition: none !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .field-video-controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Dual video testimonial layout */
+.testimonial-quote-card.dual-videos {
+  max-width: 600px;
+}
+
+.testimonial-videos-grid {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.testimonial-video-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.testimonial-video-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--blue-deep);
+  letter-spacing: 0.01em;
+  opacity: 0.85;
+}
+
+@media (max-width: 576px) {
+  .testimonial-videos-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
