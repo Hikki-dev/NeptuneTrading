@@ -151,11 +151,29 @@
     });
   }
 
+  function initInitialPreload() {
+    // Wait for the window load event so we do not block critical rendering resources
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.querySelectorAll('.field-video-card, .testimonial-quote-video').forEach((card) => {
+          const videoUrl = card.dataset.video;
+          if (videoUrl) {
+            const preloadVideo = document.createElement('video');
+            preloadVideo.src = videoUrl;
+            preloadVideo.preload = 'auto';
+            preloadVideo.muted = true;
+          }
+        });
+      }, 1000); // 1-second delay after full load to ensure idle bandwidth
+    });
+  }
+
   function init() {
     initLangSwitch();
     initFilterTabs();
     initCards();
     initRailArrows();
+    initInitialPreload();
   }
 
   document.addEventListener('DOMContentLoaded', init);
