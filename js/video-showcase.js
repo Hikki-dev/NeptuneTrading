@@ -19,6 +19,7 @@
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
       </button>
       <div class="vlb-inner" id="vlb-inner">
+        <div class="vlb-spinner" id="vlb-spinner"></div>
         <video id="vlb-video" playsinline controls></video>
       </div>
       <div class="vlb-caption" id="vlb-caption"></div>`;
@@ -26,6 +27,17 @@
     document.body.appendChild(overlay);
     video = overlay.querySelector('#vlb-video');
     caption = overlay.querySelector('#vlb-caption');
+    const spinner = overlay.querySelector('#vlb-spinner');
+
+    // Show spinner when video is loading or buffering
+    video.addEventListener('loadstart', () => spinner.classList.add('active'));
+    video.addEventListener('waiting', () => spinner.classList.add('active'));
+
+    // Hide spinner when video is ready, playing, or paused/errored
+    video.addEventListener('playing', () => spinner.classList.remove('active'));
+    video.addEventListener('canplay', () => spinner.classList.remove('active'));
+    video.addEventListener('pause', () => spinner.classList.remove('active'));
+    video.addEventListener('error', () => spinner.classList.remove('active'));
 
     overlay.addEventListener('click', (e) => { if (e.target === overlay) closeLightbox(); });
     overlay.querySelector('#vlb-close').addEventListener('click', closeLightbox);
