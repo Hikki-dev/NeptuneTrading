@@ -1,0 +1,10 @@
+# This folder's posters and clips get regenerated under the same filename
+# while iterating (e.g. re-cropping a poster, re-trimming a clip), so the
+# sitewide 1-year immutable image cache is wrong here - it would leave
+# visitors stuck on a stale poster/video for up to a year. Short revalidated
+# cache instead: fast on repeat views, but picks up real changes quickly.
+<IfModule mod_headers.c>
+    <FilesMatch "\.(jpe?g|png|mp4)$">
+        Header set Cache-Control "public, max-age=3600, must-revalidate"
+    </FilesMatch>
+</IfModule>
