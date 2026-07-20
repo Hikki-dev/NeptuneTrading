@@ -356,11 +356,30 @@
   padding-top: 24px;
   border-top: 1px solid var(--border);
   width: 100%;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: background 180ms ease;
+}
+
+@media (hover: hover) {
+  .testimonial-quote-attribution:hover {
+    background: rgba(10, 86, 255, 0.05);
+  }
+  .testimonial-quote-attribution:hover .testimonial-quote-name {
+    color: var(--gm-blue);
+  }
+}
+
+.testimonial-quote-role svg {
+  display: inline-block;
+  vertical-align: -2px;
+  margin-left: 5px;
+  color: #1877f2;
 }
 
 .testimonial-quote-logo {
-  width: 60px;
-  height: 60px;
+  width: 84px;
+  height: 84px;
   border-radius: 50%;
   object-fit: cover;
   background: #ffffff;
@@ -528,12 +547,13 @@ body.vlb-open {
 
 /* Dual video testimonial layout */
 .testimonial-quote-card.dual-videos {
-  max-width: 600px;
+  max-width: 860px;
 }
 
 .testimonial-videos-grid {
   display: flex;
-  gap: 24px;
+  align-items: center;
+  gap: 32px;
   justify-content: center;
   width: 100%;
   margin-bottom: 8px;
@@ -543,7 +563,8 @@ body.vlb-open {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  flex: 0 0 auto;
 }
 
 .testimonial-video-label {
@@ -554,9 +575,63 @@ body.vlb-open {
   opacity: 0.85;
 }
 
+.testimonial-quote-video--landscape {
+  width: clamp(220px, 34vw, 300px);
+}
+
+.field-video-thumb--landscape {
+  aspect-ratio: 16 / 9;
+}
+
+.testimonial-story {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 260px;
+  text-align: left;
+  padding: 0 8px;
+}
+
+.testimonial-story .testimonial-quote-mark {
+  display: block;
+  color: rgba(10, 86, 255, 0.25);
+  margin-bottom: 8px;
+}
+
+.testimonial-story p {
+  color: var(--blue-deep);
+  font-size: 1.02rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.testimonial-story-arrow {
+  display: none;
+}
+
+@media (min-width: 577px) {
+  .testimonial-story-arrow {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    right: -28px;
+    transform: translateY(-50%);
+    color: rgba(10, 86, 255, 0.35);
+  }
+}
+
 @media (max-width: 576px) {
   .testimonial-videos-grid {
     flex-direction: column;
     gap: 20px;
+  }
+  .testimonial-story {
+    max-width: 320px;
+    text-align: center;
+    padding: 4px 0;
+  }
+  .testimonial-story .testimonial-quote-mark {
+    margin: 0 auto 8px;
   }
 }
