@@ -1480,6 +1480,19 @@
     flex-wrap: wrap;
     gap: 20px;
   }
+
+  .hero-breadcrumbs {
+    max-width: 100%;
+    padding: 5px 12px 5px 6px;
+  }
+  .division-back-link {
+    font-size: 0.72rem;
+    padding: 2px 8px 2px 4px;
+    margin-right: 8px;
+  }
+  .hero-breadcrumbs .page-eyebrow {
+    font-size: 0.68rem !important;
+  }
 }
 
 

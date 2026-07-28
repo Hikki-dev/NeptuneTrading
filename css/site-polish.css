@@ -1597,6 +1597,17 @@ body.home-premium .navbar.at-top .nav-logo-img {
 
 /* Timeline & Continuity Mobile Responsive */
 @media (max-width: 768px) {
+  .lifecycle-steps-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .lifecycle-step {
+    border-right: none !important;
+    border-bottom: 1px solid var(--border);
+  }
+  .lifecycle-step:last-child {
+    border-bottom: none;
+  }
+
   .timeline-track::before {
     left: 20px;
   }

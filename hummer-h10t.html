@@ -118,8 +118,11 @@
         gap: 60px;
         align-items: center;
       }
+      .hpd-hero-text { min-width: 0; }
       .hpd-breadcrumb {
         display: inline-flex;
+        flex-wrap: wrap;
+        row-gap: 4px;
         align-items: center;
         gap: 8px;
         margin-bottom: 20px;
@@ -366,6 +369,11 @@
         .hpd-hero-inner { grid-template-columns: 1fr; }
         .hpd-img-panel { min-height: 240px; order: -1; }
         .hpd-two-col { grid-template-columns: 1fr; gap: 32px; }
+      }
+      @media (max-width: 480px) {
+        .hpd-keyspecs { flex-wrap: wrap; }
+        .hpd-keyspec { flex: 1 1 50%; min-width: 0; border-right: 1px solid rgba(0,0,0,0.1); }
+        .hpd-keyspec:nth-child(2n) { border-right: none; }
       }
     </style>
   </head>

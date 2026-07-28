@@ -72,8 +72,11 @@
         gap: 60px;
         align-items: center;
       }
+      .mpd-hero-text { min-width: 0; }
       .mpd-breadcrumb {
         display: inline-flex;
+        flex-wrap: wrap;
+        row-gap: 4px;
         align-items: center;
         gap: 8px;
         margin-bottom: 20px;
@@ -372,6 +375,15 @@
         .mpd-hero-inner { grid-template-columns: 1fr; }
         .mpd-img-panel { min-height: 220px; order: -1; }
         .mpd-two-col { grid-template-columns: 1fr; gap: 32px; }
+      }
+      @media (max-width: 480px) {
+        .mpd-keyspecs { flex-wrap: wrap; }
+        .mpd-keyspec { flex: 1 1 50%; border-right: 1px solid rgba(255,255,255,0.08); }
+        .mpd-keyspec:nth-child(2n) { border-right: none; }
+        .mpd-specs-table td:first-child {
+          width: auto;
+          white-space: normal;
+        }
       }
       /* Industry grid */
       .mpd-industry-grid {
