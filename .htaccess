@@ -43,6 +43,11 @@ AddType image/x-icon .ico
     RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
     RewriteRule ^index\.html$ https://neptunetrading.lk/ [R=301,L,NE]
 
+    # Retired products: send discontinued product URLs to the range page so
+    # existing inbound links and indexed results land somewhere useful.
+    # Placed above the markdown rules so the .md counterpart redirects too.
+    RewriteRule ^hummer-h3t(\.html|\.md)?$ https://neptunetrading.lk/hummer-products.html [R=301,L,NE]
+
     # Markdown for Agents: serve .md counterparts when Accept: text/markdown.
     RewriteCond %{HTTP_ACCEPT} text/markdown
     RewriteRule ^$ /index.md [L]
