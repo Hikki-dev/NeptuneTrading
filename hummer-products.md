@@ -62,24 +62,6 @@ Industry Applications
 
 GM Licensed
 
-### Hummer H8 Jump Starter
-
-Heavy-duty 12V portable car jump starter and high-capacity power bank. Equipped with spark-proof safety protection and high-efficiency emergency LED lighting.
-
-Industry Applications
-
-- Personal passenger vehicle starting
-
-- Commercial transport fleet recovery
-
-- Roadside assistance emergency packs
-
-- Marine leisure engine starting
-
-[View Product Details](hummer-h8.html)
-
-GM Licensed
-
 ### HUMMER H24 PRO Commercial Jump Starter
 
 Professional-grade peak current jump starter. Features an advanced micro-processor safety control board, spark-proof technology, and solid brass core clamps.
@@ -116,24 +98,6 @@ Industry Applications
 
 GM Licensed
 
-### Hummer H550 Portable Power Station
-
-High-capacity portable power station. Provides pure sine wave AC output, multiple DC sockets, and USB fast charge ports. Perfect for tools and essential backup.
-
-Industry Applications
-
-- Emergency home power backup
-
-- Off-grid mobile worksite operations
-
-- Remote medical device power
-
-- Field testing & analysis instruments
-
-[View Product Details](hummer-h550.html)
-
-GM Licensed
-
 ### Hummer H10T Dual-Cylinder Tyre Inflator
 
 Heavy-duty dual-cylinder high-volume portable air compressor. Features a precision digital LCD pressure gauge, automatic shutoff, and extra-long heavy air hose.
@@ -152,57 +116,21 @@ Industry Applications
 
 GM Licensed
 
-### Hummer H3T Multi-Functional Power Bank
+### Hummer H8 Jump Starter
 
-Compact, high-density power bank featuring dual USB fast-charge ports and a rugged shell. Includes emergency starting capability for small engines.
-
-Industry Applications
-
-- Everyday mobile communications backup
-
-- Corporate business travel charging
-
-- Outdoor field inspections
-
-- Emergency responder backup power
-
-[View Product Details](hummer-h3t.html)
-
-GM Licensed
-
-### Hummer HX Professional Power Bank
-
-Rugged industrial-grade high-capacity power bank. Features an integrated wireless charging pad, USB-C Power Delivery, and robust IP65 weather proofing.
+Heavy-duty 12V portable car jump starter and high-capacity power bank. Equipped with spark-proof safety protection and high-efficiency emergency LED lighting.
 
 Industry Applications
 
-- Extreme environment worksites
+- Personal passenger vehicle starting
 
-- Mining & petroleum exploration fields
+- Commercial transport fleet recovery
 
-- Adventure travel & heavy outdoor use
+- Roadside assistance emergency packs
 
-- Remote construction safety kits
+- Marine leisure engine starting
 
-[View Product Details](hummer-hx.html)
-
-GM Licensed
-
-### Hummer HX Pro Rugged Power Bank
-
-Professional heavy-duty high-capacity power bank. Engineered with high-impact drop protection, IP66 waterproof rating, wireless charging, and 45W USB-C output.
-
-Industry Applications
-
-- Field inspection and engineering projects
-
-- Boating and maritime technical backup
-
-- Heavy industrial worksites and offshore rigs
-
-- Emergency disaster recovery coordination
-
-[View Product Details](hummer-hx-pro.html)
+[View Product Details](hummer-h8.html)
 
 GM Licensed
 
@@ -224,21 +152,21 @@ Industry Applications
 
 GM Licensed
 
-### Hummer H2 Car Power Inverter
+### Hummer H1000 Portable Power Station
 
-Premium 12V DC to AC car power inverter. Delivers pure stable current, equipped with dual standard AC outlets and smart thermal fan cooling.
+716.8Wh LiFePO4 power station with 1000W pure sine wave AC output (2000W surge) and 3,000-cycle battery life. Charges 12 devices at once — wall, car, or solar input. Full charge in 4 hours.
 
 Industry Applications
 
-- Mobile vehicle office equipment
+- Construction site power backup
 
-- Field utility technician tool running
+- Disaster relief & emergency response
 
-- Corporate transport laptop powering
+- Remote field laboratories
 
-- Expedition vehicle AC outlets
+- Off-grid solar energy systems
 
-[View Product Details](hummer-h2.html)
+[View Product Details](hummer-h1000.html)
 
 GM Licensed
 
@@ -260,22 +188,75 @@ Industry Applications
 
 GM Licensed
 
-### Hummer H1000 Portable Power Station
+### Hummer H550 Portable Power Station
 
-716.8Wh LiFePO4 power station with 1000W pure sine wave AC output (2000W surge) and 3,000-cycle battery life. Charges 12 devices at once — wall, car, or solar input. Full charge in 4 hours.
+High-capacity portable power station. Provides pure sine wave AC output, multiple DC sockets, and USB fast charge ports. Perfect for tools and essential backup.
 
 Industry Applications
 
-- Construction site power backup
+- Emergency home power backup
 
-- Disaster relief & emergency response
+- Off-grid mobile worksite operations
 
-- Remote field laboratories
+- Remote medical device power
 
-- Off-grid solar energy systems
+- Field testing & analysis instruments
 
-[View Product Details](hummer-h1000.html)
+[View Product Details](hummer-h550.html)
 
+GM Licensed
+
+### Hummer HX Pro Rugged Power Bank
+
+Professional heavy-duty high-capacity power bank. Engineered with high-impact drop protection, IP66 waterproof rating, wireless charging, and 45W USB-C output.
+
+Industry Applications
+
+- Field inspection and engineering projects
+
+- Boating and maritime technical backup
+
+- Heavy industrial worksites and offshore rigs
+
+- Emergency disaster recovery coordination
+
+[View Product Details](hummer-hx-pro.html)
+
+GM Licensed
+
+### Hummer HX Professional Power Bank
+
+Rugged industrial-grade high-capacity power bank. Features an integrated wireless charging pad, USB-C Power Delivery, and robust IP65 weather proofing.
+
+Industry Applications
+
+- Extreme environment worksites
+
+- Mining & petroleum exploration fields
+
+- Adventure travel & heavy outdoor use
+
+- Remote construction safety kits
+
+[View Product Details](hummer-hx.html)
+
+GM Licensed
+
+### Hummer H2 Car Power Inverter
+
+Premium 12V DC to AC car power inverter. Delivers pure stable current, equipped with dual standard AC outlets and smart thermal fan cooling.
+
+Industry Applications
+
+- Mobile vehicle office equipment
+
+- Field utility technician tool running
+
+- Corporate transport laptop powering
+
+- Expedition vehicle AC outlets
+
+[View Product Details](hummer-h2.html)
 ## Industries & Applications
 
 HUMMER power solutions are specified by fleet operators, procurement teams, and service depots requiring high-reliability battery technology. We coordinate commercial supply directly from the authorized local desk.
@@ -312,7 +293,7 @@ Volume-based commercial quotations, fleet procurement programs, and bulk supply 
 
 What HUMMER products are available in Sri Lanka & Maldives?
 
-Neptune Trading stocks HUMMER jump starters (H8, H24 Ultra 4000A, H24 PRO), H4K supercapacitor starter, H550 portable power station, H10T dual-cylinder tyre inflator, H3T and HX power banks, HX Pro rugged power bank, HXF tactical LED flashlight, and H2 car power inverter. All are GM-licensed and sourced through the authorized Sri Lanka & Maldives distributorship.
+Neptune Trading stocks HUMMER jump starters (H24 Ultra 4000A, H24 PRO, H8), the H4K supercapacitor starter, the H10T dual-cylinder tyre inflator, the H1000, H600 and H550 portable power stations, HX Pro and HX power banks, the HXF tactical LED flashlight, and the H2 car power inverter. All are GM-licensed and sourced through the authorized Sri Lanka & Maldives distributorship.
 
 Are HUMMER products in Sri Lanka & Maldives genuine GM-licensed products?
 
