@@ -4,7 +4,7 @@
   "description": "Sri Lankan B2B trading, sourcing, procurement, and principal representation company established in Colombo in 1984.",
   "start_url": "/",
   "scope": "/",
-  "display": "standalone",
+  "display": "browser",
   "background_color": "#ffffff",
   "theme_color": "#51515a",
   "icons": [
