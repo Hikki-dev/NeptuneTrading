@@ -2019,10 +2019,11 @@
   border-color: rgba(255, 209, 0, 0.4);
   background: rgba(255, 209, 0, 0.06);
 }
-.hummer-duo-item svg {
-  width: 30px;
-  height: 30px;
-  color: #ffffff;
+.hummer-duo-item img {
+  height: 34px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
   flex-shrink: 0;
 }
 .hummer-duo-item span {
