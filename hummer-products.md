@@ -224,39 +224,6 @@ Industry Applications
 
 GM Licensed
 
-### Hummer HX Professional Power Bank
-
-Rugged industrial-grade high-capacity power bank. Features an integrated wireless charging pad, USB-C Power Delivery, and robust IP65 weather proofing.
-
-Industry Applications
-
-- Extreme environment worksites
-
-- Mining & petroleum exploration fields
-
-- Adventure travel & heavy outdoor use
-
-- Remote construction safety kits
-
-[View Product Details](hummer-hx.html)
-
-GM Licensed
-
-### Hummer H2 Car Power Inverter
-
-Premium 12V DC to AC car power inverter. Delivers pure stable current, equipped with dual standard AC outlets and smart thermal fan cooling.
-
-Industry Applications
-
-- Mobile vehicle office equipment
-
-- Field utility technician tool running
-
-- Corporate transport laptop powering
-
-- Expedition vehicle AC outlets
-
-[View Product Details](hummer-h2.html)
 ## Industries & Applications
 
 HUMMER power solutions are specified by fleet operators, procurement teams, and service depots requiring high-reliability battery technology. We coordinate commercial supply directly from the authorized local desk.
