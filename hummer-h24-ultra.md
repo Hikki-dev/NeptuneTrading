@@ -16,8 +16,8 @@ Third-generation 12V/24V professional jump starter with 4000A peak current. Up t
 
 ## Product Gallery
 
-- Front view
 - Key specs
+- Front view
 - Back view
 - Ports and certifications
 - Jump start instructions

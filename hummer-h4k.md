@@ -16,11 +16,11 @@ Heavy-duty 12V lithium-ion jump starter with 4,000A peak amps. Jump-starts gasol
 
 ## Product Gallery
 
+- Key specs
+- Retail packaging
 - Front view
 - Back view
 - Ports and controls
-- Key specs
-- Retail packaging
 
 4,000A (12V)
 Peak Amps

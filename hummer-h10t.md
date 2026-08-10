@@ -16,10 +16,10 @@ Cordless dual-function device: 2000A 12V jump starter and 150psi precision tyre 
 
 ## Product Gallery
 
-- Front view
-- With jump start clamps
 - Key specs
 - LCD display and controls
+- With jump start clamps
+- Front view
 - Retail packaging
 
 2,000A (12V)

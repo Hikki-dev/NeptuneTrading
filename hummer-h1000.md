@@ -16,10 +16,10 @@ HUMMER Power Station
 
 ## Product Gallery
 
-- Front view
-- Multi-device charging
 - Key features
 - Ports and controls
+- Front view
+- Multi-device charging
 - Back view
 
 1000W (2000W surge)

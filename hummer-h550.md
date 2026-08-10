@@ -16,9 +16,9 @@ HUMMER Power Station
 
 ## Product Gallery
 
-- Front view
 - Key features
 - Charging methods (wall, car, solar)
+- Front view
 - Ports and controls
 - Back view
 

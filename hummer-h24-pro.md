@@ -16,8 +16,8 @@ Professional-grade 4000A peak 12V/24V jump starter with micro-processor safety c
 
 ## Product Gallery
 
-- Front view
 - Label detail
+- Front view
 - Angled view
 - Clamp detail
 - Key specs
