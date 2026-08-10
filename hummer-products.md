@@ -98,6 +98,24 @@ Industry Applications
 
 GM Licensed
 
+### Hummer H3K Professional Jump Starter
+
+Professional-grade 12V jump starter with 3,000A peak amps and a 59,200mWh lithium-ion power bank. Up to 40 jump starts per charge.
+
+Industry Applications
+
+- Heavy commercial vehicle starts
+
+- Long-haul fleet emergency kits
+
+- Remote field operations
+
+- Vehicle recovery services
+
+[View Product Details](hummer-h3k.html)
+
+GM Licensed
+
 ### Hummer H10T Tyre Inflator Jump Starter
 
 2000A 12V jump starter and 150psi cordless tyre inflator in one, with LCD pressure display, auto shut-off, and 10,000mAh USB-C PD30W power bank.
@@ -113,6 +131,24 @@ Industry Applications
 - Roadside emergency tyre inflation
 
 [View Product Details](hummer-h10t.html)
+
+GM Licensed
+
+### Hummer HXF Flashlight Jump Starter
+
+2000A peak jump starter in a 400-lumen tactical flashlight form factor. 10,000mAh power bank with USB-C PD 30W and USB-A QC 18W. Up to 30 jump starts per charge.
+
+Industry Applications
+
+- Roadside emergency vehicle recovery
+
+- Field service & logistics fleets
+
+- Search & rescue operations
+
+- Night plant & boiler inspections
+
+[View Product Details](hummer-hxf.html)
 
 GM Licensed
 
@@ -134,21 +170,21 @@ Industry Applications
 
 GM Licensed
 
-### Hummer HXF Flashlight Jump Starter
+### Hummer H2K Professional Jump Starter
 
-2000A peak jump starter in a 400-lumen tactical flashlight form factor. 10,000mAh power bank with USB-C PD 30W and USB-A QC 18W. Up to 30 jump starts per charge.
+Professional-grade 12V jump starter with 2,000A peak amps and a 37,000mWh lithium-ion power bank. Up to 30 jump starts per charge.
 
 Industry Applications
 
-- Roadside emergency vehicle recovery
+- Heavy commercial vehicle starts
 
-- Field service & logistics fleets
+- Long-haul fleet emergency kits
 
-- Search & rescue operations
+- Remote field operations
 
-- Night plant & boiler inspections
+- Vehicle recovery services
 
-[View Product Details](hummer-hxf.html)
+[View Product Details](hummer-h2k.html)
 
 GM Licensed
 

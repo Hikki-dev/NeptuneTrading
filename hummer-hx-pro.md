@@ -19,7 +19,7 @@ HUMMER Power Bank
 - Front view
 - With jump start clamps
 - Charging a laptop
-- Wireless charging a phone
+- Charging a phone
 - Retail packaging
 
 2,000A (12V)
@@ -132,5 +132,5 @@ Package Contents
 Neptune Trading Company is the authorized HUMMER distributor for Sri Lanka & Maldives. Contact our desk for pricing, availability, and fleet orders.
 
 [Enquire Now](contact.html?division=HUMMER&category=Power%20Banks&product-family=Hummer%20HX%20Pro)
-[Download Catalogue](assets/catalogues/hummer-catalogue-2025.pdf)
+[Download Catalogue](assets/catalogues/hummer-product-catalogue.pdf)
 [← Back to All HUMMER Products](hummer-products.html)

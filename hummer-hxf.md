@@ -19,7 +19,7 @@ HUMMER Jump Starter
 - Front view
 - Front and back
 - Side profile
-- In use as a flashlight
+- Port and battery indicator
 - Retail packaging
 
 2,000A (12V)
@@ -129,5 +129,5 @@ Package Contents
 Neptune Trading Company is the authorized HUMMER distributor for Sri Lanka & Maldives. Contact our desk for pricing, availability, and fleet orders.
 
 [Enquire Now](contact.html?division=HUMMER&category=Jump%20Starters&product-family=Hummer%20HXF)
-[Download Catalogue](assets/catalogues/hummer-catalogue-2025.pdf)
+[Download Catalogue](assets/catalogues/hummer-product-catalogue.pdf)
 [← Back to All HUMMER Products](hummer-products.html)

@@ -19,7 +19,7 @@ Heavy-duty 12V lithium-ion jump starter with 4,000A peak amps. Jump-starts gasol
 - Front view
 - Back view
 - Ports and controls
-- In use, clamped onto a vehicle battery
+- Key specs
 - Retail packaging
 
 4,000A (12V)
@@ -119,5 +119,5 @@ Package Contents
 Neptune Trading Company is the authorized HUMMER distributor for Sri Lanka & Maldives. Contact our desk for pricing, availability, and fleet orders.
 
 [Enquire Now](contact.html?division=HUMMER&category=Jump%20Starters&product-family=Hummer%20H4K)
-[Download Catalogue](assets/catalogues/hummer-catalogue-2025.pdf)
+[Download Catalogue](assets/catalogues/hummer-product-catalogue.pdf)
 [← Back to All HUMMER Products](hummer-products.html)

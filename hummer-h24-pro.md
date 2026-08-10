@@ -17,10 +17,10 @@ Professional-grade 4000A peak 12V/24V jump starter with micro-processor safety c
 ## Product Gallery
 
 - Front view
-- Studio shot
-- In use
+- Label detail
 - Angled view
-- Retail packaging
+- Clamp detail
+- Key specs
 
 4,000A (12V & 24V)
 Peak Amps
@@ -125,5 +125,5 @@ Package Contents
 Neptune Trading Company is the authorized HUMMER distributor for Sri Lanka & Maldives. Contact our desk for pricing, availability, and fleet orders.
 
 [Enquire Now](contact.html?division=HUMMER&category=Jump%20Starters&product-family=Hummer%20H24%20PRO)
-[Download Catalogue](assets/catalogues/hummer-catalogue-2025.pdf)
+[Download Catalogue](assets/catalogues/hummer-product-catalogue.pdf)
 [← Back to All HUMMER Products](hummer-products.html)

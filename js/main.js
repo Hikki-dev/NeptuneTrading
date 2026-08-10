@@ -530,3 +530,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.addEventListener('DOMContentLoaded', initPanels);
 })();
+
+/* ── Floating WhatsApp Contact Button ───────────────────────────────── */
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.createElement("a");
+  btn.href = "https://wa.me/94777441990";
+  btn.target = "_blank";
+  btn.rel = "noopener";
+  btn.className = "wa-float-btn";
+  btn.setAttribute("aria-label", "Chat with Neptune Trading on WhatsApp");
+  btn.innerHTML = '<svg width="30" height="30" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.001 3C9.11 3 3.5 8.61 3.5 15.5c0 2.34.64 4.53 1.76 6.41L3 29l7.27-2.21a12.45 12.45 0 005.73 1.4h.01c6.89 0 12.5-5.61 12.5-12.5S22.9 3 16.001 3zm0 22.75h-.01a10.4 10.4 0 01-5.31-1.46l-.38-.23-3.94 1.2 1.22-3.84-.25-.4a10.36 10.36 0 01-1.6-5.52c0-5.75 4.68-10.43 10.44-10.43 2.79 0 5.41 1.09 7.38 3.06a10.36 10.36 0 013.06 7.38c0 5.75-4.68 10.44-10.44 10.44zm5.72-7.82c-.31-.16-1.85-.91-2.14-1.02-.29-.11-.5-.16-.71.16-.21.31-.81 1.02-1 1.23-.18.21-.37.23-.68.08-.31-.16-1.31-.48-2.5-1.54-.92-.82-1.55-1.84-1.73-2.15-.18-.31-.02-.48.14-.63.14-.14.31-.37.47-.55.16-.18.21-.31.31-.52.1-.21.05-.39-.03-.55-.08-.16-.71-1.71-.97-2.34-.26-.62-.52-.54-.71-.55h-.6c-.21 0-.55.08-.84.39-.29.31-1.1 1.08-1.1 2.63s1.13 3.05 1.28 3.26c.16.21 2.23 3.4 5.4 4.77.75.33 1.34.52 1.8.66.76.24 1.44.21 1.99.13.61-.09 1.85-.76 2.11-1.49.26-.73.26-1.36.18-1.49-.08-.13-.29-.21-.6-.36z"/></svg>';
+  document.body.appendChild(btn);
+});

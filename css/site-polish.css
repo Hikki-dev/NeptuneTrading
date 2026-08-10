@@ -2878,3 +2878,34 @@ body.home-premium .navbar.at-top {
     animation: none;
   }
 }
+
+/* ── Floating WhatsApp Contact Button ───────────────────────────────── */
+.wa-float-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  z-index: 9000;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+.wa-float-btn:active { transform: scale(0.94); }
+@media (hover: hover) {
+  .wa-float-btn:hover {
+    transform: scale(1.06);
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.32);
+  }
+}
+@media (max-width: 600px) {
+  .wa-float-btn { right: 14px; bottom: 14px; width: 50px; height: 50px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wa-float-btn { transition: none; }
+}
