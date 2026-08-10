@@ -14,6 +14,14 @@ HUMMER Power Station
 
 555Wh portable power station with 550W pure sine wave AC output — plus 1200A jump start capability. Powers 9 devices at once.
 
+## Product Gallery
+
+- Front view
+- Key features
+- Charging methods (wall, car, solar)
+- Ports and controls
+- Back view
+
 550W (1000W surge)
 AC Output
 
@@ -122,4 +130,5 @@ Package Contents
 Neptune Trading Company is the authorized HUMMER distributor for Sri Lanka & Maldives. Contact our desk for pricing, availability, and fleet orders.
 
 [Enquire Now](contact.html?division=HUMMER&category=Power%20Stations&product-family=Hummer%20H550)
+[Download Catalogue](assets/catalogues/hummer-catalogue-2025.pdf)
 [← Back to All HUMMER Products](hummer-products.html)

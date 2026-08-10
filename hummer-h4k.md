@@ -1,18 +1,26 @@
 ---
-title: "Hummer H4K Supercapacitor Jump Starter | HUMMER Power Products Sri Lanka & Maldives | Neptune Trading"
-description: "Advanced batteryless 12V jump starter using quick-charge supercapacitors. Recharges instantly from residual battery voltage — zero routine maintenance. Available in Sri Lanka & Maldives through Neptune Trading Company, authorized HUMMER distributor."
+title: "Hummer H4K Heavy Duty Jump Starter | HUMMER Power Products Sri Lanka & Maldives | Neptune Trading"
+description: "Heavy-duty 12V lithium-ion jump starter with 4,000A peak amps and a 20,000mAh (74Wh) battery. USB-C PD30W power bank with 13 protection functions. Available in Sri Lanka & Maldives through Neptune Trading Company, authorized HUMMER distributor."
 url: "https://neptunetrading.lk/hummer-h4k.html"
 ---
 
 [← HUMMER Products](hummer-products.html)
 /
-Hummer H4K Supercapacitor Jump Starter
+Hummer H4K Heavy Duty Jump Starter
 
 HUMMER Jump Starter
 
-# Hummer H4K Supercapacitor Jump Starter
+# Hummer H4K Heavy Duty Jump Starter
 
-Advanced batteryless 12V jump starter using quick-charge supercapacitors. Recharges instantly from residual battery voltage — zero routine maintenance.
+Heavy-duty 12V lithium-ion jump starter with 4,000A peak amps. Jump-starts gasoline and diesel engines in seconds and doubles as a 20,000mAh USB-C PD30W power bank.
+
+## Product Gallery
+
+- Front view
+- Back view
+- Ports and controls
+- In use, clamped onto a vehicle battery
+- Retail packaging
 
 4,000A (12V)
 Peak Amps
@@ -66,9 +74,9 @@ What It Does
 
 ## Key Features
 
-Batteryless supercapacitor technology — no degradation
+Jump-starts gasoline or diesel engines in seconds — cars, motorcycles, boats, jet skis, ATVs, lawn mowers
 
-Recharges instantly from residual battery voltage
+Multiple jump starts on a single charge from the 20,000mAh lithium-ion battery
 
 USB-C PD 30W fast charging — charges iPhone 0–50% in ~30 min
 
@@ -94,7 +102,7 @@ Use Cases
 
 Vehicle Compatibility
 
-12V vehicles up to any engine size — no battery required in device
+12V vehicles — cars, motorcycles, boats, jet skis, ATVs and lawn mowers, including EV, Turbo, Hybrid & Start-Stop systems
 
 Package Contents
 
@@ -111,4 +119,5 @@ Package Contents
 Neptune Trading Company is the authorized HUMMER distributor for Sri Lanka & Maldives. Contact our desk for pricing, availability, and fleet orders.
 
 [Enquire Now](contact.html?division=HUMMER&category=Jump%20Starters&product-family=Hummer%20H4K)
+[Download Catalogue](assets/catalogues/hummer-catalogue-2025.pdf)
 [← Back to All HUMMER Products](hummer-products.html)

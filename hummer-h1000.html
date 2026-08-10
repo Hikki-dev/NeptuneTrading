@@ -20,11 +20,11 @@
     <meta property="og:description" content="HUMMER H1000: 716.8Wh LiFePO4 power station, 1000W pure sine wave, 3,000-cycle battery, wall/car/solar charging. Available in Sri Lanka & Maldives.">
     <meta property="og:url" content="https://neptunetrading.lk/hummer-h1000.html">
     <meta property="og:type" content="product">
-    <meta property="og:image" content="https://neptunetrading.lk/assets/products/hummer-h1000.png">
+    <meta property="og:image" content="https://neptunetrading.lk/assets/products/gallery/h1000/02-front.webp">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Hummer H1000 LiFePO4 Power Station | Neptune Trading">
     <meta name="twitter:description" content="HUMMER H1000: 716.8Wh LiFePO4 power station, 1000W pure sine wave, 3,000-cycle battery, wall/car/solar charging. Available in Sri Lanka & Maldives.">
-    <meta name="twitter:image" content="https://neptunetrading.lk/assets/products/hummer-h1000.png">
+    <meta name="twitter:image" content="https://neptunetrading.lk/assets/products/gallery/h1000/02-front.webp">
     <script type="application/ld+json">
       [
       {
@@ -56,7 +56,7 @@
             "@type": "Product",
             "name": "Hummer H1000 Portable Power Station",
             "description": "High-capacity 1000Wh portable power station delivering reliable AC and DC output for professional and outdoor use.",
-            "image": "https://neptunetrading.lk/assets/products/hummer-h1000.png",
+            "image": "https://neptunetrading.lk/assets/products/gallery/h1000/02-front.webp",
             "sku": "HUMMER-H1000",
             "brand": {
                   "@type": "Brand",
@@ -204,20 +204,61 @@
         background: #ffffff;
         border-radius: 14px;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 28px 24px 36px;
+        padding: 28px 24px 32px;
         min-height: 360px;
         position: relative;
         border: 1px solid rgba(0,0,0,0.07);
         box-shadow: 0 4px 24px rgba(0,0,0,0.06);
       }
-      .hpd-img-panel img {
+      .hpd-gallery { width: 100%; display: flex; flex-direction: column; align-items: center; }
+      .hpd-gallery-main { width: 100%; display: flex; align-items: center; justify-content: center; min-height: 260px; cursor: zoom-in; }
+      .hpd-img-panel:has(.hpd-gallery) .lb-hint { bottom: auto; top: 10px; }
+      .hpd-gallery-main img {
         width: 100%;
-        max-height: 320px;
+        max-height: 300px;
         object-fit: contain;
         filter: drop-shadow(0 12px 28px rgba(0,0,0,0.18));
+        transition: opacity 140ms ease;
       }
+      .hpd-gallery-thumbs {
+        display: flex;
+        gap: 8px;
+        margin-top: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .hpd-gallery-thumb {
+        width: 54px;
+        height: 54px;
+        flex-shrink: 0;
+        border-radius: 8px;
+        border: 2px solid rgba(0,0,0,0.1);
+        background: #f4f6fa;
+        padding: 4px;
+        cursor: pointer;
+        transition: border-color 160ms;
+      }
+      .hpd-gallery-thumb img { width: 100%; height: 100%; object-fit: contain; display: block; }
+      .hpd-gallery-thumb.active, .hpd-gallery-thumb:hover { border-color: #d4a000; }
+      /* Product photo band */
+      .hpd-photo-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
+      }
+      .hpd-photo-item {
+        margin: 0;
+        background: #fff;
+        border: 1px solid rgba(0,0,0,0.08);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      }
+      .hpd-photo-item img { width: 100%; height: 220px; object-fit: cover; display: block; }
+      .hpd-photo-item figcaption { padding: 10px 14px; font-size: 0.82rem; color: #555; border-top: 1px solid rgba(0,0,0,0.06); }
       /* Detail sections */
       .hpd-body {
         background: #f4f6fa;
@@ -464,8 +505,19 @@
               </div>
             </div>
             <div class="hpd-img-panel">
-              <img src="assets/products/hummer-h1000.png" alt="Hummer H1000 Portable Power Station" loading="eager" width="400" height="300"
-                onerror="this.onerror=null;this.src='assets/products/product-placeholder.svg';">
+              <div class="hpd-gallery">
+                <div class="hpd-gallery-main">
+                  <img src="assets/products/gallery/h1000/02-front.webp" alt="Hummer H1000 Portable Power Station — front view" loading="eager" width="400" height="400"
+                    onerror="this.onerror=null;this.src='assets/products/product-placeholder.svg';">
+                </div>
+                <div class="hpd-gallery-thumbs" role="tablist" aria-label="Hummer H1000 product images">
+                  <button class="hpd-gallery-thumb active" data-full="assets/products/gallery/h1000/02-front.webp" data-alt="Hummer H1000 Portable Power Station — front view" role="tab" aria-selected="true" aria-label="Front view"><img src="assets/products/gallery/h1000/02-front.webp" alt="" loading="lazy" width="54" height="54"></button>
+                  <button class="hpd-gallery-thumb" data-full="assets/products/gallery/h1000/01-multiplug.webp" data-alt="Hummer H1000 with multiple devices connected" role="tab" aria-selected="false" aria-label="Multi-device charging"><img src="assets/products/gallery/h1000/01-multiplug.webp" alt="" loading="lazy" width="54" height="54"></button>
+                  <button class="hpd-gallery-thumb" data-full="assets/products/gallery/h1000/03-key-features.webp" data-alt="Hummer H1000 key features overview" role="tab" aria-selected="false" aria-label="Key features"><img src="assets/products/gallery/h1000/03-key-features.webp" alt="" loading="lazy" width="54" height="54"></button>
+                  <button class="hpd-gallery-thumb" data-full="assets/products/gallery/h1000/04-function-indication.webp" data-alt="Hummer H1000 port and button layout" role="tab" aria-selected="false" aria-label="Ports and controls"><img src="assets/products/gallery/h1000/04-function-indication.webp" alt="" loading="lazy" width="54" height="54"></button>
+                  <button class="hpd-gallery-thumb" data-full="assets/products/gallery/h1000/05-back.webp" data-alt="Hummer H1000 Portable Power Station — back view" role="tab" aria-selected="false" aria-label="Back view"><img src="assets/products/gallery/h1000/05-back.webp" alt="" loading="lazy" width="54" height="54"></button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -603,6 +655,28 @@
           </div>
         </section>
 
+        <!-- Product Gallery -->
+        <section class="hpd-section">
+          <div class="container reveal">
+            <div class="hpd-section-label">Product Gallery</div>
+            <h2>See It In Action</h2>
+            <div class="hpd-photo-grid">
+              <figure class="hpd-photo-item">
+                <img src="assets/products/gallery/h1000/01-multiplug.webp" alt="Hummer H1000 charging multiple devices at once" loading="lazy" width="600" height="450">
+                <figcaption>Up to 12 devices charging simultaneously</figcaption>
+              </figure>
+              <figure class="hpd-photo-item">
+                <img src="assets/products/gallery/h1000/04-function-indication.webp" alt="Hummer H1000 port and button layout" loading="lazy" width="600" height="450">
+                <figcaption>AC, DC, USB-C and USB-A ports with LCD display</figcaption>
+              </figure>
+              <figure class="hpd-photo-item">
+                <img src="assets/products/gallery/h1000/06-sticker-back.webp" alt="Hummer H1000 rating label" loading="lazy" width="600" height="600">
+                <figcaption>Rated output and safety certification label</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
       </div>
 
       <!-- CTA -->
@@ -614,6 +688,10 @@
             <a href="contact.html?division=HUMMER&category=Power%20Stations&product-family=Hummer%20H1000" class="hpd-btn-primary">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.62 3.33 2 2 0 013.6 1.27h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 9a16 16 0 006 6l1.06-1.06a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
               Enquire Now
+            </a>
+            <a href="assets/catalogues/hummer-catalogue-2025.pdf" class="hpd-btn-ghost" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+              Download Catalogue
             </a>
             <a href="hummer-products.html" class="hpd-btn-ghost">
               ← Back to All HUMMER Products
@@ -697,5 +775,6 @@
 
     <script src="js/animations.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/product-gallery.js"></script>
   </body>
 </html>

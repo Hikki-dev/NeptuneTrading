@@ -80,37 +80,37 @@ Industry Applications
 
 GM Licensed
 
-### Hummer H4K Supercapacitor Starter
+### Hummer H4K Heavy Duty Jump Starter
 
-Advanced batteryless jump starter utilizing quick-charge supercapacitors. Recharges instantly from residual battery voltage, requiring zero routine maintenance.
+Lithium-ion 12V jump starter with 4,000A peak amps and a 20,000mAh USB-C PD30W power bank. Jump-starts gasoline and diesel engines in seconds.
 
 Industry Applications
 
-- Extreme cold climate engine starts
+- Cold climate engine starts
 
-- Maritime boat emergency backup starting
+- Long-haul fleet emergency kits
 
-- Remote industrial generators
+- Remote field operations
 
-- Maintenance-free commercial emergency kits
+- Vehicle recovery services
 
 [View Product Details](hummer-h4k.html)
 
 GM Licensed
 
-### Hummer H10T Dual-Cylinder Tyre Inflator
+### Hummer H10T Tyre Inflator Jump Starter
 
-Heavy-duty dual-cylinder high-volume portable air compressor. Features a precision digital LCD pressure gauge, automatic shutoff, and extra-long heavy air hose.
+2000A 12V jump starter and 150psi cordless tyre inflator in one, with LCD pressure display, auto shut-off, and 10,000mAh USB-C PD30W power bank.
 
 Industry Applications
 
-- Commercial transport fleet inflate maintenance
+- Commercial transport fleet tyre maintenance
 
-- Off-road heavy duty utility vehicle service
+- Off-road heavy duty utility vehicles
 
-- Agricultural and construction machine tyres
+- Agricultural and construction machinery
 
-- Rapid industrial workshop pneumatic tools
+- Roadside emergency tyre inflation
 
 [View Product Details](hummer-h10t.html)
 
@@ -188,39 +188,57 @@ Industry Applications
 
 GM Licensed
 
-### Hummer H550 Portable Power Station
+### Hummer H550 Power Station Jump Starter
 
-High-capacity portable power station. Provides pure sine wave AC output, multiple DC sockets, and USB fast charge ports. Perfect for tools and essential backup.
+555Wh power station with 550W pure sine wave AC output — plus 1,200A peak jump start capability. Powers 9 devices at once via AC, wireless, USB-C PD60W, and 120W car port.
 
 Industry Applications
 
-- Emergency home power backup
+- Field operations & remote worksites
 
-- Off-grid mobile worksite operations
+- Mobile command & media crews
 
-- Remote medical device power
+- Emergency backup & disaster relief
 
-- Field testing & analysis instruments
+- Outdoor events & expedition power
 
 [View Product Details](hummer-h550.html)
 
 GM Licensed
 
-### Hummer HX Pro Rugged Power Bank
+### Hummer HX PRO Jump Starter Power Bank
 
-Professional heavy-duty high-capacity power bank. Engineered with high-impact drop protection, IP66 waterproof rating, wireless charging, and 45W USB-C output.
+2000A 12V jump starter in an ultra-slim 470g form. Wireless charging, USB-C PD45W, dual USB-A QC18W — up to 30 jump starts per charge.
 
 Industry Applications
 
-- Field inspection and engineering projects
+- Fleet workshop emergency power packs
 
-- Boating and maritime technical backup
+- Corporate travel & field teams
 
-- Heavy industrial worksites and offshore rigs
+- Auto workshop portable chargers
 
-- Emergency disaster recovery coordination
+- Emergency preparedness kits
 
 [View Product Details](hummer-hx-pro.html)
+
+GM Licensed
+
+### Hummer HX Jump Starter Power Bank
+
+2000A 12V jump starter and 37,000mWh power bank. Ultra-slim at 410g and IATA-approved for air travel — up to 30 jump starts per charge.
+
+Industry Applications
+
+- Personal vehicle emergency kits
+
+- Corporate fleet starter packs
+
+- Travel & touring power backup
+
+- Workshop compact jump start units
+
+[View Product Details](hummer-hx.html)
 
 GM Licensed
 
@@ -260,7 +278,7 @@ Volume-based commercial quotations, fleet procurement programs, and bulk supply 
 
 What HUMMER products are available in Sri Lanka & Maldives?
 
-Neptune Trading stocks HUMMER jump starters (H24 Ultra 4000A, H24 PRO, H8), the H4K supercapacitor starter, the H10T dual-cylinder tyre inflator, the H1000, H600 and H550 portable power stations, HX Pro and HX power banks, the HXF tactical LED flashlight, and the H2 car power inverter. All are GM-licensed and sourced through the authorized Sri Lanka & Maldives distributorship.
+Neptune Trading stocks HUMMER jump starters (H24 Ultra 4000A, H24 PRO, H8), the H4K heavy duty starter, the H10T tyre inflator jump starter, the H1000, H600 and H550 portable power stations, HX Pro and HX power banks, and the HXF flashlight jump starter. All are GM-licensed and sourced through the authorized Sri Lanka & Maldives distributorship.
 
 Are HUMMER products in Sri Lanka & Maldives genuine GM-licensed products?
 

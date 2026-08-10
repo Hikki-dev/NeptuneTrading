@@ -20,11 +20,11 @@
     <meta property="og:description" content="HUMMER HX: 2000A 12V jump starter and 37,000mWh power bank, ultra-slim at 410g, IATA-approved. Available in Sri Lanka & Maldives via Neptune Trading.">
     <meta property="og:url" content="https://neptunetrading.lk/hummer-hx.html">
     <meta property="og:type" content="product">
-    <meta property="og:image" content="https://neptunetrading.lk/assets/products/hummer-hx.png">
+    <meta property="og:image" content="https://neptunetrading.lk/assets/products/gallery/hx/01-front.webp">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Hummer HX Jump Starter Power Bank | Neptune Trading">
     <meta name="twitter:description" content="HUMMER HX: 2000A 12V jump starter and 37,000mWh power bank, ultra-slim at 410g, IATA-approved. Available in Sri Lanka & Maldives via Neptune Trading.">
-    <meta name="twitter:image" content="https://neptunetrading.lk/assets/products/hummer-hx.png">
+    <meta name="twitter:image" content="https://neptunetrading.lk/assets/products/gallery/hx/01-front.webp">
     <script type="application/ld+json">
       [
       {
@@ -56,7 +56,7 @@
             "@type": "Product",
             "name": "Hummer HX Power Bank",
             "description": "Rugged HUMMER-branded portable power bank designed for high-output fast charging on the go.",
-            "image": "https://neptunetrading.lk/assets/products/hummer-hx.png",
+            "image": "https://neptunetrading.lk/assets/products/gallery/hx/01-front.webp",
             "sku": "HUMMER-HX",
             "brand": {
                   "@type": "Brand",
@@ -204,20 +204,61 @@
         background: #ffffff;
         border-radius: 14px;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 28px 24px 36px;
+        padding: 28px 24px 32px;
         min-height: 360px;
         position: relative;
         border: 1px solid rgba(0,0,0,0.07);
         box-shadow: 0 4px 24px rgba(0,0,0,0.06);
       }
-      .hpd-img-panel img {
+      .hpd-gallery { width: 100%; display: flex; flex-direction: column; align-items: center; }
+      .hpd-gallery-main { width: 100%; display: flex; align-items: center; justify-content: center; min-height: 260px; cursor: zoom-in; }
+      .hpd-img-panel:has(.hpd-gallery) .lb-hint { bottom: auto; top: 10px; }
+      .hpd-gallery-main img {
         width: 100%;
-        max-height: 320px;
+        max-height: 300px;
         object-fit: contain;
         filter: drop-shadow(0 12px 28px rgba(0,0,0,0.18));
+        transition: opacity 140ms ease;
       }
+      .hpd-gallery-thumbs {
+        display: flex;
+        gap: 8px;
+        margin-top: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .hpd-gallery-thumb {
+        width: 54px;
+        height: 54px;
+        flex-shrink: 0;
+        border-radius: 8px;
+        border: 2px solid rgba(0,0,0,0.1);
+        background: #f4f6fa;
+        padding: 4px;
+        cursor: pointer;
+        transition: border-color 160ms;
+      }
+      .hpd-gallery-thumb img { width: 100%; height: 100%; object-fit: contain; display: block; }
+      .hpd-gallery-thumb.active, .hpd-gallery-thumb:hover { border-color: #d4a000; }
+      /* Product photo band */
+      .hpd-photo-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
+      }
+      .hpd-photo-item {
+        margin: 0;
+        background: #fff;
+        border: 1px solid rgba(0,0,0,0.08);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      }
+      .hpd-photo-item img { width: 100%; height: 220px; object-fit: cover; display: block; }
+      .hpd-photo-item figcaption { padding: 10px 14px; font-size: 0.82rem; color: #555; border-top: 1px solid rgba(0,0,0,0.06); }
       /* Detail sections */
       .hpd-body {
         background: #f4f6fa;
@@ -463,8 +504,19 @@
               </div>
             </div>
             <div class="hpd-img-panel">
-              <img src="assets/products/hummer-hx.webp" alt="Hummer HX Jump Starter Power Bank" loading="eager" width="400" height="300"
-                onerror="this.onerror=null;this.src='assets/products/product-placeholder.svg';">
+              <div class="hpd-gallery">
+                <div class="hpd-gallery-main">
+                  <img src="assets/products/gallery/hx/01-front.webp" alt="Hummer HX Jump Starter Power Bank — front view" loading="eager" width="400" height="400"
+                    onerror="this.onerror=null;this.src='assets/products/product-placeholder.svg';">
+                </div>
+                <div class="hpd-gallery-thumbs" role="tablist" aria-label="Hummer HX product images">
+                  <button class="hpd-gallery-thumb active" data-full="assets/products/gallery/hx/01-front.webp" data-alt="Hummer HX Jump Starter Power Bank — front view" role="tab" aria-selected="true" aria-label="Front view"><img src="assets/products/gallery/hx/01-front.webp" alt="" loading="lazy" width="54" height="54"></button>
+                  <button class="hpd-gallery-thumb" data-full="assets/products/gallery/hx/02-clamp.webp" data-alt="Hummer HX with jump start clamps" role="tab" aria-selected="false" aria-label="With clamps"><img src="assets/products/gallery/hx/02-clamp.webp" alt="" loading="lazy" width="54" height="54"></button>
+                  <button class="hpd-gallery-thumb" data-full="assets/products/gallery/hx/03-charging-smartphone.webp" data-alt="Hummer HX charging a smartphone" role="tab" aria-selected="false" aria-label="Charging a phone"><img src="assets/products/gallery/hx/03-charging-smartphone.webp" alt="" loading="lazy" width="54" height="54"></button>
+                  <button class="hpd-gallery-thumb" data-full="assets/products/gallery/hx/04-flashlight.webp" data-alt="Hummer HX flashlight mode" role="tab" aria-selected="false" aria-label="Flashlight mode"><img src="assets/products/gallery/hx/04-flashlight.webp" alt="" loading="lazy" width="54" height="54"></button>
+                  <button class="hpd-gallery-thumb" data-full="assets/products/gallery/hx/05-packing-box.webp" data-alt="Hummer HX retail packaging" role="tab" aria-selected="false" aria-label="Retail packaging"><img src="assets/products/gallery/hx/05-packing-box.webp" alt="" loading="lazy" width="54" height="54"></button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -603,6 +655,28 @@
           </div>
         </section>
 
+        <!-- Product Gallery -->
+        <section class="hpd-section">
+          <div class="container reveal">
+            <div class="hpd-section-label">Product Gallery</div>
+            <h2>See It In Action</h2>
+            <div class="hpd-photo-grid">
+              <figure class="hpd-photo-item">
+                <img src="assets/products/gallery/hx/02-clamp.webp" alt="Hummer HX clamps connected to a vehicle battery" loading="lazy" width="600" height="450">
+                <figcaption>Sparkless Smart Cable clamped to a battery terminal</figcaption>
+              </figure>
+              <figure class="hpd-photo-item">
+                <img src="assets/products/gallery/hx/03-charging-smartphone.webp" alt="Hummer HX charging a smartphone" loading="lazy" width="600" height="450">
+                <figcaption>Dual USB-A output, 16W total charging</figcaption>
+              </figure>
+              <figure class="hpd-photo-item">
+                <img src="assets/products/gallery/hx/05-packing-box.webp" alt="Hummer HX retail packaging" loading="lazy" width="600" height="450">
+                <figcaption>Retail packaging with carry bag and cable</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
       </div>
 
       <!-- CTA -->
@@ -614,6 +688,10 @@
             <a href="contact.html?division=HUMMER&category=Power%20Banks&product-family=Hummer%20HX" class="hpd-btn-primary">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.62 3.33 2 2 0 013.6 1.27h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 9a16 16 0 006 6l1.06-1.06a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
               Enquire Now
+            </a>
+            <a href="assets/catalogues/hummer-catalogue-2025.pdf" class="hpd-btn-ghost" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+              Download Catalogue
             </a>
             <a href="hummer-products.html" class="hpd-btn-ghost">
               ← Back to All HUMMER Products
@@ -697,5 +775,6 @@
 
     <script src="js/animations.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/product-gallery.js"></script>
   </body>
 </html>

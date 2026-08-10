@@ -14,6 +14,14 @@ HUMMER Power Bank
 
 2000A 12V jump starter in an ultra-slim 470g form. Wireless charging, PD 45W, dual QC 18W — up to 30 jump starts per charge.
 
+## Product Gallery
+
+- Front view
+- With jump start clamps
+- Charging a laptop
+- Wireless charging a phone
+- Retail packaging
+
 2,000A (12V)
 Peak Amps
 
@@ -124,4 +132,5 @@ Package Contents
 Neptune Trading Company is the authorized HUMMER distributor for Sri Lanka & Maldives. Contact our desk for pricing, availability, and fleet orders.
 
 [Enquire Now](contact.html?division=HUMMER&category=Power%20Banks&product-family=Hummer%20HX%20Pro)
+[Download Catalogue](assets/catalogues/hummer-catalogue-2025.pdf)
 [← Back to All HUMMER Products](hummer-products.html)

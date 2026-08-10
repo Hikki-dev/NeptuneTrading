@@ -14,6 +14,14 @@ HUMMER Jump Starter
 
 2000A 12V jump starter in a 400-lumen tactical flashlight form factor. 10,000mAh power bank with PD 30W and QC 18W. Up to 30 jump starts per charge.
 
+## Product Gallery
+
+- Front view
+- Front and back
+- Side profile
+- In use as a flashlight
+- Retail packaging
+
 2,000A (12V)
 Peak Amps
 
@@ -121,4 +129,5 @@ Package Contents
 Neptune Trading Company is the authorized HUMMER distributor for Sri Lanka & Maldives. Contact our desk for pricing, availability, and fleet orders.
 
 [Enquire Now](contact.html?division=HUMMER&category=Jump%20Starters&product-family=Hummer%20HXF)
+[Download Catalogue](assets/catalogues/hummer-catalogue-2025.pdf)
 [← Back to All HUMMER Products](hummer-products.html)

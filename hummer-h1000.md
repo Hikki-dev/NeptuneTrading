@@ -14,6 +14,14 @@ HUMMER Power Station
 
 716.8Wh LiFePO4 power station with 1000W pure sine wave AC output and 3,000-cycle battery life. Powers 12 devices via wall, car, or solar.
 
+## Product Gallery
+
+- Front view
+- Multi-device charging
+- Key features
+- Ports and controls
+- Back view
+
 1000W (2000W surge)
 AC Output
 
@@ -119,4 +127,5 @@ Package Contents
 Neptune Trading Company is the authorized HUMMER distributor for Sri Lanka & Maldives. Contact our desk for pricing, availability, and fleet orders.
 
 [Enquire Now](contact.html?division=HUMMER&category=Power%20Stations&product-family=Hummer%20H1000)
+[Download Catalogue](assets/catalogues/hummer-catalogue-2025.pdf)
 [← Back to All HUMMER Products](hummer-products.html)

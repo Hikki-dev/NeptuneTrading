@@ -14,6 +14,14 @@ HUMMER Power Bank
 
 2000A 12V jump starter and 37,000mWh power bank. Ultra-slim at 410g — IATA-approved for air travel.
 
+## Product Gallery
+
+- Front view
+- With jump start clamps
+- Charging a smartphone
+- Flashlight mode
+- Retail packaging
+
 2,000A (12V)
 Peak Amps
 
@@ -121,4 +129,5 @@ Package Contents
 Neptune Trading Company is the authorized HUMMER distributor for Sri Lanka & Maldives. Contact our desk for pricing, availability, and fleet orders.
 
 [Enquire Now](contact.html?division=HUMMER&category=Power%20Banks&product-family=Hummer%20HX)
+[Download Catalogue](assets/catalogues/hummer-catalogue-2025.pdf)
 [← Back to All HUMMER Products](hummer-products.html)

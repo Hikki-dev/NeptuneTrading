@@ -14,6 +14,14 @@ HUMMER Power Station
 
 555Wh lithium-ion portable power station with 600W pure sine wave AC output (1000W surge). Charges 12 devices simultaneously.
 
+## Product Gallery
+
+- Front view
+- Multi-device charging
+- Charging methods (wall, car, solar)
+- Ports and controls
+- Back view
+
 600W (1000W surge)
 AC Output
 
@@ -114,4 +122,5 @@ Package Contents
 Neptune Trading Company is the authorized HUMMER distributor for Sri Lanka & Maldives. Contact our desk for pricing, availability, and fleet orders.
 
 [Enquire Now](contact.html?division=HUMMER&category=Power%20Stations&product-family=Hummer%20H600)
+[Download Catalogue](assets/catalogues/hummer-catalogue-2025.pdf)
 [← Back to All HUMMER Products](hummer-products.html)

@@ -14,6 +14,14 @@ HUMMER Jump Starter
 
 Cordless dual-function device: 2000A 12V jump starter and 150psi precision tyre inflator with LCD pressure display.
 
+## Product Gallery
+
+- Front view
+- With jump start clamps
+- In use, inflating a tyre
+- LCD display and controls
+- Retail packaging
+
 2,000A (12V)
 Peak Amps
 
@@ -127,4 +135,5 @@ Package Contents
 Neptune Trading Company is the authorized HUMMER distributor for Sri Lanka & Maldives. Contact our desk for pricing, availability, and fleet orders.
 
 [Enquire Now](contact.html?division=HUMMER&category=Jump%20Starters&product-family=Hummer%20H10T)
+[Download Catalogue](assets/catalogues/hummer-catalogue-2025.pdf)
 [← Back to All HUMMER Products](hummer-products.html)

@@ -11,20 +11,20 @@
     <meta name="theme-color" content="#51515a">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <title>Hummer H4K Supercapacitor Jump Starter | Neptune Trading</title>
-    <meta name="description" content="HUMMER H4K: batteryless 12V jump starter using supercapacitors — instant recharge, zero maintenance. Available via Neptune Trading in Sri Lanka &amp; Maldives.">
-    <meta name="keywords" content="HUMMER H4K, supercapacitor jump starter, batteryless jump starter, capacitor jump starter, quick charge jump starter, zero maintenance jump starter, Neptune Trading HUMMER">
+    <title>Hummer H4K Heavy Duty Jump Starter | Neptune Trading</title>
+    <meta name="description" content="HUMMER H4K: 12V heavy-duty jump starter with a 20,000mAh lithium-ion battery, 4,000A peak amps and USB-C PD30W fast charging. Available via Neptune Trading in Sri Lanka &amp; Maldives.">
+    <meta name="keywords" content="HUMMER H4K, heavy duty jump starter, lithium jump starter, 4000A jump starter, USB-C PD jump starter, Neptune Trading HUMMER">
     <link rel="canonical" href="https://neptunetrading.lk/hummer-h4k.html">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Hummer H4K Supercapacitor Jump Starter | Neptune Trading">
-    <meta property="og:description" content="HUMMER H4K: batteryless 12V jump starter using supercapacitors — instant recharge, zero maintenance. Available via Neptune Trading in Sri Lanka & Maldives.">
+    <meta property="og:title" content="Hummer H4K Heavy Duty Jump Starter | Neptune Trading">
+    <meta property="og:description" content="HUMMER H4K: 12V heavy-duty jump starter with a 20,000mAh lithium-ion battery, 4,000A peak amps and USB-C PD30W fast charging. Available via Neptune Trading in Sri Lanka & Maldives.">
     <meta property="og:url" content="https://neptunetrading.lk/hummer-h4k.html">
     <meta property="og:type" content="product">
-    <meta property="og:image" content="https://neptunetrading.lk/assets/products/hummer-h4k.png">
+    <meta property="og:image" content="https://neptunetrading.lk/assets/products/gallery/h4k/01-front.webp">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Hummer H4K Supercapacitor Jump Starter | Neptune Trading">
-    <meta name="twitter:description" content="HUMMER H4K: batteryless 12V jump starter using supercapacitors — instant recharge, zero maintenance. Available via Neptune Trading in Sri Lanka & Maldives.">
-    <meta name="twitter:image" content="https://neptunetrading.lk/assets/products/hummer-h4k.png">
+    <meta name="twitter:title" content="Hummer H4K Heavy Duty Jump Starter | Neptune Trading">
+    <meta name="twitter:description" content="HUMMER H4K: 12V heavy-duty jump starter with a 20,000mAh lithium-ion battery, 4,000A peak amps and USB-C PD30W fast charging. Available via Neptune Trading in Sri Lanka & Maldives.">
+    <meta name="twitter:image" content="https://neptunetrading.lk/assets/products/gallery/h4k/01-front.webp">
     <script type="application/ld+json">
       [
       {
@@ -46,7 +46,7 @@
                   {
                         "@type": "ListItem",
                         "position": 3,
-                        "name": "Hummer H4K Supercapacitor Jump Starter",
+                        "name": "Hummer H4K Heavy Duty Jump Starter",
                         "item": "https://neptunetrading.lk/hummer-h4k.html"
                   }
             ]
@@ -54,9 +54,9 @@
       {
             "@context": "https://schema.org",
             "@type": "Product",
-            "name": "Hummer H4K Supercapacitor Jump Starter",
-            "description": "Batteryless supercapacitor jump starter that recharges instantly from the vehicle's dead battery. No lithium cells \u2014 safe, durable, and maintenance-free.",
-            "image": "https://neptunetrading.lk/assets/products/hummer-h4k.png",
+            "name": "Hummer H4K Heavy Duty Jump Starter",
+            "description": "Heavy-duty 12V lithium-ion jump starter with 4,000A peak amps and a 20,000mAh (74Wh) battery. USB-C PD30W power bank with 13 protection functions, built for the latest EV, Turbo, Hybrid and Start-Stop vehicles.",
+            "image": "https://neptunetrading.lk/assets/products/gallery/h4k/01-front.webp",
             "sku": "HUMMER-H4K",
             "brand": {
                   "@type": "Brand",
@@ -204,20 +204,61 @@
         background: #ffffff;
         border-radius: 14px;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 28px 24px 36px;
+        padding: 28px 24px 32px;
         min-height: 360px;
         position: relative;
         border: 1px solid rgba(0,0,0,0.07);
         box-shadow: 0 4px 24px rgba(0,0,0,0.06);
       }
-      .hpd-img-panel img {
+      .hpd-gallery { width: 100%; display: flex; flex-direction: column; align-items: center; }
+      .hpd-gallery-main { width: 100%; display: flex; align-items: center; justify-content: center; min-height: 260px; cursor: zoom-in; }
+      .hpd-img-panel:has(.hpd-gallery) .lb-hint { bottom: auto; top: 10px; }
+      .hpd-gallery-main img {
         width: 100%;
-        max-height: 320px;
+        max-height: 300px;
         object-fit: contain;
         filter: drop-shadow(0 12px 28px rgba(0,0,0,0.18));
+        transition: opacity 140ms ease;
       }
+      .hpd-gallery-thumbs {
+        display: flex;
+        gap: 8px;
+        margin-top: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .hpd-gallery-thumb {
+        width: 54px;
+        height: 54px;
+        flex-shrink: 0;
+        border-radius: 8px;
+        border: 2px solid rgba(0,0,0,0.1);
+        background: #f4f6fa;
+        padding: 4px;
+        cursor: pointer;
+        transition: border-color 160ms;
+      }
+      .hpd-gallery-thumb img { width: 100%; height: 100%; object-fit: contain; display: block; }
+      .hpd-gallery-thumb.active, .hpd-gallery-thumb:hover { border-color: #d4a000; }
+      /* Product photo band */
+      .hpd-photo-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
+      }
+      .hpd-photo-item {
+        margin: 0;
+        background: #fff;
+        border: 1px solid rgba(0,0,0,0.08);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      }
+      .hpd-photo-item img { width: 100%; height: 220px; object-fit: cover; display: block; }
+      .hpd-photo-item figcaption { padding: 10px 14px; font-size: 0.82rem; color: #555; border-top: 1px solid rgba(0,0,0,0.06); }
       /* Detail sections */
       .hpd-body {
         background: #f4f6fa;
@@ -435,14 +476,14 @@
               <div class="hpd-breadcrumb">
                 <a href="hummer-products.html">← HUMMER Products</a>
                 <span>/</span>
-                <span>Hummer H4K Supercapacitor Jump Starter</span>
+                <span>Hummer H4K Heavy Duty Jump Starter</span>
               </div>
               <div class="hpd-category-tag">
                 <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                 HUMMER Jump Starter
               </div>
-              <h1 id="hpd-title">Hummer H4K Supercapacitor Jump Starter</h1>
-              <p>Advanced batteryless 12V jump starter using quick-charge supercapacitors. Recharges instantly from residual battery voltage — zero routine maintenance.</p>
+              <h1 id="hpd-title">Hummer H4K Heavy Duty Jump Starter</h1>
+              <p>Heavy-duty 12V lithium-ion jump starter with 4,000A peak amps. Jump-starts gasoline and diesel engines in seconds and doubles as a 20,000mAh USB-C PD30W power bank.</p>
               <div class="hpd-keyspecs">
               <div class="hpd-keyspec">
                 <span class="hpd-keyspec-value">4,000A (12V)</span>
@@ -463,8 +504,19 @@
               </div>
             </div>
             <div class="hpd-img-panel">
-              <img src="assets/products/hummer-h4k.png" alt="Hummer H4K Supercapacitor Jump Starter" loading="eager" width="400" height="300"
-                onerror="this.onerror=null;this.src='assets/products/product-placeholder.svg';">
+              <div class="hpd-gallery">
+                <div class="hpd-gallery-main">
+                  <img src="assets/products/gallery/h4k/01-front.webp" alt="Hummer H4K Heavy Duty Jump Starter — front view" loading="eager" width="400" height="400"
+                    onerror="this.onerror=null;this.src='assets/products/product-placeholder.svg';">
+                </div>
+                <div class="hpd-gallery-thumbs" role="tablist" aria-label="Hummer H4K product images">
+                  <button class="hpd-gallery-thumb active" data-full="assets/products/gallery/h4k/01-front.webp" data-alt="Hummer H4K Heavy Duty Jump Starter — front view" role="tab" aria-selected="true" aria-label="Front view"><img src="assets/products/gallery/h4k/01-front.webp" alt="" loading="lazy" width="54" height="54"></button>
+                  <button class="hpd-gallery-thumb" data-full="assets/products/gallery/h4k/02-back.webp" data-alt="Hummer H4K Heavy Duty Jump Starter — back view" role="tab" aria-selected="false" aria-label="Back view"><img src="assets/products/gallery/h4k/02-back.webp" alt="" loading="lazy" width="54" height="54"></button>
+                  <button class="hpd-gallery-thumb" data-full="assets/products/gallery/h4k/03-function-indication.webp" data-alt="Hummer H4K Heavy Duty Jump Starter — button and port layout" role="tab" aria-selected="false" aria-label="Ports and controls"><img src="assets/products/gallery/h4k/03-function-indication.webp" alt="" loading="lazy" width="54" height="54"></button>
+                  <button class="hpd-gallery-thumb" data-full="assets/products/gallery/h4k/04-in-use.webp" data-alt="Hummer H4K Heavy Duty Jump Starter clamped onto a vehicle battery" role="tab" aria-selected="false" aria-label="In use on a vehicle"><img src="assets/products/gallery/h4k/04-in-use.webp" alt="" loading="lazy" width="54" height="54"></button>
+                  <button class="hpd-gallery-thumb" data-full="assets/products/gallery/h4k/06-packing-box.webp" data-alt="Hummer H4K Heavy Duty Jump Starter retail packaging" role="tab" aria-selected="false" aria-label="Retail packaging"><img src="assets/products/gallery/h4k/06-packing-box.webp" alt="" loading="lazy" width="54" height="54"></button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -533,11 +585,11 @@
             <div class="hpd-features-grid reveal">
               <div class="hpd-feature-item">
                 <div class="hpd-feature-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div>
-                <p>Batteryless supercapacitor technology — no degradation</p>
+                <p>Jump-starts gasoline or diesel engines in seconds — cars, motorcycles, boats, jet skis, ATVs, lawn mowers</p>
               </div>
               <div class="hpd-feature-item">
                 <div class="hpd-feature-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div>
-                <p>Recharges instantly from residual battery voltage</p>
+                <p>Multiple jump starts on a single charge from the 20,000mAh lithium-ion battery</p>
               </div>
               <div class="hpd-feature-item">
                 <div class="hpd-feature-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div>
@@ -549,7 +601,7 @@
               </div>
               <div class="hpd-feature-item">
                 <div class="hpd-feature-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div>
-                <p>13 protection functions including reverse polarity & overheat</p>
+                <p>13 protection functions including reverse polarity, spark-proof & overheat</p>
               </div>
               <div class="hpd-feature-item">
                 <div class="hpd-feature-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg></div>
@@ -577,7 +629,7 @@
                 </ul>
                 <div style="margin-top:24px; padding:16px 20px; background:#fff; border-radius:10px; border:1px solid rgba(0,0,0,0.08);">
                   <p style="margin:0 0 4px; font-size:0.72rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#a07800;">Vehicle Compatibility</p>
-                  <p style="margin:0; font-size:0.9rem; color:#333;">12V vehicles up to any engine size — no battery required in device</p>
+                  <p style="margin:0; font-size:0.9rem; color:#333;">12V vehicles — cars, motorcycles, boats, jet skis, ATVs and lawn mowers, including EV, Turbo, Hybrid & Start-Stop systems</p>
                 </div>
               </div>
               <div>
@@ -593,6 +645,28 @@
           </div>
         </section>
 
+        <!-- Product Gallery -->
+        <section class="hpd-section">
+          <div class="container reveal">
+            <div class="hpd-section-label">Product Gallery</div>
+            <h2>See It In Action</h2>
+            <div class="hpd-photo-grid">
+              <figure class="hpd-photo-item">
+                <img src="assets/products/gallery/h4k/04-in-use.webp" alt="Hummer H4K clamps connected to a vehicle battery terminal" loading="lazy" width="600" height="432">
+                <figcaption>Sparkless Smart Cable clamped onto a vehicle battery</figcaption>
+              </figure>
+              <figure class="hpd-photo-item">
+                <img src="assets/products/gallery/h4k/03-function-indication.webp" alt="Hummer H4K port and button layout" loading="lazy" width="600" height="600">
+                <figcaption>USB-C PD30W port, power button and status LEDs</figcaption>
+              </figure>
+              <figure class="hpd-photo-item">
+                <img src="assets/products/gallery/h4k/06-packing-box.webp" alt="Hummer H4K retail packaging box" loading="lazy" width="600" height="600">
+                <figcaption>Retail packaging with cable and manual</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
       </div>
 
       <!-- CTA -->
@@ -604,6 +678,10 @@
             <a href="contact.html?division=HUMMER&category=Jump%20Starters&product-family=Hummer%20H4K" class="hpd-btn-primary">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.62 3.33 2 2 0 013.6 1.27h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.91 9a16 16 0 006 6l1.06-1.06a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
               Enquire Now
+            </a>
+            <a href="assets/catalogues/hummer-catalogue-2025.pdf" class="hpd-btn-ghost" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+              Download Catalogue
             </a>
             <a href="hummer-products.html" class="hpd-btn-ghost">
               ← Back to All HUMMER Products
@@ -687,5 +765,6 @@
 
     <script src="js/animations.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/product-gallery.js"></script>
   </body>
 </html>
