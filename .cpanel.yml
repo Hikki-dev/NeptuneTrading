@@ -3,4 +3,3 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/neptune2/public_html/neptunetrading.lk
     - /bin/cp -R * $DEPLOYPATH
-    - /bin/cp .htaccess $DEPLOYPATH 2>/dev/null || true
