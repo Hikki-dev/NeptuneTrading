@@ -23,3 +23,6 @@ generated-assets/hummer-field-video/*
 !generated-assets/hummer-field-video/hls/
 !generated-assets/hummer-field-video/hls/*
 
+.playwright-mcp/
+
+
