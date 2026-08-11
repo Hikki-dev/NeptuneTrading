@@ -24,8 +24,8 @@
 
 .exit-popup-content {
   background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(37, 99, 235, 0.15);
-  box-shadow: 0 30px 60px rgba(9, 13, 22, 0.15), 0 0 0 1px rgba(37, 99, 235, 0.05);
+  border: 1px solid rgba(10, 86, 255, 0.15);
+  box-shadow: 0 30px 60px rgba(9, 13, 22, 0.15), 0 0 0 1px rgba(10, 86, 255, 0.05);
   border-radius: 12px;
   width: 90%;
   max-width: 500px;
@@ -58,7 +58,7 @@
 }
 
 .exit-popup-close:hover {
-  background: rgba(37, 99, 235, 0.08);
+  background: rgba(10, 86, 255, 0.08);
   color: var(--blue-mid);
   transform: rotate(90deg);
 }
@@ -96,7 +96,7 @@
   width: 100%;
   padding: 14px 18px;
   border-radius: 6px;
-  border: 1px solid rgba(37, 99, 235, 0.2);
+  border: 1px solid rgba(10, 86, 255, 0.2);
   background: rgba(255, 255, 255, 0.8);
   color: var(--dark);
   font-family: var(--font-body);
@@ -108,7 +108,7 @@
 .exit-popup-input:focus {
   border-color: var(--blue-mid);
   background: #fff;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+  box-shadow: 0 0 0 3px rgba(10, 86, 255, 0.12);
 }
 
 .exit-popup-submit {
@@ -125,7 +125,7 @@
 
 .exit-popup-submit:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+  box-shadow: 0 10px 20px rgba(10, 86, 255, 0.2);
 }
 
 .exit-popup-message {
@@ -145,10 +145,10 @@
 
 
 .btn-cta-phone:hover {
-  background: rgba(37, 99, 235, 0.12);
+  background: rgba(10, 86, 255, 0.12);
   border-color: rgba(96, 165, 250, 0.4);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.15);
+  box-shadow: 0 8px 20px rgba(10, 86, 255, 0.15);
 }
 
 @media (max-width: 960px) {
@@ -261,8 +261,8 @@
   align-items: center;
   justify-content: center;
   padding: 14px 28px;
-  background: var(--blue-accent, #2563eb);
-  border: 1px solid var(--blue-accent, #2563eb);
+  background: var(--blue-accent, #0a56ff);
+  border: 1px solid var(--blue-accent, #0a56ff);
   border-radius: 12px;
   color: var(--white) !important;
   text-decoration: none;
@@ -272,10 +272,10 @@
 }
 
 .pre-footer-cta .btn-cta-primary:hover {
-  background: #3b82f6;
-  border-color: #3b82f6;
+  background: #0a56ff;
+  border-color: #0a56ff;
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
+  box-shadow: 0 10px 25px rgba(10, 86, 255, 0.25);
 }
 
 .pre-footer-cta .btn-cta-secondary {

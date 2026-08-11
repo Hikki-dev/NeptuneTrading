@@ -14,7 +14,7 @@
 }
 
 .ship-reveal:hover {
-  box-shadow: 0 34px 96px rgba(37, 99, 235, 0.18);
+  box-shadow: 0 34px 96px rgba(10, 86, 255, 0.18);
 }
 
 @media (max-width: 1040px) {
@@ -52,8 +52,8 @@
 .about-command-section,
 .import-process-section {
   background:
-    linear-gradient(90deg, rgba(37, 99, 235, 0.026) 1px, transparent 1px),
-    linear-gradient(rgba(37, 99, 235, 0.026) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10, 86, 255, 0.026) 1px, transparent 1px),
+    linear-gradient(rgba(10, 86, 255, 0.026) 1px, transparent 1px),
     #ffffff;
   background-size: 64px 64px, 64px 64px, auto;
 }
@@ -112,8 +112,8 @@
   height: clamp(320px, 32vw, 420px);
   border-radius: 16px;
   overflow: hidden;
-  border: 1px solid rgba(37, 99, 235, 0.14);
-  box-shadow: 0 20px 48px rgba(14, 38, 96, 0.08);
+  border: 1px solid rgba(10, 86, 255, 0.14);
+  box-shadow: 0 20px 48px rgba(10, 86, 255, 0.08);
 }
 
 .about-office-wrapper img {
@@ -132,7 +132,7 @@
   position: absolute;
   bottom: 20px;
   left: 20px;
-  background: rgba(14, 38, 96, 0.85);
+  background: rgba(10, 86, 255, 0.85);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   color: #ffffff;
@@ -184,7 +184,7 @@
 .about-stat-card {
   min-height: 108px;
   padding: 22px;
-  border: 1px solid rgba(37, 99, 235, 0.14);
+  border: 1px solid rgba(10, 86, 255, 0.14);
   border-radius: 14px;
   background: #f3f7ff;
 }
@@ -216,8 +216,8 @@
   height: clamp(200px, 25vw, 300px);
   border-radius: 14px;
   overflow: hidden;
-  border: 1px solid rgba(37, 99, 235, 0.14);
-  box-shadow: 0 12px 34px rgba(14, 38, 96, 0.08);
+  border: 1px solid rgba(10, 86, 255, 0.14);
+  box-shadow: 0 12px 34px rgba(10, 86, 255, 0.08);
   margin-top: 30px;
   margin-bottom: 24px;
 }
@@ -238,7 +238,7 @@
   position: absolute;
   bottom: 16px;
   left: 16px;
-  background: rgba(14, 38, 96, 0.85);
+  background: rgba(10, 86, 255, 0.85);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   color: #ffffff;
@@ -260,7 +260,7 @@
 .trade-focus-panel {
   padding: clamp(26px, 3.3vw, 36px);
   border-radius: 18px;
-  border: 1px solid rgba(37, 99, 235, 0.14);
+  border: 1px solid rgba(10, 86, 255, 0.14);
 }
 
 .trade-focus-panel span {
@@ -316,9 +316,9 @@
 
 .trade-focus-panel-dark {
   background:
-    linear-gradient(135deg, rgba(37, 99, 235, 0.14), rgba(37, 99, 235, 0) 55%),
+    linear-gradient(135deg, rgba(10, 86, 255, 0.14), rgba(10, 86, 255, 0) 55%),
     var(--blue-deep);
-  box-shadow: 0 20px 50px rgba(14, 38, 96, 0.18);
+  box-shadow: 0 20px 50px rgba(10, 86, 255, 0.18);
 }
 
 .trade-focus-panel-dark span,
@@ -353,7 +353,7 @@
 }
 
 .import-process-steps {
-  border-top: 1px solid rgba(37, 99, 235, 0.14);
+  border-top: 1px solid rgba(10, 86, 255, 0.14);
 }
 
 .import-process-step {
@@ -361,11 +361,11 @@
   grid-template-columns: 96px minmax(0, 1fr);
   gap: 24px;
   padding: 34px 0;
-  border-bottom: 1px solid rgba(37, 99, 235, 0.14);
+  border-bottom: 1px solid rgba(10, 86, 255, 0.14);
 }
 
 .import-process-number {
-  color: rgba(37, 99, 235, 0.1);
+  color: rgba(10, 86, 255, 0.1);
   font-family: var(--font-display);
   font-size: clamp(3.2rem, 5.2vw, 4.75rem);
   font-weight: 800;
