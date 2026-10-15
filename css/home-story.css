@@ -10,63 +10,75 @@
 .hs-more { text-align: center; margin: 28px 0 0; }
 .hs-more a { font-weight: 600; color: var(--blue-deep); text-decoration: underline; text-underline-offset: 4px; }
 
-/* hero: two doors */
+/* hero: two doors, each showing the real product */
 @media (min-width: 861px) {
-  .home-trade-hero .hero-inner { grid-template-columns: minmax(0, 1fr) minmax(280px, 400px); }
+  .home-trade-hero .hero-inner { grid-template-columns: minmax(0, 1fr) minmax(320px, 440px); }
 }
-.hs-doors { display: grid; gap: 14px; }
+.hs-doors { display: grid; gap: 16px; }
 .hs-door {
-  display: flex; align-items: center; gap: 16px;
-  padding: 14px; border-radius: 16px;
+  position: relative; display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  min-height: 168px; padding: 22px 8px 22px 24px; border-radius: 18px; overflow: hidden;
   text-decoration: none; color: var(--dark);
-  box-shadow: 0 16px 36px rgba(7, 16, 38, 0.3);
+  box-shadow: 0 18px 40px rgba(7, 16, 38, 0.32);
   transition: transform 220ms var(--ease-out-quart), box-shadow 220ms var(--ease-out-quart);
 }
-.hs-door:hover { transform: translateY(-3px); box-shadow: 0 22px 44px rgba(7, 16, 38, 0.38); }
+.hs-door:hover { transform: translateY(-3px); box-shadow: 0 24px 48px rgba(7, 16, 38, 0.4); }
 .hs-door:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
-.hs-door img { flex: 0 0 auto; width: 88px; height: 88px; object-fit: contain; border-radius: 10px; }
 .hs-door--hummer { background: #ffd100; }
-.hs-door--hummer img { object-fit: cover; }
 .hs-door--metal { background: #fff; }
-.hs-door--metal img { padding: 6px; }
-.hs-door-body { display: grid; gap: 3px; min-width: 0; }
-.hs-door-body strong { font-family: var(--font-display); font-size: 1.05rem; line-height: 1.2; }
-.hs-door-body span { font-size: 0.85rem; line-height: 1.4; color: rgba(9, 13, 22, 0.72); }
+.hs-door-body { display: grid; gap: 6px; min-width: 0; flex: 1 1 52%; }
+.hs-door-body strong { font-family: var(--font-display); font-size: 1.2rem; line-height: 1.2; }
+.hs-door-body > span { font-size: 0.9rem; line-height: 1.45; color: rgba(9, 13, 22, 0.75); }
 .hs-door-body em {
-  justify-self: start; margin-top: 6px; padding: 3px 10px; border-radius: 100px;
-  font-style: normal; font-size: 0.75rem; font-weight: 700;
-  background: rgba(9, 13, 22, 0.1);
+  justify-self: start; margin-top: 6px; padding: 4px 12px; border-radius: 100px;
+  font-style: normal; font-size: 0.78rem; font-weight: 700; background: rgba(9, 13, 22, 0.12);
 }
-.hs-door--metal em { background: var(--blue-light); color: var(--blue-deep); }
+.hs-door--metal .hs-door-body em { background: var(--blue-light); color: var(--blue-deep); }
+.hs-door-art { position: relative; flex: 0 0 44%; align-self: stretch; display: flex; align-items: center; justify-content: center; }
+.hs-door-art img { display: block; max-width: 100%; height: auto; filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.25)); }
+.hs-door--hummer .hs-door-art img { width: 66%; }
+.hs-door--hummer .hs-door-art img + img { width: 62%; margin-left: -26%; margin-top: 18%; }
+.hs-door--metal .hs-door-art img { width: 100%; max-width: 170px; filter: none; mix-blend-mode: multiply; }
 
 /* who we represent: two blocks, deliberately different */
 .hs-principal {
   display: grid; gap: 0; margin-top: clamp(24px, 3vw, 36px);
-  border-radius: 20px; overflow: hidden;
+  border-radius: 22px; overflow: hidden; align-items: stretch;
 }
 .hs-principal-copy { padding: clamp(24px, 4vw, 56px); display: grid; align-content: center; gap: 14px; justify-items: start; }
 .hs-principal-copy h3 { font-family: var(--font-display); font-size: clamp(1.5rem, 1.1rem + 1.4vw, 2.2rem); line-height: 1.15; margin: 0; text-wrap: balance; }
 .hs-principal-copy p { margin: 0; line-height: 1.7; max-width: 52ch; }
-.hs-principal-visual img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.hs-facts { list-style: none; margin: 4px 0 8px; padding: 0; display: grid; gap: 8px; width: 100%; }
-.hs-facts li { display: grid; grid-template-columns: 5rem 1fr; gap: 12px; align-items: baseline; font-weight: 600; }
-.hs-facts li span { font-size: 0.8rem; font-weight: 600; opacity: 0.65; }
+.hs-principal-logo { display: block; height: 30px; width: auto; }
+.hs-facts { list-style: none; margin: 4px 0 6px; padding: 0; display: grid; gap: 10px; width: 100%; }
+.hs-facts li { display: grid; grid-template-columns: 5.5rem 1fr; gap: 12px; align-items: baseline; font-weight: 600; line-height: 1.45; }
+.hs-facts li span { font-size: 0.8rem; font-weight: 600; opacity: 0.6; }
 
-.hs-principal--hummer { background: #ffd100; color: #0b0d0f; }
-.hs-principal--hummer .hs-principal-logo { width: 150px; height: auto; mix-blend-mode: multiply; }
-.hs-principal--hummer .hs-principal-visual { min-height: 260px; }
-.hs-principal--hummer .hs-principal-copy h3 { color: #0b0d0f; }
-.hs-principal--hummer .hs-principal-copy .btn-primary { background: #0b0d0f; color: #fff; box-shadow: none; }
-.hs-principal--hummer .hs-principal-copy .btn-primary span { color: #fff; }
-
-.hs-principal--metal { background: var(--blue-bg); border: 1px solid var(--border); color: var(--dark); }
-.hs-principal--metal .hs-principal-copy p { color: var(--slate); }
-.hs-principal-visual--logo {
-  display: grid; place-items: center; gap: 20px; align-content: center;
-  padding: clamp(24px, 4vw, 48px); background: #fff;
+/* HUMMER: the brand's own black and yellow, product cutouts on black */
+.hs-principal--hummer { background: #0b0d0f; color: #fff; }
+.hs-principal--hummer .hs-principal-logo { filter: invert(1) brightness(1.1); mix-blend-mode: screen; height: 26px; }
+.hs-principal--hummer .hs-principal-copy h3 { color: #fff; }
+.hs-principal--hummer .hs-principal-copy p { color: rgba(255, 255, 255, 0.78); }
+.hs-principal--hummer .hs-facts li { color: #fff; }
+.hs-principal--hummer .hs-principal-copy .btn-primary { background: #ffd100 !important; color: #0b0d0f !important; box-shadow: none; }
+.hs-principal--hummer .hs-principal-copy .btn-primary span { color: #0b0d0f; }
+.hs-products {
+  display: flex; align-items: center; justify-content: center; padding: 24px 16px 32px;
+  background: #15181d;
 }
-.hs-principal-visual--logo img { width: min(180px, 50%); height: auto; object-fit: contain; }
-.hs-marks { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.hs-products img { display: block; width: 38%; height: auto; filter: drop-shadow(0 14px 22px rgba(0, 0, 0, 0.55)); }
+.hs-products img:nth-child(2) { width: 44%; position: relative; z-index: 1; margin-inline: -6%; }
+
+/* Metal Alloys: real product photos in a clean grid */
+.hs-principal--metal { background: var(--blue-bg); border: 1px solid var(--border); color: var(--dark); }
+.hs-principal--metal .hs-principal-copy h3 { color: var(--dark); }
+.hs-principal--metal .hs-principal-copy p { color: var(--slate); }
+.hs-principal--metal .hs-principal-logo { height: 54px; }
+.hs-gallery { list-style: none; margin: 0; padding: clamp(16px, 2.5vw, 28px); display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; background: #fff; grid-auto-rows: 1fr; }
+.hs-gallery li { position: relative; border-radius: 14px; overflow: hidden; background: #fff; border: 1px solid var(--border); }
+.hs-gallery img { display: block; width: 100%; height: 100%; aspect-ratio: 1; object-fit: cover; }
+@media (min-width: 900px) { .hs-gallery img { aspect-ratio: auto; } .hs-gallery li { min-height: 160px; } }
+.hs-gallery span { position: absolute; left: 10px; bottom: 10px; padding: 4px 10px; border-radius: 100px; background: rgba(255, 255, 255, 0.94); font-size: 0.78rem; font-weight: 700; color: var(--dark); box-shadow: 0 2px 8px rgba(9, 13, 22, 0.12); }
+.hs-marks { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
 .hs-marks li { padding: 6px 12px; border-radius: 100px; background: var(--blue-light); color: var(--blue-deep); font-size: 0.8rem; font-weight: 700; }
 
 /* proof: events */
@@ -109,7 +121,7 @@
 }
 @media (min-width: 900px) {
   .hs-principal { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .hs-principal--hummer .hs-principal-visual { min-height: 380px; }
+  .hs-products { padding: 32px 24px; }
   .hs-steps { grid-template-columns: repeat(4, 1fr); gap: 32px; }
   .hs-steps li { padding: 56px 0 0; }
   .hs-steps li:not(:last-child)::after {
@@ -120,6 +132,11 @@
 }
 @media (max-width: 859px) {
   .hs-doors { margin-top: 8px; }
+  .hs-principal--metal .hs-gallery { order: 2; }
+}
+@media (max-width: 420px) {
+  .hs-door { padding-left: 18px; min-height: 150px; }
+  .hs-door-body strong { font-size: 1.05rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   .hs-door, .hs-seen-item img { transition: none; }
