@@ -93,7 +93,8 @@
 @media (min-width: 900px) {
   .event-band .container { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
 }
-.event-bni-photos { margin-top: 16px; }
+.event-bni-photos { grid-column: 1 / -1; }
+.event-bni-photos .ev-media { box-shadow: 0 10px 28px rgba(9, 13, 22, 0.25); }
 .event-media-grid--four {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -167,6 +168,25 @@
   max-width: 100%; max-height: calc(100dvh - 140px);
   width: auto; height: auto; border-radius: 8px; background: #000;
 }
+.evlb-stage { position: relative; align-items: center; justify-content: center; }
+.evlb-ph { filter: blur(6px); transform: scale(1.01); }
+.evlb-status {
+  position: absolute; inset: 0; z-index: 2;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
+  color: #fff; font-size: 0.95rem; text-align: center; padding: 16px;
+  pointer-events: none;
+}
+.evlb-status .evlb-retry { pointer-events: auto; }
+.evlb-spin {
+  width: 36px; height: 36px; border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.3); border-top-color: #fff;
+  animation: evlb-spin 800ms linear infinite;
+}
+@keyframes evlb-spin { to { transform: rotate(360deg); } }
+.evlb-retry {
+  border: 0; border-radius: 100px; padding: 10px 20px; cursor: pointer;
+  background: #fff; color: var(--dark); font: 600 0.9rem var(--font-body);
+}
 .evlb-cap {
   position: absolute; left: 16px; right: 16px; bottom: 20px;
   text-align: center; color: rgba(255, 255, 255, 0.85); font-size: 0.9rem;
@@ -194,4 +214,5 @@ body.evlb-open { overflow: hidden; }
 
 @media (prefers-reduced-motion: reduce) {
   .ev-media img, .evlb { transition: none; }
+  .evlb-spin { animation-duration: 2s; }
 }

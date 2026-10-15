@@ -97,7 +97,7 @@ AddType image/x-icon .ico
     <FilesMatch "\.(html|md)$">
         Header set Cache-Control "public, max-age=0, must-revalidate"
     </FilesMatch>
-    <FilesMatch "\.(png|jpe?g|webp|svg|ico)$">
+    <FilesMatch "\.(png|jpe?g|webp|svg|ico|mp4|webm)$">
         Header set Cache-Control "public, max-age=86400, must-revalidate"
     </FilesMatch>
     <FilesMatch "^(site\.webmanifest|manifest\.json)$">
