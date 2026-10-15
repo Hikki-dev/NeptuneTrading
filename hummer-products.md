@@ -98,24 +98,6 @@ Industry Applications
 
 GM Licensed
 
-### Hummer H3K Professional Jump Starter
-
-Professional-grade 12V jump starter with 3,000A peak amps and a 59,200mWh lithium-ion power bank. Up to 40 jump starts per charge.
-
-Industry Applications
-
-- Heavy commercial vehicle starts
-
-- Long-haul fleet emergency kits
-
-- Remote field operations
-
-- Vehicle recovery services
-
-[View Product Details](hummer-h3k.html)
-
-GM Licensed
-
 ### Hummer H10T Tyre Inflator Jump Starter
 
 2000A 12V jump starter and 150psi cordless tyre inflator in one, with LCD pressure display, auto shut-off, and 10,000mAh USB-C PD30W power bank.
@@ -167,24 +149,6 @@ Industry Applications
 - Marine leisure engine starting
 
 [View Product Details](hummer-h8.html)
-
-GM Licensed
-
-### Hummer H2K Professional Jump Starter
-
-Professional-grade 12V jump starter with 2,000A peak amps and a 37,000mWh lithium-ion power bank. Up to 30 jump starts per charge.
-
-Industry Applications
-
-- Heavy commercial vehicle starts
-
-- Long-haul fleet emergency kits
-
-- Remote field operations
-
-- Vehicle recovery services
-
-[View Product Details](hummer-h2k.html)
 
 GM Licensed
 

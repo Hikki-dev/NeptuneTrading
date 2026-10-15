@@ -48,6 +48,8 @@ AddType image/x-icon .ico
     # Placed above the markdown rules so the .md counterpart redirects too.
     RewriteRule ^hummer-h3t(\.html|\.md)?$ https://neptunetrading.lk/hummer-products.html [R=301,L,NE]
     RewriteRule ^hummer-h2(\.html|\.md)?$ https://neptunetrading.lk/hummer-products.html [R=301,L,NE]
+    RewriteRule ^hummer-h2k(\.html|\.md)?$ https://neptunetrading.lk/hummer-products.html [R=301,L,NE]
+    RewriteRule ^hummer-h3k(\.html|\.md)?$ https://neptunetrading.lk/hummer-products.html [R=301,L,NE]
 
     # Markdown for Agents: serve .md counterparts when Accept: text/markdown.
     RewriteCond %{HTTP_ACCEPT} text/markdown
