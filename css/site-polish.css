@@ -278,10 +278,7 @@ body.home-premium .navbar.at-top .nav-logo-img {
 .trading-page-hero,
 .page-hero {
   background:
-    linear-gradient(90deg, rgba(10, 86, 255, 0.027) 1px, transparent 1px),
-    linear-gradient(rgba(10, 86, 255, 0.027) 1px, transparent 1px),
     linear-gradient(116deg, #ffffff 0%, #ffffff 57%, #f4f8ff 100%);
-  background-size: 64px 64px, 64px 64px, auto;
   padding: calc(var(--nav-h) + 80px) 0 clamp(80px, 10vw, 120px);
   border-bottom: 1px solid rgba(10, 86, 255, 0.12);
 }
@@ -1054,10 +1051,6 @@ body.home-premium .navbar.at-top .nav-logo-img {
   content: '';
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(rgba(26,86,219,0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(26,86,219,0.06) 1px, transparent 1px);
-  background-size: 48px 48px;
   pointer-events: none;
   z-index: 0;
 }
@@ -2631,10 +2624,7 @@ body.home-premium .navbar.at-top .nav-logo-img {
 .trading-page-hero:not(.page-hero--hummer):not(.page-hero--aliaxis):not(.page-hero--metalco):not(.page-hero--dark),
 .page-hero:not(.page-hero--hummer):not(.page-hero--aliaxis):not(.page-hero--metalco):not(.page-hero--dark) {
   background:
-    linear-gradient(90deg, rgba(26,86,219,0.04) 1px, transparent 1px),
-    linear-gradient(rgba(26,86,219,0.04) 1px, transparent 1px),
     linear-gradient(135deg, #ffffff 0%, #ffffff 55%, #eef3ff 100%) !important;
-  background-size: 64px 64px, 64px 64px, auto !important;
   border-bottom: 1px solid var(--nt-border) !important;
 }
 

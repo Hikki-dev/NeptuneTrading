@@ -35,10 +35,6 @@
 .hero-grid {
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(rgba(10, 86, 255,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(10, 86, 255,0.04) 1px, transparent 1px);
-  background-size: 60px 60px;
   mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 80%);
 }
 
@@ -670,11 +666,8 @@
 .trading-hero .hero-bg-gradient,
 .trading-page-hero {
   background:
-    linear-gradient(90deg, rgba(10, 86, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(rgba(10, 86, 255, 0.035) 1px, transparent 1px),
     radial-gradient(ellipse 70% 55% at 74% 28%, rgba(10, 86, 255, 0.12) 0%, transparent 68%),
     linear-gradient(150deg, #f8fafc 0%, #ffffff 48%, #eff6ff 100%);
-  background-size: 58px 58px, 58px 58px, auto, auto;
 }
 
 .premium-trading-hero .hero-bg-gradient {
@@ -689,10 +682,6 @@
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(90deg, rgba(10, 86, 255, 0.045) 1px, transparent 1px),
-    linear-gradient(rgba(10, 86, 255, 0.045) 1px, transparent 1px);
-  background-size: 64px 64px;
   opacity: 0.55;
   mask-image: linear-gradient(90deg, #000 0%, transparent 86%);
 }
@@ -1028,10 +1017,6 @@
 .identity-grid-lines {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
-  background-size: 48px 48px;
 }
 
 .identity-badge {
@@ -1184,10 +1169,6 @@
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-image:
-    linear-gradient(rgba(10, 86, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(10, 86, 255, 0.04) 1px, transparent 1px);
-  background-size: 50px 50px;
   mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 80%);
 }
 

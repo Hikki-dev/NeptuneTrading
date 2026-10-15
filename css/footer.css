@@ -52,10 +52,7 @@
 .about-command-section,
 .import-process-section {
   background:
-    linear-gradient(90deg, rgba(10, 86, 255, 0.026) 1px, transparent 1px),
-    linear-gradient(rgba(10, 86, 255, 0.026) 1px, transparent 1px),
     #ffffff;
-  background-size: 64px 64px, 64px 64px, auto;
 }
 
 .about-command-section {

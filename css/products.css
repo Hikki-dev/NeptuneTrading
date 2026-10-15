@@ -1255,10 +1255,7 @@
 /* Hero — HUMMER yellow */
 .trading-page-hero.page-hero--hummer {
   background:
-    linear-gradient(90deg, rgba(0,0,0,0.06) 1px, transparent 1px),
-    linear-gradient(rgba(0,0,0,0.06) 1px, transparent 1px),
     #ffd100;
-  background-size: 56px 56px, 56px 56px, auto;
   border-bottom: 3px solid #0b0d0f;
 }
 
@@ -1619,10 +1616,7 @@
 /* Hero — rich deep navy with diagonal grid */
 .trading-page-hero.page-hero--aliaxis {
   background:
-    linear-gradient(90deg, rgba(10, 86, 255,0.07) 1px, transparent 1px),
-    linear-gradient(rgba(10, 86, 255,0.07) 1px, transparent 1px),
     linear-gradient(135deg, #0a56ff 0%, #0a56ff 50%, #0a56ff 100%);
-  background-size: 58px 58px, 58px 58px, auto;
   border-bottom: 3px solid #0a56ff;
 }
 
@@ -1674,10 +1668,7 @@
 /* Categories section */
 .categories-section.division-card--aliaxis {
   background:
-    linear-gradient(90deg, rgba(10, 86, 255,0.03) 1px, transparent 1px),
-    linear-gradient(rgba(10, 86, 255,0.03) 1px, transparent 1px),
     linear-gradient(160deg, #f0f5ff 0%, #e8f1ff 50%, #f8fafc 100%);
-  background-size: 58px 58px, 58px 58px, auto;
 }
 .categories-section.division-card--aliaxis .section-heading { color: #0a56ff; }
 .categories-section.division-card--aliaxis .tag-label {
@@ -1768,10 +1759,7 @@
 /* Hero — deep warm copper/bronze with gold shimmer */
 .trading-page-hero.page-hero--metalco {
   background:
-    linear-gradient(90deg, rgba(217,119,6,0.06) 1px, transparent 1px),
-    linear-gradient(rgba(217,119,6,0.06) 1px, transparent 1px),
     linear-gradient(135deg, #1c0e04 0%, #3d1906 50%, #5c2d0a 100%);
-  background-size: 56px 56px, 56px 56px, auto;
   border-bottom: 3px solid #d97706;
 }
 
@@ -1830,10 +1818,7 @@
 /* Categories section — warm amber-tinted background */
 .categories-section.division-card--metalco {
   background:
-    linear-gradient(90deg, rgba(180,83,9,0.025) 1px, transparent 1px),
-    linear-gradient(rgba(180,83,9,0.025) 1px, transparent 1px),
     linear-gradient(160deg, #fffbeb 0%, #fef9ec 50%, #f8fafc 100%);
-  background-size: 56px 56px, 56px 56px, auto;
 }
 .categories-section.division-card--metalco .section-heading { color: #3d1906; }
 .categories-section.division-card--metalco .tag-label {
