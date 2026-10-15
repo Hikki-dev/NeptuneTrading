@@ -251,208 +251,168 @@
       <!-- Hero -->
       <section class="home-trade-hero" aria-labelledby="hero-title">
         <div class="hero-bg-image" aria-hidden="true">
-          <img src="assets/hero-ship-port.jpg" alt="" width="1200" height="900" loading="eager">
+          <img src="assets/hero-ship-port.jpg" alt="" width="1400" height="788" loading="eager" fetchpriority="high">
         </div>
         <div class="hero-overlay" aria-hidden="true"></div>
         <div class="container">
           <div class="hero-inner">
             <div class="hero-left">
-              <p class="hero-since">Neptune Trading Company &mdash; Colombo, Sri Lanka</p>
-              <h1 id="hero-title">Two authorized divisions. One commercial desk.</h1>
-              <p class="hero-copy">Authorized distributor for HUMMER Power Products and Metal Alloys Corporation. B2B sourcing, procurement, and principal representation since 1984.</p>
+              <p class="hero-since">Neptune Trading Company &middot; Colombo &middot; Since 1984</p>
+              <h1 id="hero-title">Your local agent for HUMMER and Metal Alloys.</h1>
+              <p class="hero-copy">Neptune Trading is the authorised agent for both makers in Sri Lanka, and for HUMMER in the Maldives too. One Colombo desk handles prices, paperwork and delivery.</p>
               <div class="hero-actions">
-                <a href="#principals" class="btn-primary btn-magnetic"><span>Explore Product Divisions</span></a>
-                <a href="contact.html" class="btn-outline-ghost btn-magnetic">Contact Trading Desk</a>
+                <a href="contact.html" class="btn-primary btn-magnetic"><span>Send an Enquiry</span></a>
+                <a href="#for-manufacturers" class="btn-outline-ghost btn-magnetic">Are you a manufacturer?</a>
               </div>
             </div>
-            <div class="hero-right-credentials" aria-hidden="true">
-              <div class="hero-cred-item">
-                <strong>40+</strong>
-                <span>Years of operation</span>
-              </div>
-              <div class="hero-cred-item">
-                <strong>2</strong>
-                <span>Authorized product divisions</span>
-              </div>
-              <div class="hero-cred-item">
-                <strong>Sri Lanka &amp; Maldives</strong>
-                <span>Active distribution territory</span>
-              </div>
+            <div class="hs-doors">
+              <a class="hs-door hs-door--hummer" href="hummer-products.html">
+                <img src="assets/products/hummer-h24-ultra-card.webp" alt="" width="420" height="420" loading="eager">
+                <span class="hs-door-body">
+                  <strong>HUMMER Power Products</strong>
+                  <span>Jump starters, power stations, power banks</span>
+                  <em>Sri Lanka &amp; Maldives</em>
+                </span>
+              </a>
+              <a class="hs-door hs-door--metal" href="metal-alloys-products.html">
+                <img src="assets/logos/metal-alloy-corporation-logo-sm.png" alt="" width="360" height="430" loading="eager">
+                <span class="hs-door-body">
+                  <strong>Metal Alloys Corporation</strong>
+                  <span>Copper, brass and bronze tubes, rods and pipes</span>
+                  <em>Sri Lanka</em>
+                </span>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Trust Bar -->
-      <div class="home-trust-bar" aria-label="Company credentials">
+      <!-- Who we represent -->
+      <section class="hs-section" id="principals" aria-labelledby="hs-rep-title">
         <div class="container">
-          <div class="trust-bar-inner">
-            <div class="trust-item">
-              <strong>Established 1984</strong>
-              <span>Over 40 Years of Sourcing Expertise</span>
-            </div>
-            <div class="trust-item">
-              <strong>2 Product Divisions</strong>
-              <span>Authorized Representation for Global Brands</span>
-            </div>
-            <div class="trust-item">
-              <strong>Colombo Commercial Desk</strong>
-              <span>Direct Local Procurement Support</span>
-            </div>
+          <div class="hs-head reveal">
+            <h2 id="hs-rep-title" class="section-heading">Who we represent</h2>
+            <p>Two makers have appointed Neptune as their official agent here. Anything you buy from us comes straight from them.</p>
           </div>
+
+          <article class="hs-principal hs-principal--hummer reveal" aria-labelledby="hs-hummer-title">
+            <div class="hs-principal-visual">
+              <img src="generated-assets/hummer-events/slnc-02-md.jpg" srcset="generated-assets/hummer-events/slnc-02-sm.jpg 480w, generated-assets/hummer-events/slnc-02-md.jpg 1000w" sizes="(max-width: 899px) 100vw, 560px" alt="The HUMMER jump starter range on display at the Neptune stand" width="1600" height="1349" loading="lazy" decoding="async">
+            </div>
+            <div class="hs-principal-copy">
+              <img class="hs-principal-logo" src="assets/logos/hummer-logo.png" alt="HUMMER" width="1182" height="141" loading="lazy">
+              <h3 id="hs-hummer-title">HUMMER Power Products</h3>
+              <p>Portable power for vehicles and the outdoors: jump starters, power stations, power banks, tyre inflators and inverters. Made under licence from General Motors.</p>
+              <ul class="hs-facts">
+                <li><span>Where</span> Sri Lanka and Maldives</li>
+                <li><span>Status</span> Authorised distributor</li>
+                <li><span>Buyers</span> Fleets, workshops, rescue and recovery teams</li>
+              </ul>
+              <a class="btn-primary" href="hummer-products.html"><span>See the HUMMER range</span></a>
+            </div>
+          </article>
+
+          <article class="hs-principal hs-principal--metal reveal" aria-labelledby="hs-metal-title">
+            <div class="hs-principal-copy">
+              <h3 id="hs-metal-title">Metal Alloys Corporation</h3>
+              <p>Copper, brass, bronze and copper-nickel in tube, rod and pipe form, for ships, engines, plumbing and factories. Supplied with Mill Test Certificates showing exactly what the metal is made of.</p>
+              <ul class="hs-facts">
+                <li><span>Where</span> Sri Lanka</li>
+                <li><span>Status</span> Authorised distributor</li>
+                <li><span>Buyers</span> Shipyards, engineering works, manufacturers</li>
+              </ul>
+              <a class="btn-primary" href="metal-alloys-products.html"><span>See the Metal Alloys range</span></a>
+            </div>
+            <div class="hs-principal-visual hs-principal-visual--logo">
+              <!-- PHOTO SLOT: real Metal Alloys stock photo (tubes/rods in the warehouse) can replace or sit beside the logo panel -->
+              <img src="assets/logos/metal-alloy-corporation-logo-sm.png" alt="Metal Alloys Corporation" width="360" height="430" loading="lazy">
+              <ul class="hs-marks" aria-label="Quality marks">
+                <li>ISO 9001:2015 certified</li>
+                <li>Mill Test Certificates</li>
+                <li>ASTM, BS, DIN, JIS, EN standards</li>
+              </ul>
+            </div>
+          </article>
         </div>
-      </div>
+      </section>
 
-      <!-- Product Divisions -->
-      <section class="section" id="principals" style="background: var(--neptune-bg);" aria-labelledby="divisions-title">
+      <!-- Seen in Sri Lanka -->
+      <section class="hs-section hs-section--tint" aria-labelledby="hs-seen-title">
         <div class="container">
-          <div class="section-head center reveal">
-            <h2 id="divisions-title" class="section-heading">Two authorized product divisions</h2>
-            <p style="max-width: 620px; margin-top: 10px;">Formal local agency agreements with global industrial manufacturers, covering inquiry routing, compliance documentation, and structured bid coordination.</p>
+          <div class="hs-head reveal">
+            <h2 id="hs-seen-title" class="section-heading">HUMMER, out in Sri Lanka</h2>
+            <p>We take the product to the people who use it: launches, off-road events and fleet demonstrations.</p>
           </div>
-          <div class="grid grid-2 reveal" style="max-width: 900px; margin-left: auto; margin-right: auto;">
-            <!-- Hummer Card -->
-            <article class="card logo-card" id="hummer" data-tilt data-tilt-intensity="4">
-              <div>
-                <div class="logo-frame" style="background: #ffcc00; border-color: #e5b800;">
-                  <img src="assets/logos/hummer-logo.png" alt="Hummer logo" loading="lazy" width="1182" height="141" style="mix-blend-mode: multiply;">
-                </div>
-                <div class="logo-card-content">
-                  <h3>HUMMER Power Products</h3>
-                  <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 16px;">Portable automotive and outdoor power for fleet operators, workshops, emergency responders, and corporate procurement teams. GM-licensed. Authorized for Sri Lanka and Maldives.</p>
-                  <ul class="capability-list" style="gap: 6px; font-size: 0.84rem; margin-top: 12px; border-top: 1px solid rgba(9, 19, 44, 0.05); padding-top: 12px;">
-                    <li>Jump Starters &amp; Power Stations</li>
-                    <li>Power Banks &amp; Tyre Inflators</li>
-                    <li>Power Inverters &amp; Accessories</li>
-                  </ul>
-                </div>
-              </div>
-              <a class="btn btn-secondary" href="hummer-products.html" style="margin-top: 20px; width: 100%;">Explore HUMMER Products</a>
-            </article>
-
-            <!-- Metal Alloys Card -->
-            <article class="card logo-card" id="metalco" data-tilt data-tilt-intensity="4" style="transition-delay:0.24s;">
-              <div>
-                <div class="logo-frame" style="background: #ffffff; border-color: rgba(9, 19, 44, 0.08);">
-                  <img src="assets/logos/metal-alloy-corporation-logo-display.png" alt="Metal Alloys Corporation logo" loading="lazy" width="954" height="1139">
-                </div>
-                <div class="logo-card-content">
-                  <h3>Metal Alloys Corporation</h3>
-                  <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 16px;">Copper, brass, bronze, and copper-nickel alloys for marine engineering, industrial fabrication, manufacturing, and specialist project procurement across Sri Lanka.</p>
-                  <ul class="capability-list" style="gap: 6px; font-size: 0.84rem; margin-top: 12px; border-top: 1px solid rgba(9, 19, 44, 0.05); padding-top: 12px;">
-                    <li>Admiralty &amp; Aluminium Brass Tubes</li>
-                    <li>Brass Hollow Rods &amp; Naval Pipes</li>
-                    <li>Bronze Alloys &amp; Custom Metallurgy</li>
-                  </ul>
-                </div>
-              </div>
-              <a class="btn btn-secondary" href="metal-alloys-products.html" style="margin-top: 20px; width: 100%;">Explore Metal Alloys</a>
-            </article>
-          </div>
-          <div class="divisions-footer reveal">
-            <a href="product-divisions.html" class="divisions-all-link">
-              View all product divisions
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="hs-seen reveal">
+            <a href="hummer-products.html#events" class="hs-seen-item">
+              <img src="generated-assets/hummer-events/slnc-01-sm.jpg" srcset="generated-assets/hummer-events/slnc-01-sm.jpg 480w, generated-assets/hummer-events/slnc-01-thumb.jpg 720w" sizes="(max-width: 699px) 100vw, 360px" alt="Neptune Trading HUMMER stand at the BNI Sri Lanka National Conference" width="1600" height="1200" loading="lazy" decoding="async">
+              <span><strong>Launch at BNI SLNC 2026</strong> Cinnamon Lakeside, Colombo</span>
+            </a>
+            <a href="hummer-products.html#events" class="hs-seen-item">
+              <img src="generated-assets/hummer-events/toyota-02-sm.jpg" srcset="generated-assets/hummer-events/toyota-02-sm.jpg 480w, generated-assets/hummer-events/toyota-02-thumb.jpg 720w" sizes="(max-width: 699px) 100vw, 360px" alt="Neptune Trading stand at the Land Cruiser 75th anniversary event" width="1600" height="1200" loading="lazy" decoding="async">
+              <span><strong>Land Cruiser 75th Anniversary</strong> With Toyota Lanka</span>
+            </a>
+            <a href="hummer-products.html#events" class="hs-seen-item">
+              <img src="generated-assets/hummer-events/jh-02-sm.jpg" srcset="generated-assets/hummer-events/jh-02-sm.jpg 480w, generated-assets/hummer-events/jh-02-thumb.jpg 720w" sizes="(max-width: 699px) 100vw, 360px" alt="4x4 on the trail at Johnny's Hill" width="1600" height="1200" loading="lazy" decoding="async">
+              <span><strong>Johnny's Hill off-road event</strong> 20 June 2026</span>
             </a>
           </div>
+          <p class="hs-more reveal"><a href="hummer-products.html#events">See all events and videos</a></p>
         </div>
       </section>
 
-      <!-- Ceylon Export Support -->
-      <section class="section" id="ceylon-exports" style="background: var(--white); border-top: 1px solid var(--border);" aria-labelledby="exports-section-title">
+      <!-- Enquiry to delivery -->
+      <section class="hs-section" aria-labelledby="hs-steps-title">
         <div class="container">
-          <div class="section-head center reveal">
-            <h2 id="exports-section-title" class="section-heading">Ceylon Export Support</h2>
-            <p style="max-width: 680px; margin-top: 10px;">For Ceylon tea and selected agricultural export enquiries, Neptune Trading coordinates export supply, product preparation, documentation support, and buyer fulfilment from its Colombo commercial desk.</p>
+          <div class="hs-head reveal">
+            <h2 id="hs-steps-title" class="section-heading">From your enquiry to your door</h2>
+            <p>Four steps, one point of contact.</p>
           </div>
-          
-          <div class="grid grid-2 reveal" style="align-items: center; gap: 48px; margin-top: 40px;">
-            <div style="background: var(--blue-bg); border: 1px solid var(--border); border-radius: 16px; padding: 36px;">
-              <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 800; color: var(--blue-deep); margin-bottom: 12px;">Export Supply Sourcing Channels</h3>
-              <p style="color: var(--slate); font-size: 0.92rem; line-height: 1.65; margin-bottom: 24px;">
-                We connect international bulk buyers with direct sourcing channels for premium Sri Lankan commodities. Our desk coordinates documentation, compliance, and custom sorting under a unified commercial contract.
-              </p>
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-                <div style="display: flex; align-items: center; gap: 8px;">
-                  <span style="height: 6px; width: 6px; border-radius: 50%; background: var(--blue-mid);"></span>
-                  <span style="font-size: 0.88rem; font-weight: 600; color: var(--dark-mid);">Ceylon Black &amp; CTC Tea</span>
-                </div>
-                <div style="display: flex; align-items: center; gap: 8px;">
-                  <span style="height: 6px; width: 6px; border-radius: 50%; background: var(--blue-mid);"></span>
-                  <span style="font-size: 0.88rem; font-weight: 600; color: var(--dark-mid);">Ceylon Cinnamon &amp; Spices</span>
-                </div>
-                <div style="display: flex; align-items: center; gap: 8px;">
-                  <span style="height: 6px; width: 6px; border-radius: 50%; background: var(--blue-mid);"></span>
-                  <span style="font-size: 0.88rem; font-weight: 600; color: var(--dark-mid);">Coconut Fibre &amp; Coir</span>
-                </div>
-                <div style="display: flex; align-items: center; gap: 8px;">
-                  <span style="height: 6px; width: 6px; border-radius: 50%; background: var(--blue-mid);"></span>
-                  <span style="font-size: 0.88rem; font-weight: 600; color: var(--dark-mid);">Agricultural Sourcing</span>
-                </div>
-              </div>
-            </div>
-            <div>
-              <h3 style="font-family: var(--font-display); font-size: 1.4rem; font-weight: 800; color: var(--blue-deep); margin: 0 0 12px;">Agricultural Supply Backing</h3>
-              <p style="color: var(--slate); font-size: 0.92rem; line-height: 1.65; margin-bottom: 24px;">
-                Agricultural supply operations, custom blends, sorting, grading, and bulk warehouse packaging are coordinated at source to secure product origin and quality controls.
-              </p>
-              <a href="ceylon-exports.html" class="btn-primary"><span>Discuss an Export Enquiry</span></a>
-            </div>
-          </div>
+          <ol class="hs-steps reveal">
+            <li>
+              <h3>Tell us what you need</h3>
+              <p>The product, how many, and where it is going. A short email or form is enough.</p>
+            </li>
+            <li>
+              <h3>We check with the maker</h3>
+              <p>We confirm the exact model or alloy, and the certificates and documents you will need.</p>
+            </li>
+            <li>
+              <h3>You get a quote</h3>
+              <p>A clear price, stock position and lead time from the Colombo desk.</p>
+            </li>
+            <li>
+              <h3>It arrives</h3>
+              <p>Neptune Logistics can handle port clearance and delivery, so nothing falls between suppliers.</p>
+            </li>
+          </ol>
+          <p class="hs-more reveal"><a href="contact.html">Start with an enquiry</a></p>
         </div>
       </section>
 
-      <!-- What We Do — Compact Split -->
-      <section class="section home-capabilities-section home-capabilities-section--dark" aria-labelledby="capabilities-title">
-        <div class="container">
-          <div class="home-capabilities-grid">
-            <div class="home-cap-left reveal-left">
-              <h2 id="capabilities-title" class="section-heading" style="font-size: clamp(1.9rem, 3.2vw, 2.6rem);">Four core capabilities. One commercial desk.</h2>
-              <p style="color: var(--slate); line-height: 1.7; margin: 18px 0 32px; max-width: 480px;">Neptune Trading Company coordinates product representation, international sourcing, Ceylon export development, and market-entry support from a single commercial team in Colombo.</p>
-              <div class="home-cap-actions">
-                <a href="what-we-do.html" class="btn-primary"><span>Explore Capabilities</span></a>
-                <a href="principals.html" class="btn-outline">Our Principals</a>
-              </div>
-            </div>
-            <div class="home-cap-right reveal-right">
-              <div class="home-cap-item">
-                <div class="home-cap-icon">
-                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                </div>
-                <div>
-                  <h3>Represent</h3>
-                  <p>Authorized product representation for selected international principals in Sri Lanka.</p>
-                </div>
-              </div>
-              <div class="home-cap-item">
-                <div class="home-cap-icon">
-                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-                </div>
-                <div>
-                  <h3>Source</h3>
-                  <p>Supplier identification, pricing support, and technical procurement coordination.</p>
-                </div>
-              </div>
-              <div class="home-cap-item">
-                <div class="home-cap-icon">
-                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                </div>
-                <div>
-                  <h3>Export</h3>
-                  <p>Commercial export development for Ceylon tea and selected goods.</p>
-                </div>
-              </div>
-              <div class="home-cap-item">
-                <div class="home-cap-icon">
-                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-                </div>
-                <div>
-                  <h3>Launch</h3>
-                  <p>Market-entry coordination and regulatory setup compliance for brands entering Sri Lanka.</p>
-                </div>
-              </div>
-            </div>
+      <!-- Ceylon exports -->
+      <section class="hs-section hs-section--tint" id="ceylon-exports" aria-labelledby="hs-export-title">
+        <div class="container hs-export reveal">
+          <div>
+            <h2 id="hs-export-title" class="section-heading">Also: Ceylon exports</h2>
+            <p>Buying Ceylon tea, spices or coir from Sri Lanka? Our Colombo desk arranges supply, sorting, packing and export paperwork for overseas buyers.</p>
           </div>
+          <a href="ceylon-exports.html" class="btn-primary"><span>Ask about exports</span></a>
+        </div>
+      </section>
+
+      <!-- For manufacturers -->
+      <section class="hs-section hs-makers" id="for-manufacturers" aria-labelledby="hs-makers-title">
+        <div class="container hs-makers-inner reveal">
+          <div>
+            <h2 id="hs-makers-title">A maker wanting a local desk in Sri Lanka?</h2>
+            <p>That is what we do for HUMMER and Metal Alloys. We answer buyers, give quotes, handle local paperwork and follow up tenders, so you do not have to set up here yourself.</p>
+            <a href="principals.html#become-a-principal" class="btn-white"><span>Talk to us about representation</span></a>
+          </div>
+          <ul class="hs-chips" aria-label="Territories we cover">
+            <li>Sri Lanka</li>
+            <li>Maldives</li>
+          </ul>
         </div>
       </section>
 
