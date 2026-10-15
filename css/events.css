@@ -111,7 +111,17 @@
 .event-rail .ev-media { flex: 0 0 auto; height: var(--rail-h); scroll-snap-align: start; }
 .event-rail .ev-media img { width: auto; max-width: none; }
 
-/* 3. fleet: tall tiles (phone video), copy beside */
+/* 3. trail: copy beside a video lead and photo grid */
+.event--trail { display: grid; gap: 24px; align-items: center; }
+.event-media-grid--trail {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.event-media-grid--trail .ev-media { aspect-ratio: 4 / 3; }
+.event-media-grid--trail .ev-media--lead { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
+
+/* 4. fleet: tall tiles (phone video), copy beside */
 .event--fleet { display: grid; gap: 24px; align-items: center; }
 .event--fleet .event-copy { order: -1; }
 .event-media-grid--fleet {
@@ -122,6 +132,8 @@
 .event-media-grid--fleet .ev-media { aspect-ratio: 9 / 14; }
 
 @media (min-width: 900px) {
+  .event--trail { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.5fr); gap: 48px; }
+  .event-media-grid--trail { grid-template-columns: repeat(3, 1fr); }
   .event--fleet { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 48px; }
   .event--fleet .event-copy { order: 0; }
   .event-media-grid--fleet { grid-template-columns: repeat(4, 1fr); }
